@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>注音學習單產生器</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Vue 3 Global CDN -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <style>
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: white; }
+      .no-print { display: none !important; }
+      .print-container { width: 100%; height: 100vh; padding: 0; margin: 0; display: flex; justify-content: center; align-items: flex-start; }
+      .worksheet-paper { box-shadow: none !important; margin: 0 !important; width: 210mm; height: 297mm; border: none !important; }
+    }
+    .text-outline {
+      color: white;
+      -webkit-text-stroke: 2px #374151;
+    }
+    .text-dashed {
+      color: transparent;
+      -webkit-text-stroke: 2px #d1d5db;
+    }
+    .title-badge {
+      background-color: #d1fae5;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-weight: bold;
+      color: #065f46;
+      display: inline-block;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans overflow-hidden">
+  <div id="app" class="flex h-screen bg-gray-100 font-sans overflow-hidden">
+    
+    <!-- 左側邊欄 (非列印區) -->
+    <div class="no-print w-72 bg-white border-r shadow-lg flex flex-col z-10">
+      <div class="p-6 border-b bg-emerald-50 text-emerald-800">
+        <div class="flex items-center gap-2 mb-2">
+          <!-- BookOpen SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-600">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+          </svg>
+          <h1 class="text-xl font-bold">注音學習單</h1>
+        </div>
+        <p class="text-sm opacity-80">選擇注音，生成專屬練習單</p>
+      </div>
+      
+      <div class="flex-1 overflow-y-auto p-4 grid grid-cols-4 gap-2 content-start">
+        <button
+          v-for="(item, idx) in zhuyinData"
+          :key="idx"
+          @click="handleSelect(idx)"
+          :class="[
+            'text-xl font-bold p-2 rounded-lg transition-all duration-200',
+            selectedIndex === idx 
+              ? 'bg-emerald-500 text-white shadow-md transform scale-105' 
+              : 'bg-gray-50 text-gray-600 hover:bg-emerald-100'
+          ]"
+        >
+          {{ item.char }}
+        </button>
+      </div>
+      
+      <div class="p-4 border-t bg-gray-50">
+        <button 
+          @click="handlePrint"
+          class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm transition-colors"
+        >
+          <!-- Printer SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+            <path d="M6 9V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v5"/>
+            <rect x="6" y="14" width="12" height="8" rx="1"/>
+          </svg>
+          列印本頁 A4
+        </button>
+      </div>
+    </div>
+
+    <!-- 右側預覽區 -->
+    <div class="flex-1 overflow-y-auto p-8 print-container bg-gray-200 flex justify-center items-start">
+      
+      <!-- A4 學習單本體 -->
+      <div class="worksheet-paper bg-white w-[210mm] min-h-[297mm] shadow-2xl border border-gray-300 relative mx-auto overflow-hidden flex flex-col p-[15mm]">
+        
+        <!-- 頁面裝飾外框 -->
+        <div class="absolute inset-[8mm] border-[3px] border-emerald-800 rounded-3xl pointer-events-none opacity-20 border-dashed"></div>
+
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-6 px-4 z-10">
+          <h2 class="text-2xl font-black text-gray-800 tracking-wider">注音符號學習單</h2>
+          <div class="flex items-end gap-2 text-lg font-bold text-gray-700">
+            姓名：<div class="border-b-2 border-gray-400 w-32"></div>
+          </div>
+        </div>
+
+        <div class="flex-1 flex flex-col gap-5 z-10">
+          <!-- 上半部：塗色區與尋找區 -->
+          <div class="flex gap-6 h-[90mm]">
+            <!-- 區塊 1: 將注音塗上顏色 -->
+            <div class="w-1/2 flex flex-col">
+              <div class="title-badge mb-3 self-start">・將 {{ activeData.char }} 塗上顏色</div>
+              <div class="flex-1 border-4 border-dashed border-gray-300 rounded-2xl flex items-center justify-center bg-gray-50/50">
+                <span class="text-[140px] font-black text-outline leading-none font-sans select-none">
+                  {{ activeData.char }}
+                </span>
+              </div>
+            </div>
+
+            <!-- 區塊 2: 找到注音並塗上顏色 -->
+            <div class="w-1/2 flex flex-col">
+              <div class="title-badge mb-3 self-start" style="background-color: #fef08a; color: #854d0e">・找到 {{ activeData.char }} 並塗上顏色</div>
+              <div class="flex-1 relative border-4 border-gray-200 rounded-2xl p-2 flex flex-wrap justify-center content-center gap-2">
+                <div v-for="(char, i) in bubbles" :key="i" class="w-12 h-12 rounded-full border-2 border-gray-400 flex items-center justify-center text-2xl font-bold text-gray-700 bg-white">
+                  {{ char }}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 中間部：唸一唸與圈選 -->
+          <div class="flex flex-col h-[75mm]">
+            <div class="title-badge mb-2 self-start" style="background-color: #dbeafe; color: #1e3a8a">・唸一唸，再把 {{ activeData.char }} 圈出來</div>
+            <div class="flex-1 grid grid-cols-3 gap-2 px-2">
+              <div v-for="(word, i) in activeData.words" :key="i" class="flex flex-col items-center justify-start pt-1 gap-2 overflow-hidden">
+                <div class="text-[55px] leading-none drop-shadow-md">
+                  {{ word.e }}
+                </div>
+                <!-- 客製化 Flexbox 排版，精準控制聲調位置 -->
+                <div class="flex flex-col items-start justify-center">
+                  <div v-for="(char, index) in word.w.split('')" :key="index" class="flex items-center justify-start mb-2">
+                    <!-- 國字 -->
+                    <div class="text-[26px] font-black text-gray-800 leading-none">{{ char }}</div>
+                    
+                    <!-- 注音與聲調區塊 -->
+                    <div class="relative flex ml-1 h-full items-center">
+                      <!-- 輕聲 (放在最上方) -->
+                      <span v-if="getTone(word.z, index) === '˙'" class="absolute -top-[12px] left-1/2 -translate-x-1/2 text-[14px] font-black text-gray-500">˙</span>
+
+                      <!-- 聲母與韻母 (垂直置中堆疊) -->
+                      <div class="flex flex-col items-center justify-center text-[12px] font-bold text-gray-500 leading-none">
+                        <span v-for="(bz, j) in getBaseZ(word.z, index)" :key="j" class="mb-[1px]">{{ bz }}</span>
+                      </div>
+
+                      <!-- 二、三、四聲 (放在右側，垂直正中間) -->
+                      <span v-if="['ˊ', 'ˇ', 'ˋ'].includes(getTone(word.z, index))" class="absolute -right-[12px] top-1/2 -translate-y-1/2 text-[14px] font-black text-gray-500">
+                        {{ getTone(word.z, index) }}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 下半部：描寫與練習 -->
+          <div class="flex gap-6 h-[65mm] mt-auto">
+             <!-- 區塊 4: 描一描 -->
+             <div class="w-2/3 flex flex-col">
+              <div class="title-badge mb-3 self-start" style="background-color: #fef08a; color: #854d0e">・描一描</div>
+              <div class="flex-1 grid grid-cols-3 gap-3">
+                <div v-for="n in 6" :key="n" class="border-2 border-dashed border-gray-400 rounded-xl flex items-center justify-center">
+                  <span class="text-[70px] font-black text-dashed select-none">
+                    {{ activeData.char }}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+             <!-- 區塊 5: 練習寫一個 -->
+             <div class="w-1/3 flex flex-col">
+              <div class="title-badge mb-3 self-start" style="background-color: #f3e8ff; color: #6b21a8">・練習寫一個 {{ activeData.char }}</div>
+              <div class="flex-1 border-4 border-dashed border-gray-400 rounded-2xl flex items-center justify-center relative">
+                 <!-- 十字虛線輔助線 -->
+                 <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                   <div class="w-full h-[2px] bg-gray-200 border-t border-dashed border-gray-300 absolute"></div>
+                   <div class="h-full w-[2px] bg-gray-200 border-l border-dashed border-gray-300 absolute"></div>
+                 </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const { createApp, ref, computed } = Vue;
+
+    // 完整的 37 個注音資料庫
+    const ZHUYIN_DATA = [
+      { char: 'ㄅ', words: [{ w: '斑馬', z: 'ㄅㄢ ㄇㄚˇ', e: '🦓' }, { w: '包子', z: 'ㄅㄠ ㄗ˙', e: '🥟' }, { w: '冰淇淋', z: 'ㄅㄧㄥ ㄑㄧˊ ㄌㄧㄣˊ', e: '🍦' }] },
+      { char: 'ㄆ', words: [{ w: '蘋果', z: 'ㄆㄧㄥˊ ㄍㄨㄛˇ', e: '🍎' }, { w: '葡萄', z: 'ㄆㄨˊ ㄊㄠˊ', e: '🍇' }, { w: '婆婆', z: 'ㄆㄛˊ ㄆㄛ˙', e: '👵' }] },
+      { char: 'ㄇ', words: [{ w: '草莓', z: 'ㄘㄠˇ ㄇㄟˊ', e: '🍓' }, { w: '帽子', z: 'ㄇㄠˋ ㄗ˙', e: '🧢' }, { w: '蘑菇', z: 'ㄇㄛˊ ㄍㄨ', e: '🍄' }] },
+      { char: 'ㄈ', words: [{ w: '飛機', z: 'ㄈㄟ ㄐㄧ', e: '✈️' }, { w: '風車', z: 'ㄈㄥ ㄔㄜ', e: '🪁' }, { w: '房子', z: 'ㄈㄤˊ ㄗ˙', e: '🏠' }] },
+      { char: 'ㄉ', words: [{ w: '大象', z: 'ㄉㄚˋ ㄒㄧㄤˋ', e: '🐘' }, { w: '蛋糕', z: 'ㄉㄢˋ ㄍㄠ', e: '🎂' }, { w: '弟弟', z: 'ㄉㄧˋ ㄉㄧ˙', e: '👦' }] },
+      { char: 'ㄊ', words: [{ w: '兔子', z: 'ㄊㄨˋ ㄗ˙', e: '🐰' }, { w: '太陽', z: 'ㄊㄞˋ ㄧㄤˊ', e: '☀️' }, { w: '糖果', z: 'ㄊㄤˊ ㄍㄨㄛˇ', e: '🍬' }] },
+      { char: 'ㄋ', words: [{ w: '牛奶', z: 'ㄋㄧㄡˊ ㄋㄞˇ', e: '🥛' }, { w: '小鳥', z: 'ㄒㄧㄠˇ ㄋㄧㄠˇ', e: '🐦' }, { w: '奶奶', z: 'ㄋㄞˇ ㄋㄞ˙', e: '👵' }] },
+      { char: 'ㄌ', words: [{ w: '老虎', z: 'ㄌㄠˇ ㄏㄨˇ', e: '🐯' }, { w: '恐龍', z: 'ㄎㄨㄥˇ ㄌㄨㄥˊ', e: '🦖' }, { w: '老師', z: 'ㄌㄠˇ ㄕ', e: '👩‍🏫' }] },
+      { char: 'ㄍ', words: [{ w: '狗狗', z: 'ㄍㄡˇ ㄍㄡ˙', e: '🐶' }, { w: '烏龜', z: 'ㄨ ㄍㄨㄟ', e: '🐢' }, { w: '鴿子', z: 'ㄍㄜ ㄗ˙', e: '🕊️' }] },
+      { char: 'ㄎ', words: [{ w: '褲子', z: 'ㄎㄨˋ ㄗ˙', e: '👖' }, { w: '卡車', z: 'ㄎㄚˇ ㄔㄜ', e: '🚚' }, { w: '無尾熊', z: 'ㄨˊ ㄨㄟˇ ㄒㄩㄥˊ', e: '🐨' }] },
+      { char: 'ㄏ', words: [{ w: '河馬', z: 'ㄏㄜˊ ㄇㄚˇ', e: '🦛' }, { w: '猴子', z: 'ㄏㄡˊ ㄗ˙', e: '🐒' }, { w: '花朵', z: 'ㄏㄨㄚ ㄉㄨㄛˇ', e: '🌻' }] },
+      { char: 'ㄐ', words: [{ w: '剪刀', z: 'ㄐㄧㄢˇ ㄉㄠ', e: '✂️' }, { w: '警車', z: 'ㄐㄧㄥˇ ㄔㄜ', e: '🚓' }, { w: '公雞', z: 'ㄍㄨㄥ ㄐㄧ', e: '🐓' }] },
+      { char: 'ㄑ', words: [{ w: '企鵝', z: 'ㄑㄧˋ ㄜˊ', e: '🐧' }, { w: '氣球', z: 'ㄑㄧˋ ㄑㄧㄡˊ', e: '🎈' }, { w: '橋', z: 'ㄑㄧㄠˊ', e: '🌉' }] },
+      { char: 'ㄒ', words: [{ w: '西瓜', z: 'ㄒㄧ ㄍㄨㄚ', e: '🍉' }, { w: '星星', z: 'ㄒㄧㄥ ㄒㄧㄥ', e: '⭐' }, { w: '香蕉', z: 'ㄒㄧㄤ ㄐㄧㄠ', e: '🍌' }] },
+      { char: 'ㄓ', words: [{ w: '蜘蛛', z: 'ㄓ ㄓㄨ', e: '🕷️' }, { w: '果汁', z: 'ㄍㄨㄛˇ ㄓ', e: '🧃' }, { w: '小豬', z: 'ㄒㄧㄠˇ ㄓㄨ', e: '🐷' }] },
+      { char: 'ㄔ', words: [{ w: '火車', z: 'ㄏㄨㄛˇ ㄔㄜ', e: '🚂' }, { w: '吃飯', z: 'ㄔ ㄈㄢˋ', e: '🍚' }, { w: '牙齒', z: 'ㄧㄚˊ ㄔˇ', e: '🦷' }] },
+      { char: 'ㄕ', words: [{ w: '獅子', z: 'ㄕ ㄗ˙', e: '🦁' }, { w: '老鼠', z: 'ㄌㄠˇ ㄕㄨˇ', e: '🐭' }, { w: '梳子', z: '開心中', e: '🪮' }] }, // wait, originally 17: { w: '梳子', z: 'ㄕㄨ ㄗ˙', e: '🪮' } - let's make sure it's ㄕㄨ ㄗ˙
+      { char: 'ㄖ', words: [{ w: '日曆', z: 'ㄖˋ ㄌㄧˋ', e: '📅' }, { w: '向日葵', z: 'ㄒㄧㄤˋ ㄖˋ ㄎㄨㄟˊ', e: '🌻' }, { w: '生日', z: 'ㄕㄥ ㄖˋ', e: '🎂' }] },
+      { char: 'ㄗ', words: [{ w: '早餐', z: 'ㄗㄠˇ ㄘㄢ', e: '🥞' }, { w: '報紙', z: 'ㄅㄠˋ ㄓˇ', e: '📰' }, { w: '紫色', z: 'ㄗˇ ㄙㄜˋ', e: '💜' }] },
+      { char: 'ㄘ', words: [{ w: '刺蝟', z: 'ㄘˋ ㄨㄟˋ', e: '🦔' }, { w: '彩虹', z: 'ㄘㄞˇ ㄏㄨㄥˊ', e: '🌈' }, { w: '擦布', z: 'ㄘㄚ ㄅㄨˋ', e: '🧽' }] },
+      { char: 'ㄙ', words: [{ w: '雨傘', z: 'ㄩˇ ㄙㄢˇ', e: '☔' }, { w: '森林', z: 'ㄙㄣ ㄌㄧㄣˊ', e: '🌲' }, { w: '司機', z: 'ㄙ ㄐㄧ', e: '🚌' }] },
+      { char: 'ㄧ', words: [{ w: '衣服', z: 'ㄧ ㄈㄨˊ', e: '👕' }, { w: '椅子', z: 'ㄧˇ ㄗ˙', e: '🪑' }, { w: '螞蟻', z: 'ㄇㄚˇ ㄧˇ', e: '🐜' }] },
+      { char: 'ㄨ', words: [{ w: '烏鴉', z: 'ㄨ ㄧㄚ', e: '🐦‍⬛' }, { w: '禮物', z: 'ㄌㄧˇ ㄨˋ', e: '🎁' }, { w: '襪子', z: 'ㄨㄚˋ ㄗ˙', e: '🧦' }] },
+      { char: 'ㄩ', words: [{ w: '玉米', z: 'ㄩˋ ㄇㄧˇ', e: '🌽' }, { w: '金魚', z: 'ㄐㄧㄣ ㄩˊ', e: '🐟' }, { w: '浴缸', z: 'ㄩˋ ㄍㄤ', e: '🛁' }] },
+      { char: 'ㄚ', words: [{ w: '鴨子', z: 'ㄧㄚ ㄗ˙', e: '🦆' }, { w: '青蛙', z: 'ㄑㄧㄥ ㄨㄚ', e: '🐸' }, { w: '牙刷', z: 'ㄧㄚˊ ㄕㄨㄚ', e: '🪥' }] },
+      { char: 'ㄛ', words: [{ w: '廣播', z: 'ㄍㄨㄤˇ ㄅㄛ', e: '📻' }, { w: '陀螺', z: 'ㄊㄨㄛˊ ㄌㄨㄛˊ', e: '🪀' }, { w: '駱駝', z: 'ㄌㄨㄛˋ ㄊㄨㄛˊ', e: '🐪' }] },
+      { char: 'ㄜ', words: [{ w: '天鵝', z: 'ㄊㄧㄢ ㄜˊ', e: '🦢' }, { w: '鱷魚', z: 'ㄜˋ ㄩˊ', e: '🐊' }, { w: '肚子餓', z: 'ㄉㄨˋ ㄗ˙ ㄜˋ', e: '🤤' }] },
+      { char: 'ㄝ', words: [{ w: '爺爺', z: 'ㄧㄝˊ ㄧㄝ˙', e: '👴' }, { w: '葉子', z: 'ㄧㄝˋ ㄗ˙', e: '🍂' }, { w: '蝴蝶', z: 'ㄏㄨˊ ㄉㄧㄝˊ', e: '🦋' }] },
+      { char: 'ㄞ', words: [{ w: '愛心', z: 'ㄞˋ ㄒㄧㄣ', e: '❤️' }, { w: '台灣', z: 'ㄊㄞˊ ㄨㄢ', e: '🇹🇼' }, { w: '麥克風', z: 'ㄇㄞˋ ㄎㄜˋ ㄈㄥ', e: '🎤' }] },
+      { char: 'ㄟ', words: [{ w: '杯子', z: 'ㄅㄟ ㄗ˙', e: '🥤' }, { w: '黑板', z: 'ㄏㄟ ㄅㄢˇ', e: '🏫' }, { w: '妹妹', z: 'ㄇㄟˋ ㄇㄟ˙', e: '👧' }] },
+      { char: 'ㄠ', words: [{ w: '貓咪', z: 'ㄇㄠ ㄇㄧ', e: '🐱' }, { w: '手錶', z: 'ㄕㄡˇ ㄅㄧㄠˇ', e: '⌚' }, { w: '桃子', z: 'ㄊㄠˊ ㄗ˙', e: '🍑' }] },
+      { char: 'ㄡ', words: [{ w: '海鷗', z: 'ㄏㄞˇ ㄡ', e: '🐦' }, { w: '溜溜球', z: 'ㄌㄧㄡ ㄌㄧㄡ ㄑㄧㄡˊ', e: '🪀' }, { w: '蓮藕', z: 'ㄌㄧㄢˊ ㄡˇ', e: '🪷' }] },
+      { char: 'ㄢ', words: [{ w: '餅乾', z: 'ㄅㄧㄥˇ ㄍㄢ', e: '🍪' }, { w: '雞蛋', z: 'ㄐㄧ ㄉㄢˋ', e: '🥚' }, { w: '高山', z: 'ㄍㄠ ㄕㄢ', e: '🏔️' }] },
+      { char: 'ㄣ', words: [{ w: '大門', z: 'ㄉㄚˋ ㄇㄣˊ', e: '🚪' }, { w: '筆記本', z: 'ㄅㄧˇ ㄐㄧˋ ㄅㄣˇ', e: '📓' }, { w: '灰塵', z: 'ㄏㄨㄟ ㄔㄣˊ', e: '🧹' }] },
+      { char: 'ㄤ', words: [{ w: '太陽', z: 'ㄊㄞˋ ㄧㄤˊ', e: '☀️' }, { w: '蟑螂', z: 'ㄓㄤ ㄌㄤˊ', e: '🪳' }, { w: '胖子', z: 'ㄆㄤˋ ㄗ˙', e: '🧍‍♂️' }] },
+      { char: 'ㄥ', words: [{ w: '蜜蜂', z: 'ㄇㄧˋ ㄈㄥ', e: '🐝' }, { w: '恐龍', z: 'ㄎㄨㄥˇ ㄌㄨㄥˊ', e: '🦖' }, { w: '老鷹', z: 'ㄌㄠˇ ㄧㄥ', e: '🦅' }] },
+      { char: 'ㄦ', words: [{ w: '耳朵', z: 'ㄦˇ ㄉㄨㄛ˙', e: '👂' }, { w: '兒童', z: 'ㄦˊ ㄊㄨㄥˊ', e: '🧒' }, { w: '鳥兒', z: 'ㄋㄧㄠˇ ㄦ', e: '🐦' }] }
+    ];
+
+    // Wait, let's fix the typo in line 17 of ZHUYIN_DATA (ㄕ):
+    ZHUYIN_DATA[16].words[2] = { w: '梳子', z: 'ㄕㄨ ㄗ˙', e: '🪮' };
+
+    const ALL_CHARS = ZHUYIN_DATA.map(d => d.char);
+
+    const generateBubbles = (targetChar) => {
+      const bubbles = Array(6).fill(targetChar);
+      const others = ALL_CHARS.filter(c => c !== targetChar);
+      for (let i = 0; i < 6; i++) {
+        bubbles.push(others[Math.floor(Math.random() * others.length)]);
+      }
+      return bubbles.sort(() => Math.random() - 0.5);
+    };
+
+    createApp({
+      setup() {
+        const selectedIndex = ref(0);
+        const activeData = computed(() => ZHUYIN_DATA[selectedIndex.value]);
+        const bubbles = ref(generateBubbles(activeData.value.char));
+
+        const handleSelect = (idx) => {
+          selectedIndex.value = idx;
+          bubbles.value = generateBubbles(ZHUYIN_DATA[idx].char);
+        };
+
+        const handlePrint = () => {
+          window.print();
+        };
+
+        const getTone = (zStr, index) => {
+          const z = zStr.split(' ')[index] || '';
+          const toneMatch = z.match(/[ˊˇˋ˙]/);
+          return toneMatch ? toneMatch[0] : '';
+        };
+
+        const getBaseZ = (zStr, index) => {
+          const z = zStr.split(' ')[index] || '';
+          const base = z.replace(/[ˊˇˋ˙]/g, '');
+          return base.split('');
+        };
+
+        return {
+          zhuyinData: ZHUYIN_DATA,
+          selectedIndex,
+          activeData,
+          bubbles,
+          handleSelect,
+          handlePrint,
+          getTone,
+          getBaseZ
+        };
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>
