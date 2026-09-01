@@ -1,0 +1,7208 @@
+[
+  {
+    "id": 1,
+    "name": "妙蛙種子",
+    "zhuyin": "ㄇㄧㄠˋ ㄨㄚ ㄓㄨㄥˇ ㄗ˙",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 2,
+    "name": "妙蛙草",
+    "zhuyin": "ㄇㄧㄠˋ ㄨㄚ ㄘㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 3,
+    "name": "妙蛙花",
+    "zhuyin": "ㄇㄧㄠˋ ㄨㄚ ㄏㄨㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 4,
+    "name": "小火龍",
+    "zhuyin": "ㄒㄧㄠˇ ㄏㄨㄛˇ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 5,
+    "name": "火恐龍",
+    "zhuyin": "ㄏㄨㄛˇ ㄎㄨㄥˇ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 6,
+    "name": "噴火龍",
+    "zhuyin": "ㄆㄣ ㄏㄨㄛˇ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 7,
+    "name": "傑尼龜",
+    "zhuyin": "ㄐㄧㄝˊ ㄋㄧˊ ㄍㄨㄟ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 8,
+    "name": "卡咪龜",
+    "zhuyin": "ㄎㄚˇ ㄇㄧ ㄍㄨㄟ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 9,
+    "name": "水箭龜",
+    "zhuyin": "ㄕㄨㄟˇ ㄐㄧㄢˋ ㄍㄨㄟ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 10,
+    "name": "綠毛蟲",
+    "zhuyin": "ㄌㄩˋ ㄇㄠˊ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 11,
+    "name": "鐵甲蛹",
+    "zhuyin": "ㄊㄧㄝˇ ㄐㄧㄚˇ ㄩㄥˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 12,
+    "name": "巴大蝶",
+    "zhuyin": "ㄅㄚ ㄉㄚˋ ㄉㄧㄝˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 13,
+    "name": "獨角蟲",
+    "zhuyin": "ㄉㄨˊ ㄐㄧㄠˇ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 14,
+    "name": "鐵殼蛹",
+    "zhuyin": "ㄊㄧㄝˇ ㄎㄜˊ ㄩㄥˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 15,
+    "name": "大針蜂",
+    "zhuyin": "ㄉㄚˋ ㄓㄣ ㄈㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 16,
+    "name": "波波",
+    "zhuyin": "ㄅㄛ ㄅㄛ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 17,
+    "name": "比比鳥",
+    "zhuyin": "ㄅㄧˇ ㄅㄧˇ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 18,
+    "name": "大比鳥",
+    "zhuyin": "ㄉㄚˋ ㄅㄧˇ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 19,
+    "name": "小拉達",
+    "zhuyin": "ㄒㄧㄠˇ ㄌㄚ ㄉㄚˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 20,
+    "name": "拉達",
+    "zhuyin": "ㄌㄚ ㄉㄚˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 21,
+    "name": "烈雀",
+    "zhuyin": "ㄌㄧㄝˋ ㄑㄩㄝˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 22,
+    "name": "大嘴雀",
+    "zhuyin": "ㄉㄚˋ ㄗㄨㄟˇ ㄑㄩㄝˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 23,
+    "name": "阿柏蛇",
+    "zhuyin": "ㄚ ㄅㄞˇ ㄕㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 24,
+    "name": "阿柏怪",
+    "zhuyin": "ㄚ ㄅㄞˇ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 25,
+    "name": "皮卡丘",
+    "zhuyin": "ㄆㄧˊ ㄎㄚˇ ㄑㄧㄡ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 26,
+    "name": "雷丘",
+    "zhuyin": "ㄌㄟˊ ㄑㄧㄡ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 27,
+    "name": "穿山鼠",
+    "zhuyin": "ㄔㄨㄢ ㄕㄢ ㄕㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 28,
+    "name": "穿山王",
+    "zhuyin": "ㄔㄨㄢ ㄕㄢ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 29,
+    "name": "尼多蘭",
+    "zhuyin": "ㄋㄧˊ ㄉㄨㄛ ㄌㄢˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 30,
+    "name": "尼多娜",
+    "zhuyin": "ㄋㄧˊ ㄉㄨㄛ ㄋㄚˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 31,
+    "name": "尼多后",
+    "zhuyin": "ㄋㄧˊ ㄉㄨㄛ ㄏㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 32,
+    "name": "尼多朗",
+    "zhuyin": "ㄋㄧˊ ㄉㄨㄛ ㄌㄤˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 33,
+    "name": "尼多力諾",
+    "zhuyin": "ㄋㄧˊ ㄉㄨㄛ ㄌㄧˋ ㄋㄨㄛˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 34,
+    "name": "尼多王",
+    "zhuyin": "ㄋㄧˊ ㄉㄨㄛ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 35,
+    "name": "皮皮",
+    "zhuyin": "ㄆㄧˊ ㄆㄧˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 36,
+    "name": "皮可西",
+    "zhuyin": "ㄆㄧˊ ㄎㄜˇ ㄒㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 37,
+    "name": "六尾",
+    "zhuyin": "ㄌㄧㄡˋ ㄨㄟˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 38,
+    "name": "九尾",
+    "zhuyin": "ㄐㄧㄡˇ ㄨㄟˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 39,
+    "name": "胖丁",
+    "zhuyin": "ㄆㄤˋ ㄉㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 40,
+    "name": "胖可丁",
+    "zhuyin": "ㄆㄤˋ ㄎㄜˇ ㄉㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 41,
+    "name": "超音蝠",
+    "zhuyin": "ㄔㄠ ㄧㄣ ㄈㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 42,
+    "name": "大嘴蝠",
+    "zhuyin": "ㄉㄚˋ ㄗㄨㄟˇ ㄈㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 43,
+    "name": "走路草",
+    "zhuyin": "ㄗㄡˇ ㄌㄨˋ ㄘㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 44,
+    "name": "臭臭花",
+    "zhuyin": "ㄔㄡˋ ㄔㄡˋ ㄏㄨㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 45,
+    "name": "霸王花",
+    "zhuyin": "ㄅㄚˋ ㄨㄤˊ ㄏㄨㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 46,
+    "name": "派拉斯",
+    "zhuyin": "ㄆㄞˋ ㄌㄚ ㄙ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 47,
+    "name": "派拉斯特",
+    "zhuyin": "ㄆㄞˋ ㄌㄚ ㄙ ㄊㄜˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 48,
+    "name": "毛球",
+    "zhuyin": "ㄇㄠˊ ㄑㄧㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 49,
+    "name": "摩魯蛾",
+    "zhuyin": "ㄇㄛˊ ㄌㄨˇ ㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 50,
+    "name": "地鼠",
+    "zhuyin": "ㄉㄧˋ ㄕㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 51,
+    "name": "三地鼠",
+    "zhuyin": "ㄙㄢ ㄉㄧˋ ㄕㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 52,
+    "name": "喵喵",
+    "zhuyin": "ㄇㄧㄠ ㄇㄧㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 53,
+    "name": "貓老大",
+    "zhuyin": "ㄇㄠ ㄌㄠˇ ㄉㄚˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 54,
+    "name": "可達鴨",
+    "zhuyin": "ㄎㄜˇ ㄉㄚˊ ㄧㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 55,
+    "name": "哥達鴨",
+    "zhuyin": "ㄍㄜ ㄉㄚˊ ㄧㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 56,
+    "name": "猴怪",
+    "zhuyin": "ㄏㄡˊ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 57,
+    "name": "火爆猴",
+    "zhuyin": "ㄏㄨㄛˇ ㄅㄠˋ ㄏㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 58,
+    "name": "卡蒂狗",
+    "zhuyin": "ㄎㄚˇ ㄉㄧˋ ㄍㄡˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 59,
+    "name": "風速狗",
+    "zhuyin": "ㄈㄥ ㄙㄨˋ ㄍㄡˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 60,
+    "name": "蚊香蝌蚪",
+    "zhuyin": "ㄨㄣˊ ㄒㄧㄤ ㄎㄜ ㄉㄡˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 61,
+    "name": "蚊香君",
+    "zhuyin": "ㄨㄣˊ ㄒㄧㄤ ㄐㄩㄣ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 62,
+    "name": "蚊香泳士",
+    "zhuyin": "ㄨㄣˊ ㄒㄧㄤ ㄩㄥˇ ㄕˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 63,
+    "name": "凱西",
+    "zhuyin": "ㄎㄞˇ ㄒㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 64,
+    "name": "勇基拉",
+    "zhuyin": "ㄩㄥˇ ㄐㄧ ㄌㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 65,
+    "name": "胡地",
+    "zhuyin": "ㄏㄨˊ ㄉㄧˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 66,
+    "name": "腕力",
+    "zhuyin": "ㄨㄢˋ ㄌㄧˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 67,
+    "name": "豪力",
+    "zhuyin": "ㄏㄠˊ ㄌㄧˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 68,
+    "name": "怪力",
+    "zhuyin": "ㄍㄨㄞˋ ㄌㄧˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 69,
+    "name": "喇叭芽",
+    "zhuyin": "ㄌㄚˇ ㄅㄚ ㄧㄚˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 70,
+    "name": "口呆花",
+    "zhuyin": "ㄎㄡˇ ㄉㄞ ㄏㄨㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 71,
+    "name": "大食花",
+    "zhuyin": "ㄉㄚˋ ㄕˊ ㄏㄨㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 72,
+    "name": "瑪瑙水母",
+    "zhuyin": "ㄇㄚˇ ㄋㄠˇ ㄕㄨㄟˇ ㄇㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 73,
+    "name": "毒刺水母",
+    "zhuyin": "ㄉㄨˊ ㄘˋ ㄕㄨㄟˇ ㄇㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 74,
+    "name": "小拳石",
+    "zhuyin": "ㄒㄧㄠˇ ㄑㄩㄢˊ ㄕˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 75,
+    "name": "隆隆石",
+    "zhuyin": "ㄌㄨㄥˊ ㄌㄨㄥˊ ㄕˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 76,
+    "name": "隆隆岩",
+    "zhuyin": "ㄌㄨㄥˊ ㄌㄨㄥˊ ㄧㄢˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 77,
+    "name": "小火馬",
+    "zhuyin": "ㄒㄧㄠˇ ㄏㄨㄛˇ ㄇㄚˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 78,
+    "name": "烈焰馬",
+    "zhuyin": "ㄌㄧㄝˋ ㄧㄢˋ ㄇㄚˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 79,
+    "name": "呆呆獸",
+    "zhuyin": "ㄉㄞ ㄉㄞ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 80,
+    "name": "呆殼獸",
+    "zhuyin": "ㄉㄞ ㄎㄜˊ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 81,
+    "name": "小磁怪",
+    "zhuyin": "ㄒㄧㄠˇ ㄘˊ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 82,
+    "name": "三合一磁怪",
+    "zhuyin": "ㄙㄢ ㄏㄜˊ ㄧ ㄘˊ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 83,
+    "name": "大蔥鴨",
+    "zhuyin": "ㄉㄚˋ ㄘㄨㄥ ㄧㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 84,
+    "name": "嘟嘟",
+    "zhuyin": "ㄉㄨ ㄉㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 85,
+    "name": "嘟嘟利",
+    "zhuyin": "ㄉㄨ ㄉㄨ ㄌㄧˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 86,
+    "name": "小海獅",
+    "zhuyin": "ㄒㄧㄠˇ ㄏㄞˇ ㄕ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 87,
+    "name": "白海獅",
+    "zhuyin": "ㄅㄞˊ ㄏㄞˇ ㄕ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 88,
+    "name": "臭泥",
+    "zhuyin": "ㄔㄡˋ ㄋㄧˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 89,
+    "name": "臭臭泥",
+    "zhuyin": "ㄔㄡˋ ㄔㄡˋ ㄋㄧˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 90,
+    "name": "大舌貝",
+    "zhuyin": "ㄉㄚˋ ㄕㄜˊ ㄅㄟˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 91,
+    "name": "刺甲貝",
+    "zhuyin": "ㄘˋ ㄐㄧㄚˇ ㄅㄟˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 92,
+    "name": "鬼斯",
+    "zhuyin": "ㄍㄨㄟˇ ㄙ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 93,
+    "name": "鬼斯通",
+    "zhuyin": "ㄍㄨㄟˇ ㄙ ㄊㄨㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 94,
+    "name": "耿鬼",
+    "zhuyin": "ㄍㄥˇ ㄍㄨㄟˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 95,
+    "name": "大岩蛇",
+    "zhuyin": "ㄉㄚˋ ㄧㄢˊ ㄕㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 96,
+    "name": "催眠貘",
+    "zhuyin": "ㄘㄨㄟ ㄇㄧㄢˊ ㄇㄛˋ",
+    "needsReview": true,
+    "missingCharacters": [
+      "貘"
+    ]
+  },
+  {
+    "id": 97,
+    "name": "引夢貘人",
+    "zhuyin": "ㄧㄣˇ ㄇㄥˋ ㄇㄛˋ ㄖㄣˊ",
+    "needsReview": true,
+    "missingCharacters": [
+      "貘"
+    ]
+  },
+  {
+    "id": 98,
+    "name": "大鉗蟹",
+    "zhuyin": "ㄉㄚˋ ㄑㄧㄢˊ ㄒㄧㄝˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 99,
+    "name": "巨鉗蟹",
+    "zhuyin": "ㄐㄩˋ ㄑㄧㄢˊ ㄒㄧㄝˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 100,
+    "name": "霹靂電球",
+    "zhuyin": "ㄆㄧ ㄌㄧˋ ㄉㄧㄢˋ ㄑㄧㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 101,
+    "name": "頑皮雷彈",
+    "zhuyin": "ㄨㄢˊ ㄆㄧˊ ㄌㄟˊ ㄉㄢˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 102,
+    "name": "蛋蛋",
+    "zhuyin": "ㄉㄢˋ ㄉㄢˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 103,
+    "name": "椰蛋樹",
+    "zhuyin": "ㄧㄝ ㄉㄢˋ ㄕㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 104,
+    "name": "卡拉卡拉",
+    "zhuyin": "ㄎㄚˇ ㄌㄚ ㄎㄚˇ ㄌㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 105,
+    "name": "嘎啦嘎啦",
+    "zhuyin": "ㄍㄚ ㄌㄚ˙ ㄍㄚ ㄌㄚ˙",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 106,
+    "name": "飛腿郎",
+    "zhuyin": "ㄈㄟ ㄊㄨㄟˇ ㄌㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 107,
+    "name": "快拳郎",
+    "zhuyin": "ㄎㄨㄞˋ ㄑㄩㄢˊ ㄌㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 108,
+    "name": "大舌頭",
+    "zhuyin": "ㄉㄚˋ ㄕㄜˊ ㄊㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 109,
+    "name": "瓦斯彈",
+    "zhuyin": "ㄨㄚˇ ㄙ ㄉㄢˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 110,
+    "name": "雙彈瓦斯",
+    "zhuyin": "ㄕㄨㄤ ㄉㄢˋ ㄨㄚˇ ㄙ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 111,
+    "name": "獨角犀牛",
+    "zhuyin": "ㄉㄨˊ ㄐㄧㄠˇ ㄒㄧ ㄋㄧㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 112,
+    "name": "鑽角犀獸",
+    "zhuyin": "ㄗㄨㄢ ㄐㄧㄠˇ ㄒㄧ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 113,
+    "name": "吉利蛋",
+    "zhuyin": "ㄐㄧˊ ㄌㄧˋ ㄉㄢˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 114,
+    "name": "蔓藤怪",
+    "zhuyin": "ㄇㄢˋ ㄊㄥˊ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 115,
+    "name": "袋獸",
+    "zhuyin": "ㄉㄞˋ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 116,
+    "name": "墨海馬",
+    "zhuyin": "ㄇㄛˋ ㄏㄞˇ ㄇㄚˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 117,
+    "name": "海刺龍",
+    "zhuyin": "ㄏㄞˇ ㄘˋ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 118,
+    "name": "角金魚",
+    "zhuyin": "ㄐㄧㄠˇ ㄐㄧㄣ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 119,
+    "name": "金魚王",
+    "zhuyin": "ㄐㄧㄣ ㄩˊ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 120,
+    "name": "海星星",
+    "zhuyin": "ㄏㄞˇ ㄒㄧㄥ ㄒㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 121,
+    "name": "寶石海星",
+    "zhuyin": "ㄅㄠˇ ㄕˊ ㄏㄞˇ ㄒㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 122,
+    "name": "魔牆人偶",
+    "zhuyin": "ㄇㄛˊ ㄑㄧㄤˊ ㄖㄣˊ ㄡˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 123,
+    "name": "飛天螳螂",
+    "zhuyin": "ㄈㄟ ㄊㄧㄢ ㄊㄤˊ ㄌㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 124,
+    "name": "迷唇姐",
+    "zhuyin": "ㄇㄧˊ ㄔㄨㄣˊ ㄐㄧㄝˇ",
+    "needsReview": true,
+    "missingCharacters": [
+      "唇"
+    ]
+  },
+  {
+    "id": 125,
+    "name": "電擊獸",
+    "zhuyin": "ㄉㄧㄢˋ ㄐㄧ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 126,
+    "name": "鴨嘴火獸",
+    "zhuyin": "ㄧㄚ ㄗㄨㄟˇ ㄏㄨㄛˇ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 127,
+    "name": "凱羅斯",
+    "zhuyin": "ㄎㄞˇ ㄌㄨㄛˊ ㄙ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 128,
+    "name": "肯泰羅",
+    "zhuyin": "ㄎㄣˇ ㄊㄞˋ ㄌㄨㄛˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 129,
+    "name": "鯉魚王",
+    "zhuyin": "ㄌㄧˇ ㄩˊ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 130,
+    "name": "暴鯉龍",
+    "zhuyin": "ㄅㄠˋ ㄌㄧˇ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 131,
+    "name": "拉普拉斯",
+    "zhuyin": "ㄌㄚ ㄆㄨˇ ㄌㄚ ㄙ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 132,
+    "name": "百變怪",
+    "zhuyin": "ㄅㄞˇ ㄅㄧㄢˋ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 133,
+    "name": "伊布",
+    "zhuyin": "ㄧ ㄅㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 134,
+    "name": "水伊布",
+    "zhuyin": "ㄕㄨㄟˇ ㄧ ㄅㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 135,
+    "name": "雷伊布",
+    "zhuyin": "ㄌㄟˊ ㄧ ㄅㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 136,
+    "name": "火伊布",
+    "zhuyin": "ㄏㄨㄛˇ ㄧ ㄅㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 137,
+    "name": "多邊獸",
+    "zhuyin": "ㄉㄨㄛ ㄅㄧㄢ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 138,
+    "name": "菊石獸",
+    "zhuyin": "ㄐㄩˊ ㄕˊ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 139,
+    "name": "多刺菊石獸",
+    "zhuyin": "ㄉㄨㄛ ㄘˋ ㄐㄩˊ ㄕˊ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 140,
+    "name": "化石盔",
+    "zhuyin": "ㄏㄨㄚˋ ㄕˊ ㄎㄨㄟ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 141,
+    "name": "鐮刀盔",
+    "zhuyin": "ㄌㄧㄢˊ ㄉㄠ ㄎㄨㄟ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 142,
+    "name": "化石翼龍",
+    "zhuyin": "ㄏㄨㄚˋ ㄕˊ ㄧˋ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 143,
+    "name": "卡比獸",
+    "zhuyin": "ㄎㄚˇ ㄅㄧˇ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 144,
+    "name": "急凍鳥",
+    "zhuyin": "ㄐㄧˊ ㄉㄨㄥˋ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 145,
+    "name": "閃電鳥",
+    "zhuyin": "ㄕㄢˇ ㄉㄧㄢˋ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 146,
+    "name": "火焰鳥",
+    "zhuyin": "ㄏㄨㄛˇ ㄧㄢˋ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 147,
+    "name": "迷你龍",
+    "zhuyin": "ㄇㄧˊ ㄋㄧˇ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 148,
+    "name": "哈克龍",
+    "zhuyin": "ㄏㄚ ㄎㄜˋ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 149,
+    "name": "快龍",
+    "zhuyin": "ㄎㄨㄞˋ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 150,
+    "name": "超夢",
+    "zhuyin": "ㄔㄠ ㄇㄥˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 151,
+    "name": "夢幻",
+    "zhuyin": "ㄇㄥˋ ㄏㄨㄢˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 152,
+    "name": "菊草葉",
+    "zhuyin": "ㄐㄩˊ ㄘㄠˇ ㄧㄝˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 153,
+    "name": "月桂葉",
+    "zhuyin": "ㄩㄝˋ ㄍㄨㄟˋ ㄧㄝˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 154,
+    "name": "大菊花",
+    "zhuyin": "ㄉㄚˋ ㄐㄩˊ ㄏㄨㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 155,
+    "name": "火球鼠",
+    "zhuyin": "ㄏㄨㄛˇ ㄑㄧㄡˊ ㄕㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 156,
+    "name": "火岩鼠",
+    "zhuyin": "ㄏㄨㄛˇ ㄧㄢˊ ㄕㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 157,
+    "name": "火暴獸",
+    "zhuyin": "ㄏㄨㄛˇ ㄅㄠˋ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 158,
+    "name": "小鋸鱷",
+    "zhuyin": "ㄒㄧㄠˇ ㄐㄩˋ ㄜˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 159,
+    "name": "藍鱷",
+    "zhuyin": "ㄌㄢˊ ㄜˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 160,
+    "name": "大力鱷",
+    "zhuyin": "ㄉㄚˋ ㄌㄧˋ ㄜˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 161,
+    "name": "尾立",
+    "zhuyin": "ㄨㄟˇ ㄌㄧˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 162,
+    "name": "大尾立",
+    "zhuyin": "ㄉㄚˋ ㄨㄟˇ ㄌㄧˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 163,
+    "name": "咕咕",
+    "zhuyin": "ㄍㄨ ㄍㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 164,
+    "name": "貓頭夜鷹",
+    "zhuyin": "ㄇㄠ ㄊㄡˊ ㄧㄝˋ ㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 165,
+    "name": "芭瓢蟲",
+    "zhuyin": "ㄅㄚ ㄆㄧㄠˊ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 166,
+    "name": "安瓢蟲",
+    "zhuyin": "ㄢ ㄆㄧㄠˊ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 167,
+    "name": "線球",
+    "zhuyin": "ㄒㄧㄢˋ ㄑㄧㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 168,
+    "name": "阿利多斯",
+    "zhuyin": "ㄚ ㄌㄧˋ ㄉㄨㄛ ㄙ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 169,
+    "name": "叉字蝠",
+    "zhuyin": "ㄔㄚ ㄗˋ ㄈㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 170,
+    "name": "燈籠魚",
+    "zhuyin": "ㄉㄥ ㄌㄨㄥˊ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 171,
+    "name": "電燈怪",
+    "zhuyin": "ㄉㄧㄢˋ ㄉㄥ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 172,
+    "name": "皮丘",
+    "zhuyin": "ㄆㄧˊ ㄑㄧㄡ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 173,
+    "name": "皮寶寶",
+    "zhuyin": "ㄆㄧˊ ㄅㄠˇ ㄅㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 174,
+    "name": "寶寶丁",
+    "zhuyin": "ㄅㄠˇ ㄅㄠˇ ㄉㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 175,
+    "name": "波克比",
+    "zhuyin": "ㄅㄛ ㄎㄜˋ ㄅㄧˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 176,
+    "name": "波克基古",
+    "zhuyin": "ㄅㄛ ㄎㄜˋ ㄐㄧ ㄍㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 177,
+    "name": "天然雀",
+    "zhuyin": "ㄊㄧㄢ ㄖㄢˊ ㄑㄩㄝˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 178,
+    "name": "天然鳥",
+    "zhuyin": "ㄊㄧㄢ ㄖㄢˊ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 179,
+    "name": "咩利羊",
+    "zhuyin": "ㄇㄧㄝ ㄌㄧˋ ㄧㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 180,
+    "name": "綿綿",
+    "zhuyin": "ㄇㄧㄢˊ ㄇㄧㄢˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 181,
+    "name": "電龍",
+    "zhuyin": "ㄉㄧㄢˋ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 182,
+    "name": "美麗花",
+    "zhuyin": "ㄇㄟˇ ㄌㄧˋ ㄏㄨㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 183,
+    "name": "瑪力露",
+    "zhuyin": "ㄇㄚˇ ㄌㄧˋ ㄌㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 184,
+    "name": "瑪力露麗",
+    "zhuyin": "ㄇㄚˇ ㄌㄧˋ ㄌㄨˋ ㄌㄧˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 185,
+    "name": "樹才怪",
+    "zhuyin": "ㄕㄨˋ ㄘㄞˊ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 186,
+    "name": "蚊香蛙皇",
+    "zhuyin": "ㄨㄣˊ ㄒㄧㄤ ㄨㄚ ㄏㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 187,
+    "name": "毽子草",
+    "zhuyin": "ㄐㄧㄢˋ ㄗ˙ ㄘㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 188,
+    "name": "毽子花",
+    "zhuyin": "ㄐㄧㄢˋ ㄗ˙ ㄏㄨㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 189,
+    "name": "毽子綿",
+    "zhuyin": "ㄐㄧㄢˋ ㄗ˙ ㄇㄧㄢˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 190,
+    "name": "長尾怪手",
+    "zhuyin": "ㄓㄤˇ ㄨㄟˇ ㄍㄨㄞˋ ㄕㄡˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 191,
+    "name": "向日種子",
+    "zhuyin": "ㄒㄧㄤˋ ㄖˋ ㄓㄨㄥˇ ㄗ˙",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 192,
+    "name": "向日花怪",
+    "zhuyin": "ㄒㄧㄤˋ ㄖˋ ㄏㄨㄚ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 193,
+    "name": "陽陽瑪",
+    "zhuyin": "ㄧㄤˊ ㄧㄤˊ ㄇㄚˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 194,
+    "name": "烏波",
+    "zhuyin": "ㄨ ㄅㄛ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 195,
+    "name": "沼王",
+    "zhuyin": "ㄓㄠˇ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 196,
+    "name": "太陽精靈",
+    "zhuyin": "ㄊㄞˋ ㄧㄤˊ ㄐㄧㄥ ㄌㄧㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 197,
+    "name": "月精靈",
+    "zhuyin": "ㄩㄝˋ ㄐㄧㄥ ㄌㄧㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 198,
+    "name": "黑暗鴉",
+    "zhuyin": "ㄏㄟ ㄢˋ ㄧㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 199,
+    "name": "河馬王",
+    "zhuyin": "ㄏㄜˊ ㄇㄚˇ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 200,
+    "name": "夢妖",
+    "zhuyin": "ㄇㄥˋ ㄧㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 201,
+    "name": "未知圖騰",
+    "zhuyin": "ㄨㄟˋ ㄓ ㄊㄨˊ ㄊㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 202,
+    "name": "果然翁",
+    "zhuyin": "ㄍㄨㄛˇ ㄖㄢˊ ㄨㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 203,
+    "name": "麒麟奇",
+    "zhuyin": "ㄑㄧˊ ㄌㄧㄣˊ ㄑㄧˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 204,
+    "name": "榛果球",
+    "zhuyin": "ㄓㄣ ㄍㄨㄛˇ ㄑㄧㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 205,
+    "name": "佛烈托斯",
+    "zhuyin": "ㄈㄨˊ ㄌㄧㄝˋ ㄊㄨㄛ ㄙ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 206,
+    "name": "土龍弟弟",
+    "zhuyin": "ㄊㄨˇ ㄌㄨㄥˊ ㄉㄧˋ ㄉㄧˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 207,
+    "name": "天蠍",
+    "zhuyin": "ㄊㄧㄢ ㄒㄧㄝ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 208,
+    "name": "大鋼蛇",
+    "zhuyin": "ㄉㄚˋ ㄍㄤ ㄕㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 209,
+    "name": "布盧",
+    "zhuyin": "ㄅㄨˋ ㄌㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 210,
+    "name": "布盧皇",
+    "zhuyin": "ㄅㄨˋ ㄌㄨˊ ㄏㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 211,
+    "name": "千針魚",
+    "zhuyin": "ㄑㄧㄢ ㄓㄣ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 212,
+    "name": "巨鉗螳螂",
+    "zhuyin": "ㄐㄩˋ ㄑㄧㄢˊ ㄊㄤˊ ㄌㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 213,
+    "name": "壺壺",
+    "zhuyin": "ㄏㄨˊ ㄏㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 214,
+    "name": "赫拉剋羅斯",
+    "zhuyin": "ㄏㄜˋ ㄌㄚ ㄎㄜˋ ㄌㄨㄛˊ ㄙ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 215,
+    "name": "狃拉",
+    "zhuyin": "ㄋㄧㄡˇ ㄌㄚ",
+    "needsReview": true,
+    "missingCharacters": [
+      "狃"
+    ]
+  },
+  {
+    "id": 216,
+    "name": "熊寶寶",
+    "zhuyin": "ㄒㄩㄥˊ ㄅㄠˇ ㄅㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 217,
+    "name": "圈圈熊",
+    "zhuyin": "ㄑㄩㄢ ㄑㄩㄢ ㄒㄩㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 218,
+    "name": "熔岩蟲",
+    "zhuyin": "ㄖㄨㄥˊ ㄧㄢˊ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 219,
+    "name": "熔岩蝸牛",
+    "zhuyin": "ㄖㄨㄥˊ ㄧㄢˊ ㄨㄛ ㄋㄧㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 220,
+    "name": "小山豬",
+    "zhuyin": "ㄒㄧㄠˇ ㄕㄢ ㄓㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 221,
+    "name": "長毛豬",
+    "zhuyin": "ㄓㄤˇ ㄇㄠˊ ㄓㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 222,
+    "name": "太陽珊瑚",
+    "zhuyin": "ㄊㄞˋ ㄧㄤˊ ㄕㄢ ㄏㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 223,
+    "name": "鐵炮魚",
+    "zhuyin": "ㄊㄧㄝˇ ㄆㄠˋ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 224,
+    "name": "章魚桶",
+    "zhuyin": "ㄓㄤ ㄩˊ ㄊㄨㄥˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 225,
+    "name": "信使鳥",
+    "zhuyin": "ㄒㄧㄣˋ ㄕˇ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 226,
+    "name": "巨翅飛魚",
+    "zhuyin": "ㄐㄩˋ ㄔˋ ㄈㄟ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 227,
+    "name": "盔甲鳥",
+    "zhuyin": "ㄎㄨㄟ ㄐㄧㄚˇ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 228,
+    "name": "戴魯比",
+    "zhuyin": "ㄉㄞˋ ㄌㄨˇ ㄅㄧˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 229,
+    "name": "黑魯加",
+    "zhuyin": "ㄏㄟ ㄌㄨˇ ㄐㄧㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 230,
+    "name": "刺龍王",
+    "zhuyin": "ㄘˋ ㄌㄨㄥˊ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 231,
+    "name": "小小象",
+    "zhuyin": "ㄒㄧㄠˇ ㄒㄧㄠˇ ㄒㄧㄤˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 232,
+    "name": "頓甲",
+    "zhuyin": "ㄉㄨㄣˋ ㄐㄧㄚˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 233,
+    "name": "3D龍2",
+    "zhuyin": "3 D ㄌㄨㄥˊ 2",
+    "needsReview": true,
+    "missingCharacters": [
+      "D"
+    ]
+  },
+  {
+    "id": 234,
+    "name": "驚角鹿",
+    "zhuyin": "ㄐㄧㄥ ㄐㄧㄠˇ ㄌㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 235,
+    "name": "圖圖犬",
+    "zhuyin": "ㄊㄨˊ ㄊㄨˊ ㄑㄩㄢˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 236,
+    "name": "巴爾郎",
+    "zhuyin": "ㄅㄚ ㄦˇ ㄌㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 237,
+    "name": "柯波朗",
+    "zhuyin": "ㄎㄜ ㄅㄛ ㄌㄤˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 238,
+    "name": "迷唇娃",
+    "zhuyin": "ㄇㄧˊ ㄔㄨㄣˊ ㄨㄚˊ",
+    "needsReview": true,
+    "missingCharacters": [
+      "唇"
+    ]
+  },
+  {
+    "id": 239,
+    "name": "電擊怪",
+    "zhuyin": "ㄉㄧㄢˋ ㄐㄧ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 240,
+    "name": "小鴨嘴龍",
+    "zhuyin": "ㄒㄧㄠˇ ㄧㄚ ㄗㄨㄟˇ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 241,
+    "name": "大奶罐",
+    "zhuyin": "ㄉㄚˋ ㄋㄞˇ ㄍㄨㄢˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 242,
+    "name": "幸福蛋",
+    "zhuyin": "ㄒㄧㄥˋ ㄈㄨˊ ㄉㄢˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 243,
+    "name": "雷公",
+    "zhuyin": "ㄌㄟˊ ㄍㄨㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 244,
+    "name": "炎帝",
+    "zhuyin": "ㄧㄢˊ ㄉㄧˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 245,
+    "name": "水君",
+    "zhuyin": "ㄕㄨㄟˇ ㄐㄩㄣ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 246,
+    "name": "由基拉",
+    "zhuyin": "ㄧㄡˊ ㄐㄧ ㄌㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 247,
+    "name": "沙基拉",
+    "zhuyin": "ㄕㄚ ㄐㄧ ㄌㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 248,
+    "name": "班吉拉",
+    "zhuyin": "ㄅㄢ ㄐㄧˊ ㄌㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 249,
+    "name": "洛奇亞",
+    "zhuyin": "ㄌㄨㄛˋ ㄑㄧˊ ㄧㄚˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 250,
+    "name": "鳳王",
+    "zhuyin": "ㄈㄥˋ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 251,
+    "name": "雪拉比",
+    "zhuyin": "ㄒㄩㄝˇ ㄌㄚ ㄅㄧˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 252,
+    "name": "木守宮",
+    "zhuyin": "ㄇㄨˋ ㄕㄡˇ ㄍㄨㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 253,
+    "name": "森林蜥蜴",
+    "zhuyin": "ㄙㄣ ㄌㄧㄣˊ ㄒㄧ ㄧˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 254,
+    "name": "蜥蜴王",
+    "zhuyin": "ㄒㄧ ㄧˋ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 255,
+    "name": "火稚雞",
+    "zhuyin": "ㄏㄨㄛˇ ㄓˋ ㄐㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 256,
+    "name": "力壯雞",
+    "zhuyin": "ㄌㄧˋ ㄓㄨㄤˋ ㄐㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 257,
+    "name": "火焰雞",
+    "zhuyin": "ㄏㄨㄛˇ ㄧㄢˋ ㄐㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 258,
+    "name": "水躍魚",
+    "zhuyin": "ㄕㄨㄟˇ ㄩㄝˋ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 259,
+    "name": "沼躍魚",
+    "zhuyin": "ㄓㄠˇ ㄩㄝˋ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 260,
+    "name": "巨沼怪",
+    "zhuyin": "ㄐㄩˋ ㄓㄠˇ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 261,
+    "name": "土狼犬",
+    "zhuyin": "ㄊㄨˇ ㄌㄤˊ ㄑㄩㄢˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 262,
+    "name": "大狼犬",
+    "zhuyin": "ㄉㄚˋ ㄌㄤˊ ㄑㄩㄢˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 263,
+    "name": "蛇紋熊",
+    "zhuyin": "ㄕㄜˊ ㄨㄣˊ ㄒㄩㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 264,
+    "name": "直衝熊",
+    "zhuyin": "ㄓˊ ㄔㄨㄥ ㄒㄩㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 265,
+    "name": "刺尾蟲",
+    "zhuyin": "ㄘˋ ㄨㄟˇ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 266,
+    "name": "甲殼蛹",
+    "zhuyin": "ㄐㄧㄚˇ ㄎㄜˊ ㄩㄥˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 267,
+    "name": "狩獵鳳蝶",
+    "zhuyin": "ㄕㄡˋ ㄌㄧㄝˋ ㄈㄥˋ ㄉㄧㄝˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 268,
+    "name": "盾甲繭",
+    "zhuyin": "ㄉㄨㄣˋ ㄐㄧㄚˇ ㄐㄧㄢˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 269,
+    "name": "毒粉蝶",
+    "zhuyin": "ㄉㄨˊ ㄈㄣˇ ㄉㄧㄝˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 270,
+    "name": "蓮葉童子",
+    "zhuyin": "ㄌㄧㄢˊ ㄧㄝˋ ㄊㄨㄥˊ ㄗ˙",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 271,
+    "name": "蓮帽小童",
+    "zhuyin": "ㄌㄧㄢˊ ㄇㄠˋ ㄒㄧㄠˇ ㄊㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 272,
+    "name": "樂天河童",
+    "zhuyin": "ㄌㄜˋ ㄊㄧㄢ ㄏㄜˊ ㄊㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 273,
+    "name": "橡實果",
+    "zhuyin": "ㄒㄧㄤˋ ㄕˊ ㄍㄨㄛˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 274,
+    "name": "長鼻葉",
+    "zhuyin": "ㄓㄤˇ ㄅㄧˊ ㄧㄝˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 275,
+    "name": "狡猾天狗",
+    "zhuyin": "ㄐㄧㄠˇ ㄏㄨㄚˊ ㄊㄧㄢ ㄍㄡˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 276,
+    "name": "傲骨燕",
+    "zhuyin": "ㄠˋ ㄍㄨˇ ㄧㄢˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 277,
+    "name": "大王燕",
+    "zhuyin": "ㄉㄚˋ ㄨㄤˊ ㄧㄢˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 278,
+    "name": "長翅鷗",
+    "zhuyin": "ㄓㄤˇ ㄔˋ ㄡ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 279,
+    "name": "大嘴鷗",
+    "zhuyin": "ㄉㄚˋ ㄗㄨㄟˇ ㄡ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 280,
+    "name": "拉魯拉絲",
+    "zhuyin": "ㄌㄚ ㄌㄨˇ ㄌㄚ ㄙ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 281,
+    "name": "奇魯莉安",
+    "zhuyin": "ㄑㄧˊ ㄌㄨˇ ㄌㄧˋ ㄢ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 282,
+    "name": "沙奈朵",
+    "zhuyin": "ㄕㄚ ㄋㄞˋ ㄉㄨㄛˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 283,
+    "name": "溜溜糖球",
+    "zhuyin": "ㄌㄧㄡ ㄌㄧㄡ ㄊㄤˊ ㄑㄧㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 284,
+    "name": "雨翅蛾",
+    "zhuyin": "ㄩˇ ㄔˋ ㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 285,
+    "name": "蘑蘑菇",
+    "zhuyin": "ㄇㄛˊ ㄇㄛˊ ㄍㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 286,
+    "name": "斗笠菇",
+    "zhuyin": "ㄉㄡˋ ㄌㄧˋ ㄍㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 287,
+    "name": "懶人翁",
+    "zhuyin": "ㄌㄢˇ ㄖㄣˊ ㄨㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 288,
+    "name": "過動猿",
+    "zhuyin": "ㄍㄨㄛˋ ㄉㄨㄥˋ ㄩㄢˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 289,
+    "name": "請假王",
+    "zhuyin": "ㄑㄧㄥˇ ㄐㄧㄚˇ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 290,
+    "name": "土居忍士",
+    "zhuyin": "ㄊㄨˇ ㄐㄩ ㄖㄣˇ ㄕˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 291,
+    "name": "鐵面忍者",
+    "zhuyin": "ㄊㄧㄝˇ ㄇㄧㄢˋ ㄖㄣˇ ㄓㄜˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 292,
+    "name": "脫殼忍者",
+    "zhuyin": "ㄊㄨㄛ ㄎㄜˊ ㄖㄣˇ ㄓㄜˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 293,
+    "name": "咕妞妞",
+    "zhuyin": "ㄍㄨ ㄋㄧㄡ ㄋㄧㄡ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 294,
+    "name": "吼爆彈",
+    "zhuyin": "ㄏㄡˇ ㄅㄠˋ ㄉㄢˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 295,
+    "name": "爆音怪",
+    "zhuyin": "ㄅㄠˋ ㄧㄣ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 296,
+    "name": "幕下力士",
+    "zhuyin": "ㄇㄨˋ ㄒㄧㄚˋ ㄌㄧˋ ㄕˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 297,
+    "name": "超力王",
+    "zhuyin": "ㄔㄠ ㄌㄧˋ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 298,
+    "name": "露力麗",
+    "zhuyin": "ㄌㄨˋ ㄌㄧˋ ㄌㄧˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 299,
+    "name": "朝北鼻",
+    "zhuyin": "ㄔㄠˊ ㄅㄟˇ ㄅㄧˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 300,
+    "name": "向尾喵",
+    "zhuyin": "ㄒㄧㄤˋ ㄨㄟˇ ㄇㄧㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 301,
+    "name": "優雅貓",
+    "zhuyin": "ㄧㄡ ㄧㄚˇ ㄇㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 302,
+    "name": "勾魂眼",
+    "zhuyin": "ㄍㄡ ㄏㄨㄣˊ ㄧㄢˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 303,
+    "name": "大嘴娃",
+    "zhuyin": "ㄉㄚˋ ㄗㄨㄟˇ ㄨㄚˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 304,
+    "name": "可可多拉",
+    "zhuyin": "ㄎㄜˇ ㄎㄜˇ ㄉㄨㄛ ㄌㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 305,
+    "name": "可多拉",
+    "zhuyin": "ㄎㄜˇ ㄉㄨㄛ ㄌㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 306,
+    "name": "波士可多拉",
+    "zhuyin": "ㄅㄛ ㄕˋ ㄎㄜˇ ㄉㄨㄛ ㄌㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 307,
+    "name": "瑪沙那",
+    "zhuyin": "ㄇㄚˇ ㄕㄚ ㄋㄚˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 308,
+    "name": "恰雷姆",
+    "zhuyin": "ㄑㄧㄚˋ ㄌㄟˊ ㄇㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 309,
+    "name": "落雷獸",
+    "zhuyin": "ㄌㄨㄛˋ ㄌㄟˊ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 310,
+    "name": "雷電獸",
+    "zhuyin": "ㄌㄟˊ ㄉㄧㄢˋ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 311,
+    "name": "正電拍拍",
+    "zhuyin": "ㄓㄥˋ ㄉㄧㄢˋ ㄆㄞ ㄆㄞ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 312,
+    "name": "負電拍拍",
+    "zhuyin": "ㄈㄨˋ ㄉㄧㄢˋ ㄆㄞ ㄆㄞ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 313,
+    "name": "電螢蟲",
+    "zhuyin": "ㄉㄧㄢˋ ㄧㄥˊ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 314,
+    "name": "甜甜螢",
+    "zhuyin": "ㄊㄧㄢˊ ㄊㄧㄢˊ ㄧㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 315,
+    "name": "毒薔薇",
+    "zhuyin": "ㄉㄨˊ ㄑㄧㄤˊ ㄨㄟ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 316,
+    "name": "溶食獸",
+    "zhuyin": "ㄖㄨㄥˊ ㄕˊ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 317,
+    "name": "吞食獸",
+    "zhuyin": "ㄊㄨㄣ ㄕˊ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 318,
+    "name": "利牙魚",
+    "zhuyin": "ㄌㄧˋ ㄧㄚˊ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 319,
+    "name": "巨牙鯊",
+    "zhuyin": "ㄐㄩˋ ㄧㄚˊ ㄕㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 320,
+    "name": "吼吼鯨",
+    "zhuyin": "ㄏㄡˇ ㄏㄡˇ ㄐㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 321,
+    "name": "吼鯨王",
+    "zhuyin": "ㄏㄡˇ ㄐㄧㄥ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 322,
+    "name": "呆火駝",
+    "zhuyin": "ㄉㄞ ㄏㄨㄛˇ ㄊㄨㄛˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 323,
+    "name": "噴火駝",
+    "zhuyin": "ㄆㄣ ㄏㄨㄛˇ ㄊㄨㄛˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 324,
+    "name": "煤炭龜",
+    "zhuyin": "ㄇㄟˊ ㄊㄢˋ ㄍㄨㄟ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 325,
+    "name": "跳跳豬",
+    "zhuyin": "ㄊㄧㄠˋ ㄊㄧㄠˋ ㄓㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 326,
+    "name": "噗噗豬",
+    "zhuyin": "ㄆㄨ ㄆㄨ ㄓㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 327,
+    "name": "晃晃斑",
+    "zhuyin": "ㄏㄨㄤˇ ㄏㄨㄤˇ ㄅㄢ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 328,
+    "name": "大顎蟻",
+    "zhuyin": "ㄉㄚˋ ㄜˋ ㄧˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 329,
+    "name": "超音波幼蟲",
+    "zhuyin": "ㄔㄠ ㄧㄣ ㄅㄛ ㄧㄡˋ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 330,
+    "name": "沙漠蜻蜓",
+    "zhuyin": "ㄕㄚ ㄇㄛˋ ㄑㄧㄥ ㄊㄧㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 331,
+    "name": "沙漠奈亞",
+    "zhuyin": "ㄕㄚ ㄇㄛˋ ㄋㄞˋ ㄧㄚˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 332,
+    "name": "夢歌奈亞",
+    "zhuyin": "ㄇㄥˋ ㄍㄜ ㄋㄞˋ ㄧㄚˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 333,
+    "name": "青綿鳥",
+    "zhuyin": "ㄑㄧㄥ ㄇㄧㄢˊ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 334,
+    "name": "七夕青鳥",
+    "zhuyin": "ㄑㄧ ㄒㄧ ㄑㄧㄥ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 335,
+    "name": "貓鼬斬",
+    "zhuyin": "ㄇㄠ ㄧㄡˋ ㄓㄢˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 336,
+    "name": "飯匙蛇",
+    "zhuyin": "ㄈㄢˋ ㄕ˙ ㄕㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 337,
+    "name": "月石",
+    "zhuyin": "ㄩㄝˋ ㄕˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 338,
+    "name": "太陽岩",
+    "zhuyin": "ㄊㄞˋ ㄧㄤˊ ㄧㄢˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 339,
+    "name": "泥泥鰍",
+    "zhuyin": "ㄋㄧˊ ㄋㄧˊ ㄑㄧㄡ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 340,
+    "name": "鯰魚王",
+    "zhuyin": "ㄋㄧㄢˊ ㄩˊ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 341,
+    "name": "龍蝦小兵",
+    "zhuyin": "ㄌㄨㄥˊ ㄒㄧㄚ ㄒㄧㄠˇ ㄅㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 342,
+    "name": "鐵螯龍蝦",
+    "zhuyin": "ㄊㄧㄝˇ ㄠˊ ㄌㄨㄥˊ ㄒㄧㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 343,
+    "name": "天秤偶",
+    "zhuyin": "ㄊㄧㄢ ㄔㄥˋ ㄡˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 344,
+    "name": "念力土偶",
+    "zhuyin": "ㄋㄧㄢˋ ㄌㄧˋ ㄊㄨˇ ㄡˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 345,
+    "name": "觸手百合",
+    "zhuyin": "ㄔㄨˋ ㄕㄡˇ ㄅㄞˇ ㄏㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 346,
+    "name": "搖籃百合",
+    "zhuyin": "ㄧㄠˊ ㄌㄢˊ ㄅㄞˇ ㄏㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 347,
+    "name": "太古羽蟲",
+    "zhuyin": "ㄊㄞˋ ㄍㄨˇ ㄩˇ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 348,
+    "name": "太古盔甲",
+    "zhuyin": "ㄊㄞˋ ㄍㄨˇ ㄎㄨㄟ ㄐㄧㄚˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 349,
+    "name": "笨笨魚",
+    "zhuyin": "ㄅㄣˋ ㄅㄣˋ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 350,
+    "name": "美納斯",
+    "zhuyin": "ㄇㄟˇ ㄋㄚˋ ㄙ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 351,
+    "name": "漂浮泡泡",
+    "zhuyin": "ㄆㄧㄠ ㄈㄨˊ ㄆㄠˋ ㄆㄠˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 352,
+    "name": "變隱龍",
+    "zhuyin": "ㄅㄧㄢˋ ㄧㄣˇ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 353,
+    "name": "怨影娃娃",
+    "zhuyin": "ㄩㄢˋ ㄧㄥˇ ㄨㄚˊ ㄨㄚˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 354,
+    "name": "詛咒娃娃",
+    "zhuyin": "ㄗㄨˇ ㄓㄡˋ ㄨㄚˊ ㄨㄚˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 355,
+    "name": "夜骷顱",
+    "zhuyin": "ㄧㄝˋ ㄎㄨ ㄌㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 356,
+    "name": "夜巨人",
+    "zhuyin": "ㄧㄝˋ ㄐㄩˋ ㄖㄣˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 357,
+    "name": "熱帶龍",
+    "zhuyin": "ㄖㄜˋ ㄉㄞˋ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 358,
+    "name": "風鈴鈴",
+    "zhuyin": "ㄈㄥ ㄌㄧㄥˊ ㄌㄧㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 359,
+    "name": "阿勃梭魯",
+    "zhuyin": "ㄚ ㄅㄛˊ ㄙㄨㄛ ㄌㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 360,
+    "name": "小果然",
+    "zhuyin": "ㄒㄧㄠˇ ㄍㄨㄛˇ ㄖㄢˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 361,
+    "name": "雪童子",
+    "zhuyin": "ㄒㄩㄝˇ ㄊㄨㄥˊ ㄗ˙",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 362,
+    "name": "冰鬼護",
+    "zhuyin": "ㄅㄧㄥ ㄍㄨㄟˇ ㄏㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 363,
+    "name": "海豹球",
+    "zhuyin": "ㄏㄞˇ ㄅㄠˋ ㄑㄧㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 364,
+    "name": "海魔獅",
+    "zhuyin": "ㄏㄞˇ ㄇㄛˊ ㄕ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 365,
+    "name": "帝牙海獅",
+    "zhuyin": "ㄉㄧˋ ㄧㄚˊ ㄏㄞˇ ㄕ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 366,
+    "name": "珍珠貝",
+    "zhuyin": "ㄓㄣ ㄓㄨ ㄅㄟˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 367,
+    "name": "獵斑魚",
+    "zhuyin": "ㄌㄧㄝˋ ㄅㄢ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 368,
+    "name": "櫻花魚",
+    "zhuyin": "ㄧㄥ ㄏㄨㄚ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 369,
+    "name": "古空棘魚",
+    "zhuyin": "ㄍㄨˇ ㄎㄨㄥ ㄐㄧˊ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 370,
+    "name": "愛心魚",
+    "zhuyin": "ㄞˋ ㄒㄧㄣ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 371,
+    "name": "寶貝龍",
+    "zhuyin": "ㄅㄠˇ ㄅㄟˋ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 372,
+    "name": "甲殼龍",
+    "zhuyin": "ㄐㄧㄚˇ ㄎㄜˊ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 373,
+    "name": "暴飛龍",
+    "zhuyin": "ㄅㄠˋ ㄈㄟ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 374,
+    "name": "鐵啞鈴",
+    "zhuyin": "ㄊㄧㄝˇ ㄧㄚˇ ㄌㄧㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 375,
+    "name": "金屬怪",
+    "zhuyin": "ㄐㄧㄣ ㄕㄨˇ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 376,
+    "name": "巨金怪",
+    "zhuyin": "ㄐㄩˋ ㄐㄧㄣ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 377,
+    "name": "雷吉洛克",
+    "zhuyin": "ㄌㄟˊ ㄐㄧˊ ㄌㄨㄛˋ ㄎㄜˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 378,
+    "name": "雷吉艾斯",
+    "zhuyin": "ㄌㄟˊ ㄐㄧˊ ㄞˋ ㄙ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 379,
+    "name": "雷吉斯奇魯",
+    "zhuyin": "ㄌㄟˊ ㄐㄧˊ ㄙ ㄑㄧˊ ㄌㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 380,
+    "name": "拉帝亞斯",
+    "zhuyin": "ㄌㄚ ㄉㄧˋ ㄧㄚˋ ㄙ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 381,
+    "name": "拉帝歐斯",
+    "zhuyin": "ㄌㄚ ㄉㄧˋ ㄡ ㄙ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 382,
+    "name": "蓋歐卡",
+    "zhuyin": "ㄍㄞˋ ㄡ ㄎㄚˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 383,
+    "name": "固拉多",
+    "zhuyin": "ㄍㄨˋ ㄌㄚ ㄉㄨㄛ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 384,
+    "name": "烈空坐",
+    "zhuyin": "ㄌㄧㄝˋ ㄎㄨㄥ ㄗㄨㄛˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 385,
+    "name": "基拉祈",
+    "zhuyin": "ㄐㄧ ㄌㄚ ㄑㄧˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 386,
+    "name": "代歐奇希斯",
+    "zhuyin": "ㄉㄞˋ ㄡ ㄑㄧˊ ㄒㄧ ㄙ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 387,
+    "name": "草苗龜",
+    "zhuyin": "ㄘㄠˇ ㄇㄧㄠˊ ㄍㄨㄟ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 388,
+    "name": "樹林龜",
+    "zhuyin": "ㄕㄨˋ ㄌㄧㄣˊ ㄍㄨㄟ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 389,
+    "name": "土台龜",
+    "zhuyin": "ㄊㄨˇ ㄊㄞˊ ㄍㄨㄟ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 390,
+    "name": "小火焰猴",
+    "zhuyin": "ㄒㄧㄠˇ ㄏㄨㄛˇ ㄧㄢˋ ㄏㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 391,
+    "name": "猛火猴",
+    "zhuyin": "ㄇㄥˇ ㄏㄨㄛˇ ㄏㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 392,
+    "name": "烈焰猴",
+    "zhuyin": "ㄌㄧㄝˋ ㄧㄢˋ ㄏㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 393,
+    "name": "波加曼",
+    "zhuyin": "ㄅㄛ ㄐㄧㄚ ㄇㄢˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 394,
+    "name": "波皇子",
+    "zhuyin": "ㄅㄛ ㄏㄨㄤˊ ㄗ˙",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 395,
+    "name": "帝王拿波",
+    "zhuyin": "ㄉㄧˋ ㄨㄤˊ ㄋㄚˊ ㄅㄛ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 396,
+    "name": "姆克兒",
+    "zhuyin": "ㄇㄨˇ ㄎㄜˋ ㄦˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 397,
+    "name": "姆克鳥",
+    "zhuyin": "ㄇㄨˇ ㄎㄜˋ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 398,
+    "name": "姆克鷹",
+    "zhuyin": "ㄇㄨˇ ㄎㄜˋ ㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 399,
+    "name": "大牙狸",
+    "zhuyin": "ㄉㄚˋ ㄧㄚˊ ㄌㄧˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 400,
+    "name": "大尾狸",
+    "zhuyin": "ㄉㄚˋ ㄨㄟˇ ㄌㄧˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 401,
+    "name": "圓法師",
+    "zhuyin": "ㄩㄢˊ ㄈㄚˇ ㄕ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 402,
+    "name": "音箱蟀",
+    "zhuyin": "ㄧㄣ ㄒㄧㄤ ㄕㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 403,
+    "name": "小貓怪",
+    "zhuyin": "ㄒㄧㄠˇ ㄇㄠ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 404,
+    "name": "勒克貓",
+    "zhuyin": "ㄌㄟ ㄎㄜˋ ㄇㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 405,
+    "name": "倫琴貓",
+    "zhuyin": "ㄌㄨㄣˊ ㄑㄧㄣˊ ㄇㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 406,
+    "name": "含羞苞",
+    "zhuyin": "ㄏㄢˊ ㄒㄧㄡ ㄅㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 407,
+    "name": "羅絲雷朵",
+    "zhuyin": "ㄌㄨㄛˊ ㄙ ㄌㄟˊ ㄉㄨㄛˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 408,
+    "name": "頭蓋龍",
+    "zhuyin": "ㄊㄡˊ ㄍㄞˋ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 409,
+    "name": "戰槌龍",
+    "zhuyin": "ㄓㄢˋ ㄔㄨㄟˊ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 410,
+    "name": "盾甲龍",
+    "zhuyin": "ㄉㄨㄣˋ ㄐㄧㄚˇ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 411,
+    "name": "護城龍",
+    "zhuyin": "ㄏㄨˋ ㄔㄥˊ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 412,
+    "name": "結草兒",
+    "zhuyin": "ㄐㄧㄝˊ ㄘㄠˇ ㄦˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 413,
+    "name": "結草貴婦",
+    "zhuyin": "ㄐㄧㄝˊ ㄘㄠˇ ㄍㄨㄟˋ ㄈㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 414,
+    "name": "紳士蛾",
+    "zhuyin": "ㄕㄣ ㄕˋ ㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 415,
+    "name": "三蜜蜂",
+    "zhuyin": "ㄙㄢ ㄇㄧˋ ㄈㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 416,
+    "name": "蜂后",
+    "zhuyin": "ㄈㄥ ㄏㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 417,
+    "name": "帕奇利茲",
+    "zhuyin": "ㄆㄚˋ ㄑㄧˊ ㄌㄧˋ ㄗ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 418,
+    "name": "泳氣鼬",
+    "zhuyin": "ㄩㄥˇ ㄑㄧˋ ㄧㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 419,
+    "name": "浮潛鼬",
+    "zhuyin": "ㄈㄨˊ ㄑㄧㄢˊ ㄧㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 420,
+    "name": "櫻花寶",
+    "zhuyin": "ㄧㄥ ㄏㄨㄚ ㄅㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 421,
+    "name": "櫻花兒",
+    "zhuyin": "ㄧㄥ ㄏㄨㄚ ㄦˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 422,
+    "name": "無殼海牛",
+    "zhuyin": "ㄨˊ ㄎㄜˊ ㄏㄞˇ ㄋㄧㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 423,
+    "name": "海牛獸",
+    "zhuyin": "ㄏㄞˇ ㄋㄧㄡˊ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 424,
+    "name": "雙尾怪手",
+    "zhuyin": "ㄕㄨㄤ ㄨㄟˇ ㄍㄨㄞˋ ㄕㄡˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 425,
+    "name": "飄飄球",
+    "zhuyin": "ㄆㄧㄠ ㄆㄧㄠ ㄑㄧㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 426,
+    "name": "附和氣球",
+    "zhuyin": "ㄈㄨˋ ㄏㄜˊ ㄑㄧˋ ㄑㄧㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 427,
+    "name": "捲捲耳",
+    "zhuyin": "ㄐㄩㄢˇ ㄐㄩㄢˇ ㄦˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 428,
+    "name": "長耳兔",
+    "zhuyin": "ㄓㄤˇ ㄦˇ ㄊㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 429,
+    "name": "夢妖魔",
+    "zhuyin": "ㄇㄥˋ ㄧㄠ ㄇㄛˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 430,
+    "name": "烏鴉頭頭",
+    "zhuyin": "ㄨ ㄧㄚ ㄊㄡˊ ㄊㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 431,
+    "name": "魅力喵",
+    "zhuyin": "ㄇㄟˋ ㄌㄧˋ ㄇㄧㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 432,
+    "name": "東施喵",
+    "zhuyin": "ㄉㄨㄥ ㄕ ㄇㄧㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 433,
+    "name": "鈴噹響",
+    "zhuyin": "ㄌㄧㄥˊ ㄉㄤ ㄒㄧㄤˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 434,
+    "name": "臭鼬噗",
+    "zhuyin": "ㄔㄡˋ ㄧㄡˋ ㄆㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 435,
+    "name": "坦克臭鼬",
+    "zhuyin": "ㄊㄢˇ ㄎㄜˋ ㄔㄡˋ ㄧㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 436,
+    "name": "銅鏡怪",
+    "zhuyin": "ㄊㄨㄥˊ ㄐㄧㄥˋ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 437,
+    "name": "青銅鐘",
+    "zhuyin": "ㄑㄧㄥ ㄊㄨㄥˊ ㄓㄨㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 438,
+    "name": "愛哭樹",
+    "zhuyin": "ㄞˋ ㄎㄨ ㄕㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 439,
+    "name": "魔尼尼",
+    "zhuyin": "ㄇㄛˊ ㄋㄧˊ ㄋㄧˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 440,
+    "name": "好運蛋",
+    "zhuyin": "ㄏㄠˇ ㄩㄣˋ ㄉㄢˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 441,
+    "name": "聒噪鳥",
+    "zhuyin": "ㄍㄨㄚ ㄗㄠˋ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 442,
+    "name": "花岩怪",
+    "zhuyin": "ㄏㄨㄚ ㄧㄢˊ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 443,
+    "name": "圓陸鯊",
+    "zhuyin": "ㄩㄢˊ ㄌㄨˋ ㄕㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 444,
+    "name": "尖牙陸鯊",
+    "zhuyin": "ㄐㄧㄢ ㄧㄚˊ ㄌㄨˋ ㄕㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 445,
+    "name": "烈咬陸鯊",
+    "zhuyin": "ㄌㄧㄝˋ ㄧㄠˇ ㄌㄨˋ ㄕㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 446,
+    "name": "小卡比獸",
+    "zhuyin": "ㄒㄧㄠˇ ㄎㄚˇ ㄅㄧˇ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 447,
+    "name": "利歐路",
+    "zhuyin": "ㄌㄧˋ ㄡ ㄌㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 448,
+    "name": "路卡利歐",
+    "zhuyin": "ㄌㄨˋ ㄎㄚˇ ㄌㄧˋ ㄡ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 449,
+    "name": "怪河馬",
+    "zhuyin": "ㄍㄨㄞˋ ㄏㄜˊ ㄇㄚˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 450,
+    "name": "河馬獸",
+    "zhuyin": "ㄏㄜˊ ㄇㄚˇ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 451,
+    "name": "紫天蠍",
+    "zhuyin": "ㄗˇ ㄊㄧㄢ ㄒㄧㄝ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 452,
+    "name": "龍王蠍",
+    "zhuyin": "ㄌㄨㄥˊ ㄨㄤˊ ㄒㄧㄝ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 453,
+    "name": "不良蛙",
+    "zhuyin": "ㄅㄨˋ ㄌㄧㄤˊ ㄨㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 454,
+    "name": "毒骷蛙",
+    "zhuyin": "ㄉㄨˊ ㄎㄨ ㄨㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 455,
+    "name": "尖牙籠",
+    "zhuyin": "ㄐㄧㄢ ㄧㄚˊ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 456,
+    "name": "螢光魚",
+    "zhuyin": "ㄧㄥˊ ㄍㄨㄤ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 457,
+    "name": "霓虹魚",
+    "zhuyin": "ㄋㄧˊ ㄏㄨㄥˊ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 458,
+    "name": "小球飛魚",
+    "zhuyin": "ㄒㄧㄠˇ ㄑㄧㄡˊ ㄈㄟ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 459,
+    "name": "雪笠怪",
+    "zhuyin": "ㄒㄩㄝˇ ㄌㄧˋ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 460,
+    "name": "暴雪王",
+    "zhuyin": "ㄅㄠˋ ㄒㄩㄝˇ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 461,
+    "name": "瑪狃拉",
+    "zhuyin": "ㄇㄚˇ ㄋㄧㄡˇ ㄌㄚ",
+    "needsReview": true,
+    "missingCharacters": [
+      "狃"
+    ]
+  },
+  {
+    "id": 462,
+    "name": "自爆磁怪",
+    "zhuyin": "ㄗˋ ㄅㄠˋ ㄘˊ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 463,
+    "name": "大舌舔",
+    "zhuyin": "ㄉㄚˋ ㄕㄜˊ ㄊㄧㄢˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 464,
+    "name": "超鐵暴龍",
+    "zhuyin": "ㄔㄠ ㄊㄧㄝˇ ㄅㄠˋ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 465,
+    "name": "巨蔓藤",
+    "zhuyin": "ㄐㄩˋ ㄇㄢˋ ㄊㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 466,
+    "name": "電擊魔獸",
+    "zhuyin": "ㄉㄧㄢˋ ㄐㄧ ㄇㄛˊ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 467,
+    "name": "鴨嘴焰龍",
+    "zhuyin": "ㄧㄚ ㄗㄨㄟˇ ㄧㄢˋ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 468,
+    "name": "波克基斯",
+    "zhuyin": "ㄅㄛ ㄎㄜˋ ㄐㄧ ㄙ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 469,
+    "name": "梅卡陽瑪",
+    "zhuyin": "ㄇㄟˊ ㄎㄚˇ ㄧㄤˊ ㄇㄚˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 470,
+    "name": "葉精靈",
+    "zhuyin": "ㄧㄝˋ ㄐㄧㄥ ㄌㄧㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 471,
+    "name": "冰精靈",
+    "zhuyin": "ㄅㄧㄥ ㄐㄧㄥ ㄌㄧㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 472,
+    "name": "天蠍王",
+    "zhuyin": "ㄊㄧㄢ ㄒㄧㄝ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 473,
+    "name": "象牙豬",
+    "zhuyin": "ㄒㄧㄤˋ ㄧㄚˊ ㄓㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 474,
+    "name": "3D龍Z",
+    "zhuyin": "3 D ㄌㄨㄥˊ Z",
+    "needsReview": true,
+    "missingCharacters": [
+      "D",
+      "Z"
+    ]
+  },
+  {
+    "id": 475,
+    "name": "艾路雷朵",
+    "zhuyin": "ㄞˋ ㄌㄨˋ ㄌㄟˊ ㄉㄨㄛˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 476,
+    "name": "大朝北鼻",
+    "zhuyin": "ㄉㄚˋ ㄔㄠˊ ㄅㄟˇ ㄅㄧˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 477,
+    "name": "夜黑魔人",
+    "zhuyin": "ㄧㄝˋ ㄏㄟ ㄇㄛˊ ㄖㄣˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 478,
+    "name": "雪妖女",
+    "zhuyin": "ㄒㄩㄝˇ ㄧㄠ ㄋㄩˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 479,
+    "name": "洛托姆",
+    "zhuyin": "ㄌㄨㄛˋ ㄊㄨㄛ ㄇㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 480,
+    "name": "由克希",
+    "zhuyin": "ㄧㄡˊ ㄎㄜˋ ㄒㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 481,
+    "name": "艾姆利多",
+    "zhuyin": "ㄞˋ ㄇㄨˇ ㄌㄧˋ ㄉㄨㄛ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 482,
+    "name": "亞克諾姆",
+    "zhuyin": "ㄧㄚˋ ㄎㄜˋ ㄋㄨㄛˋ ㄇㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 483,
+    "name": "帝牙盧卡",
+    "zhuyin": "ㄉㄧˋ ㄧㄚˊ ㄌㄨˊ ㄎㄚˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 484,
+    "name": "帕路奇犽",
+    "zhuyin": "ㄆㄚˋ ㄌㄨˋ ㄑㄧˊ ㄧㄚˋ",
+    "needsReview": true,
+    "missingCharacters": [
+      "犽"
+    ]
+  },
+  {
+    "id": 485,
+    "name": "席多藍恩",
+    "zhuyin": "ㄒㄧˊ ㄉㄨㄛ ㄌㄢˊ ㄣ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 486,
+    "name": "雷吉奇卡斯",
+    "zhuyin": "ㄌㄟˊ ㄐㄧˊ ㄑㄧˊ ㄎㄚˇ ㄙ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 487,
+    "name": "騎拉帝納",
+    "zhuyin": "ㄑㄧˊ ㄌㄚ ㄉㄧˋ ㄋㄚˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 488,
+    "name": "克雷色利亞",
+    "zhuyin": "ㄎㄜˋ ㄌㄟˊ ㄙㄜˋ ㄌㄧˋ ㄧㄚˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 489,
+    "name": "霏歐納",
+    "zhuyin": "ㄈㄟ ㄡ ㄋㄚˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 490,
+    "name": "瑪納霏",
+    "zhuyin": "ㄇㄚˇ ㄋㄚˋ ㄈㄟ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 491,
+    "name": "達克萊伊",
+    "zhuyin": "ㄉㄚˊ ㄎㄜˋ ㄌㄞˊ ㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 492,
+    "name": "謝米",
+    "zhuyin": "ㄒㄧㄝˋ ㄇㄧˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 493,
+    "name": "阿爾宙斯",
+    "zhuyin": "ㄚ ㄦˇ ㄓㄡˋ ㄙ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 494,
+    "name": "比克提尼",
+    "zhuyin": "ㄅㄧˇ ㄎㄜˋ ㄊㄧˊ ㄋㄧˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 495,
+    "name": "藤藤蛇",
+    "zhuyin": "ㄊㄥˊ ㄊㄥˊ ㄕㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 496,
+    "name": "青藤蛇",
+    "zhuyin": "ㄑㄧㄥ ㄊㄥˊ ㄕㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 497,
+    "name": "君主蛇",
+    "zhuyin": "ㄐㄩㄣ ㄓㄨˇ ㄕㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 498,
+    "name": "暖暖豬",
+    "zhuyin": "ㄋㄨㄢˇ ㄋㄨㄢˇ ㄓㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 499,
+    "name": "炒炒豬",
+    "zhuyin": "ㄔㄠˇ ㄔㄠˇ ㄓㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 500,
+    "name": "炎武王",
+    "zhuyin": "ㄧㄢˊ ㄨˇ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 501,
+    "name": "水水獺",
+    "zhuyin": "ㄕㄨㄟˇ ㄕㄨㄟˇ ㄊㄚˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 502,
+    "name": "雙刃丸",
+    "zhuyin": "ㄕㄨㄤ ㄖㄣˋ ㄨㄢˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 503,
+    "name": "大劍鬼",
+    "zhuyin": "ㄉㄚˋ ㄐㄧㄢˋ ㄍㄨㄟˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 504,
+    "name": "探探鼠",
+    "zhuyin": "ㄊㄢˋ ㄊㄢˋ ㄕㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 505,
+    "name": "步哨鼠",
+    "zhuyin": "ㄅㄨˋ ㄕㄠˋ ㄕㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 506,
+    "name": "小約克",
+    "zhuyin": "ㄒㄧㄠˇ ㄩㄝ ㄎㄜˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 507,
+    "name": "哈約克",
+    "zhuyin": "ㄏㄚ ㄩㄝ ㄎㄜˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 508,
+    "name": "長毛狗",
+    "zhuyin": "ㄓㄤˇ ㄇㄠˊ ㄍㄡˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 509,
+    "name": "扒手貓",
+    "zhuyin": "ㄅㄚ ㄕㄡˇ ㄇㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 510,
+    "name": "酷豹",
+    "zhuyin": "ㄎㄨˋ ㄅㄠˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 511,
+    "name": "花椰猴",
+    "zhuyin": "ㄏㄨㄚ ㄧㄝ ㄏㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 512,
+    "name": "花椰猿",
+    "zhuyin": "ㄏㄨㄚ ㄧㄝ ㄩㄢˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 513,
+    "name": "爆香猴",
+    "zhuyin": "ㄅㄠˋ ㄒㄧㄤ ㄏㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 514,
+    "name": "爆香猿",
+    "zhuyin": "ㄅㄠˋ ㄒㄧㄤ ㄩㄢˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 515,
+    "name": "冷水猴",
+    "zhuyin": "ㄌㄥˇ ㄕㄨㄟˇ ㄏㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 516,
+    "name": "冷水猿",
+    "zhuyin": "ㄌㄥˇ ㄕㄨㄟˇ ㄩㄢˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 517,
+    "name": "食夢夢",
+    "zhuyin": "ㄕˊ ㄇㄥˋ ㄇㄥˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 518,
+    "name": "夢夢蝕",
+    "zhuyin": "ㄇㄥˋ ㄇㄥˋ ㄕˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 519,
+    "name": "豆豆鴿",
+    "zhuyin": "ㄉㄡˋ ㄉㄡˋ ㄍㄜ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 520,
+    "name": "波波鴿",
+    "zhuyin": "ㄅㄛ ㄅㄛ ㄍㄜ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 521,
+    "name": "轟隆雉雞",
+    "zhuyin": "ㄏㄨㄥ ㄌㄨㄥˊ ㄓˋ ㄐㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 522,
+    "name": "斑斑馬",
+    "zhuyin": "ㄅㄢ ㄅㄢ ㄇㄚˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 523,
+    "name": "雷電斑馬",
+    "zhuyin": "ㄌㄟˊ ㄉㄧㄢˋ ㄅㄢ ㄇㄚˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 524,
+    "name": "石丸子",
+    "zhuyin": "ㄕˊ ㄨㄢˊ ㄗ˙",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 525,
+    "name": "地幔岩",
+    "zhuyin": "ㄉㄧˋ ㄇㄢˋ ㄧㄢˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 526,
+    "name": "龐岩怪",
+    "zhuyin": "ㄆㄤˊ ㄧㄢˊ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 527,
+    "name": "滾滾蝙蝠",
+    "zhuyin": "ㄍㄨㄣˇ ㄍㄨㄣˇ ㄅㄧㄢ ㄈㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 528,
+    "name": "心蝙蝠",
+    "zhuyin": "ㄒㄧㄣ ㄅㄧㄢ ㄈㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 529,
+    "name": "螺釘地鼠",
+    "zhuyin": "ㄌㄨㄛˊ ㄉㄧㄥ ㄉㄧˋ ㄕㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 530,
+    "name": "龍頭地鼠",
+    "zhuyin": "ㄌㄨㄥˊ ㄊㄡˊ ㄉㄧˋ ㄕㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 531,
+    "name": "差不多娃娃",
+    "zhuyin": "ㄔㄚˋ ㄅㄨˋ ㄉㄨㄛ ㄨㄚˊ ㄨㄚˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 532,
+    "name": "搬運小匠",
+    "zhuyin": "ㄅㄢ ㄩㄣˋ ㄒㄧㄠˇ ㄐㄧㄤˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 533,
+    "name": "鐵骨土人",
+    "zhuyin": "ㄊㄧㄝˇ ㄍㄨˇ ㄊㄨˇ ㄖㄣˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 534,
+    "name": "修繕老頭",
+    "zhuyin": "ㄒㄧㄡ ㄕㄢˋ ㄌㄠˇ ㄊㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 535,
+    "name": "圓蝌蚪",
+    "zhuyin": "ㄩㄢˊ ㄎㄜ ㄉㄡˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 536,
+    "name": "藍蟾蜍",
+    "zhuyin": "ㄌㄢˊ ㄔㄢˊ ㄔㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 537,
+    "name": "蟾蜍王",
+    "zhuyin": "ㄔㄢˊ ㄔㄨˊ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 538,
+    "name": "投射鬼",
+    "zhuyin": "ㄊㄡˊ ㄕㄜˋ ㄍㄨㄟˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 539,
+    "name": "打擊鬼",
+    "zhuyin": "ㄉㄚˇ ㄐㄧ ㄍㄨㄟˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 540,
+    "name": "蟲寶包",
+    "zhuyin": "ㄔㄨㄥˊ ㄅㄠˇ ㄅㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 541,
+    "name": "寶包繭",
+    "zhuyin": "ㄅㄠˇ ㄅㄠ ㄐㄧㄢˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 542,
+    "name": "保母蟲",
+    "zhuyin": "ㄅㄠˇ ㄇㄨˇ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 543,
+    "name": "百足蜈蚣",
+    "zhuyin": "ㄅㄞˇ ㄗㄨˊ ㄨˊ ㄍㄨㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 544,
+    "name": "車輪毬",
+    "zhuyin": "ㄔㄜ ㄌㄨㄣˊ ㄑㄧㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 545,
+    "name": "蜈蚣王",
+    "zhuyin": "ㄨˊ ㄍㄨㄥ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 546,
+    "name": "木棉球",
+    "zhuyin": "ㄇㄨˋ ㄇㄧㄢˊ ㄑㄧㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 547,
+    "name": "風妖精",
+    "zhuyin": "ㄈㄥ ㄧㄠ ㄐㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 548,
+    "name": "百合根娃娃",
+    "zhuyin": "ㄅㄞˇ ㄏㄜˊ ㄍㄣ ㄨㄚˊ ㄨㄚˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 549,
+    "name": "裙兒小姐",
+    "zhuyin": "ㄑㄩㄣˊ ㄦˊ ㄒㄧㄠˇ ㄐㄧㄝˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 550,
+    "name": "勇士鱸魚",
+    "zhuyin": "ㄩㄥˇ ㄕˋ ㄌㄨˊ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 551,
+    "name": "黑眼鱷",
+    "zhuyin": "ㄏㄟ ㄧㄢˇ ㄜˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 552,
+    "name": "混混鱷",
+    "zhuyin": "ㄏㄨㄣˋ ㄏㄨㄣˋ ㄜˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 553,
+    "name": "流氓鱷",
+    "zhuyin": "ㄌㄧㄡˊ ㄇㄤˊ ㄜˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 554,
+    "name": "火紅不倒翁",
+    "zhuyin": "ㄏㄨㄛˇ ㄏㄨㄥˊ ㄅㄨˋ ㄉㄠˋ ㄨㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 555,
+    "name": "達摩狒狒",
+    "zhuyin": "ㄉㄚˊ ㄇㄛˊ ㄈㄟˋ ㄈㄟˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 556,
+    "name": "街頭沙鈴",
+    "zhuyin": "ㄐㄧㄝ ㄊㄡˊ ㄕㄚ ㄌㄧㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 557,
+    "name": "石居蟹",
+    "zhuyin": "ㄕˊ ㄐㄩ ㄒㄧㄝˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 558,
+    "name": "岩殿居蟹",
+    "zhuyin": "ㄧㄢˊ ㄉㄧㄢˋ ㄐㄩ ㄒㄧㄝˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 559,
+    "name": "滑頭小子",
+    "zhuyin": "ㄏㄨㄚˊ ㄊㄡˊ ㄒㄧㄠˇ ㄗ˙",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 560,
+    "name": "頭巾混混",
+    "zhuyin": "ㄊㄡˊ ㄐㄧㄣ ㄏㄨㄣˋ ㄏㄨㄣˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 561,
+    "name": "象徵鳥",
+    "zhuyin": "ㄒㄧㄤˋ ㄓㄥ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 562,
+    "name": "哭哭面具",
+    "zhuyin": "ㄎㄨ ㄎㄨ ㄇㄧㄢˋ ㄐㄩˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 563,
+    "name": "死神棺",
+    "zhuyin": "ㄙˇ ㄕㄣˊ ㄍㄨㄢ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 564,
+    "name": "原蓋海龜",
+    "zhuyin": "ㄩㄢˊ ㄍㄞˋ ㄏㄞˇ ㄍㄨㄟ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 565,
+    "name": "肋骨海龜",
+    "zhuyin": "ㄌㄜ ㄍㄨˇ ㄏㄞˇ ㄍㄨㄟ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 566,
+    "name": "始祖小鳥",
+    "zhuyin": "ㄕˇ ㄗㄨˇ ㄒㄧㄠˇ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 567,
+    "name": "始祖大鳥",
+    "zhuyin": "ㄕˇ ㄗㄨˇ ㄉㄚˋ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 568,
+    "name": "破破袋",
+    "zhuyin": "ㄆㄛˋ ㄆㄛˋ ㄉㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 569,
+    "name": "灰塵山",
+    "zhuyin": "ㄏㄨㄟ ㄔㄣˊ ㄕㄢ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 570,
+    "name": "索羅亞",
+    "zhuyin": "ㄙㄨㄛˇ ㄌㄨㄛˊ ㄧㄚˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 571,
+    "name": "索羅亞克",
+    "zhuyin": "ㄙㄨㄛˇ ㄌㄨㄛˊ ㄧㄚˋ ㄎㄜˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 572,
+    "name": "泡沫栗鼠",
+    "zhuyin": "ㄆㄠˋ ㄇㄛˋ ㄌㄧˋ ㄕㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 573,
+    "name": "奇諾栗鼠",
+    "zhuyin": "ㄑㄧˊ ㄋㄨㄛˋ ㄌㄧˋ ㄕㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 574,
+    "name": "哥德寶寶",
+    "zhuyin": "ㄍㄜ ㄉㄜˊ ㄅㄠˇ ㄅㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 575,
+    "name": "哥德小童",
+    "zhuyin": "ㄍㄜ ㄉㄜˊ ㄒㄧㄠˇ ㄊㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 576,
+    "name": "哥德小姐",
+    "zhuyin": "ㄍㄜ ㄉㄜˊ ㄒㄧㄠˇ ㄐㄧㄝˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 577,
+    "name": "單卵細胞球",
+    "zhuyin": "ㄉㄢ ㄌㄨㄢˇ ㄒㄧˋ ㄅㄠ ㄑㄧㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 578,
+    "name": "雙卵細胞球",
+    "zhuyin": "ㄕㄨㄤ ㄌㄨㄢˇ ㄒㄧˋ ㄅㄠ ㄑㄧㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 579,
+    "name": "人造細胞卵",
+    "zhuyin": "ㄖㄣˊ ㄗㄠˋ ㄒㄧˋ ㄅㄠ ㄌㄨㄢˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 580,
+    "name": "鴨寶寶",
+    "zhuyin": "ㄧㄚ ㄅㄠˇ ㄅㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 581,
+    "name": "首席天鵝",
+    "zhuyin": "ㄕㄡˇ ㄒㄧˊ ㄊㄧㄢ ㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 582,
+    "name": "迷你冰",
+    "zhuyin": "ㄇㄧˊ ㄋㄧˇ ㄅㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 583,
+    "name": "多多冰",
+    "zhuyin": "ㄉㄨㄛ ㄉㄨㄛ ㄅㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 584,
+    "name": "雙倍多多冰",
+    "zhuyin": "ㄕㄨㄤ ㄅㄟˋ ㄉㄨㄛ ㄉㄨㄛ ㄅㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 585,
+    "name": "四季鹿",
+    "zhuyin": "ㄙˋ ㄐㄧˋ ㄌㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 586,
+    "name": "芽吹鹿",
+    "zhuyin": "ㄧㄚˊ ㄔㄨㄟ ㄌㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 587,
+    "name": "電飛鼠",
+    "zhuyin": "ㄉㄧㄢˋ ㄈㄟ ㄕㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 588,
+    "name": "蓋蓋蟲",
+    "zhuyin": "ㄍㄞˋ ㄍㄞˋ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 589,
+    "name": "騎士蝸牛",
+    "zhuyin": "ㄑㄧˊ ㄕˋ ㄨㄛ ㄋㄧㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 590,
+    "name": "寶貝球菇",
+    "zhuyin": "ㄅㄠˇ ㄅㄟˋ ㄑㄧㄡˊ ㄍㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 591,
+    "name": "暴露菇",
+    "zhuyin": "ㄅㄠˋ ㄌㄨˋ ㄍㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 592,
+    "name": "輕飄飄",
+    "zhuyin": "ㄑㄧㄥ ㄆㄧㄠ ㄆㄧㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 593,
+    "name": "胖嘟嘟",
+    "zhuyin": "ㄆㄤˋ ㄉㄨ ㄉㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 594,
+    "name": "保母曼波",
+    "zhuyin": "ㄅㄠˇ ㄇㄨˇ ㄇㄢˋ ㄅㄛ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 595,
+    "name": "電電蟲",
+    "zhuyin": "ㄉㄧㄢˋ ㄉㄧㄢˋ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 596,
+    "name": "電蜘蛛",
+    "zhuyin": "ㄉㄧㄢˋ ㄓ ㄓㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 597,
+    "name": "種子鐵球",
+    "zhuyin": "ㄓㄨㄥˇ ㄗ˙ ㄊㄧㄝˇ ㄑㄧㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 598,
+    "name": "堅果啞鈴",
+    "zhuyin": "ㄐㄧㄢ ㄍㄨㄛˇ ㄧㄚˇ ㄌㄧㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 599,
+    "name": "齒輪兒",
+    "zhuyin": "ㄔˇ ㄌㄨㄣˊ ㄦˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 600,
+    "name": "齒輪組",
+    "zhuyin": "ㄔˇ ㄌㄨㄣˊ ㄗㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 601,
+    "name": "齒輪怪",
+    "zhuyin": "ㄔˇ ㄌㄨㄣˊ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 602,
+    "name": "麻麻小魚",
+    "zhuyin": "ㄇㄚˊ ㄇㄚˊ ㄒㄧㄠˇ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 603,
+    "name": "麻麻鰻",
+    "zhuyin": "ㄇㄚˊ ㄇㄚˊ ㄇㄢˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 604,
+    "name": "麻麻鰻魚王",
+    "zhuyin": "ㄇㄚˊ ㄇㄚˊ ㄇㄢˊ ㄩˊ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 605,
+    "name": "小灰怪",
+    "zhuyin": "ㄒㄧㄠˇ ㄏㄨㄟ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 606,
+    "name": "大宇怪",
+    "zhuyin": "ㄉㄚˋ ㄩˇ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 607,
+    "name": "燭光靈",
+    "zhuyin": "ㄓㄨˊ ㄍㄨㄤ ㄌㄧㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 608,
+    "name": "燈火幽靈",
+    "zhuyin": "ㄉㄥ ㄏㄨㄛˇ ㄧㄡ ㄌㄧㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 609,
+    "name": "水晶燈火靈",
+    "zhuyin": "ㄕㄨㄟˇ ㄐㄧㄥ ㄉㄥ ㄏㄨㄛˇ ㄌㄧㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 610,
+    "name": "牙牙",
+    "zhuyin": "ㄧㄚˊ ㄧㄚˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 611,
+    "name": "斧牙龍",
+    "zhuyin": "ㄈㄨˇ ㄧㄚˊ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 612,
+    "name": "雙斧戰龍",
+    "zhuyin": "ㄕㄨㄤ ㄈㄨˇ ㄓㄢˋ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 613,
+    "name": "噴嚏熊",
+    "zhuyin": "ㄆㄣ ㄊㄧˋ ㄒㄩㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 614,
+    "name": "凍原熊",
+    "zhuyin": "ㄉㄨㄥˋ ㄩㄢˊ ㄒㄩㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 615,
+    "name": "幾何雪花",
+    "zhuyin": "ㄐㄧˇ ㄏㄜˊ ㄒㄩㄝˇ ㄏㄨㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 616,
+    "name": "小嘴蝸",
+    "zhuyin": "ㄒㄧㄠˇ ㄗㄨㄟˇ ㄨㄛ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 617,
+    "name": "敏捷蟲",
+    "zhuyin": "ㄇㄧㄣˇ ㄐㄧㄝˊ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 618,
+    "name": "泥巴魚",
+    "zhuyin": "ㄋㄧˊ ㄅㄚ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 619,
+    "name": "功夫鼬",
+    "zhuyin": "ㄍㄨㄥ ㄈㄨ ㄧㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 620,
+    "name": "師父鼬",
+    "zhuyin": "ㄕ ㄈㄨˋ ㄧㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 621,
+    "name": "赤面龍",
+    "zhuyin": "ㄔˋ ㄇㄧㄢˋ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 622,
+    "name": "泥偶小人",
+    "zhuyin": "ㄋㄧˊ ㄡˇ ㄒㄧㄠˇ ㄖㄣˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 623,
+    "name": "泥偶巨人",
+    "zhuyin": "ㄋㄧˊ ㄡˇ ㄐㄩˋ ㄖㄣˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 624,
+    "name": "駒刀小兵",
+    "zhuyin": "ㄐㄩ ㄉㄠ ㄒㄧㄠˇ ㄅㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 625,
+    "name": "劈斬司令",
+    "zhuyin": "ㄆㄧ ㄓㄢˇ ㄙ ㄌㄧㄥˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 626,
+    "name": "爆爆頭水牛",
+    "zhuyin": "ㄅㄠˋ ㄅㄠˋ ㄊㄡˊ ㄕㄨㄟˇ ㄋㄧㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 627,
+    "name": "毛頭小鷹",
+    "zhuyin": "ㄇㄠˊ ㄊㄡˊ ㄒㄧㄠˇ ㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 628,
+    "name": "勇士鷹",
+    "zhuyin": "ㄩㄥˇ ㄕˋ ㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 629,
+    "name": "禿鷹小子",
+    "zhuyin": "ㄊㄨ ㄧㄥ ㄒㄧㄠˇ ㄗ˙",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 630,
+    "name": "禿鷹娜",
+    "zhuyin": "ㄊㄨ ㄧㄥ ㄋㄚˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 631,
+    "name": "食蟻爐",
+    "zhuyin": "ㄕˊ ㄧˇ ㄌㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 632,
+    "name": "鐵蟻",
+    "zhuyin": "ㄊㄧㄝˇ ㄧˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 633,
+    "name": "單首龍",
+    "zhuyin": "ㄉㄢ ㄕㄡˇ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 634,
+    "name": "雙頭龍",
+    "zhuyin": "ㄕㄨㄤ ㄊㄡˊ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 635,
+    "name": "三頭龍",
+    "zhuyin": "ㄙㄢ ㄊㄡˊ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 636,
+    "name": "燃燒蟲",
+    "zhuyin": "ㄖㄢˊ ㄕㄠ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 637,
+    "name": "火神蟲",
+    "zhuyin": "ㄏㄨㄛˇ ㄕㄣˊ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 638,
+    "name": "勾帕路翁",
+    "zhuyin": "ㄍㄡ ㄆㄚˋ ㄌㄨˋ ㄨㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 639,
+    "name": "代拉基翁",
+    "zhuyin": "ㄉㄞˋ ㄌㄚ ㄐㄧ ㄨㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 640,
+    "name": "畢力吉翁",
+    "zhuyin": "ㄅㄧˋ ㄌㄧˋ ㄐㄧˊ ㄨㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 641,
+    "name": "龍捲雲",
+    "zhuyin": "ㄌㄨㄥˊ ㄐㄩㄢˇ ㄩㄣˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 642,
+    "name": "雷電雲",
+    "zhuyin": "ㄌㄟˊ ㄉㄧㄢˋ ㄩㄣˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 643,
+    "name": "雷希拉姆",
+    "zhuyin": "ㄌㄟˊ ㄒㄧ ㄌㄚ ㄇㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 644,
+    "name": "捷克羅姆",
+    "zhuyin": "ㄐㄧㄝˊ ㄎㄜˋ ㄌㄨㄛˊ ㄇㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 645,
+    "name": "土地雲",
+    "zhuyin": "ㄊㄨˇ ㄉㄧˋ ㄩㄣˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 646,
+    "name": "酋雷姆",
+    "zhuyin": "ㄑㄧㄡˊ ㄌㄟˊ ㄇㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 647,
+    "name": "凱路迪歐",
+    "zhuyin": "ㄎㄞˇ ㄌㄨˋ ㄉㄧˊ ㄡ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 648,
+    "name": "美洛耶塔",
+    "zhuyin": "ㄇㄟˇ ㄌㄨㄛˋ ㄧㄝˊ ㄊㄚˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 649,
+    "name": "蓋諾賽克特",
+    "zhuyin": "ㄍㄞˋ ㄋㄨㄛˋ ㄙㄞˋ ㄎㄜˋ ㄊㄜˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 650,
+    "name": "哈力栗",
+    "zhuyin": "ㄏㄚ ㄌㄧˋ ㄌㄧˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 651,
+    "name": "胖胖哈力",
+    "zhuyin": "ㄆㄤˋ ㄆㄤˋ ㄏㄚ ㄌㄧˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 652,
+    "name": "布里卡隆",
+    "zhuyin": "ㄅㄨˋ ㄌㄧˇ ㄎㄚˇ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 653,
+    "name": "火狐狸",
+    "zhuyin": "ㄏㄨㄛˇ ㄏㄨˊ ㄌㄧˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 654,
+    "name": "長尾火狐",
+    "zhuyin": "ㄓㄤˇ ㄨㄟˇ ㄏㄨㄛˇ ㄏㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 655,
+    "name": "妖火紅狐",
+    "zhuyin": "ㄧㄠ ㄏㄨㄛˇ ㄏㄨㄥˊ ㄏㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 656,
+    "name": "呱呱泡蛙",
+    "zhuyin": "ㄍㄨ ㄍㄨ ㄆㄠˋ ㄨㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 657,
+    "name": "呱頭蛙",
+    "zhuyin": "ㄍㄨ ㄊㄡˊ ㄨㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 658,
+    "name": "甲賀忍蛙",
+    "zhuyin": "ㄐㄧㄚˇ ㄏㄜˋ ㄖㄣˇ ㄨㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 659,
+    "name": "掘掘兔",
+    "zhuyin": "ㄐㄩㄝˊ ㄐㄩㄝˊ ㄊㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 660,
+    "name": "攉土兔",
+    "zhuyin": "ㄏㄨㄛ ㄊㄨˇ ㄊㄨˋ",
+    "needsReview": true,
+    "missingCharacters": [
+      "攉"
+    ]
+  },
+  {
+    "id": 661,
+    "name": "小箭雀",
+    "zhuyin": "ㄒㄧㄠˇ ㄐㄧㄢˋ ㄑㄩㄝˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 662,
+    "name": "火箭雀",
+    "zhuyin": "ㄏㄨㄛˇ ㄐㄧㄢˋ ㄑㄩㄝˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 663,
+    "name": "烈箭鶲",
+    "zhuyin": "ㄌㄧㄝˋ ㄐㄧㄢˋ ㄨㄥ",
+    "needsReview": true,
+    "missingCharacters": [
+      "鶲"
+    ]
+  },
+  {
+    "id": 664,
+    "name": "粉蛹",
+    "zhuyin": "ㄈㄣˇ ㄩㄥˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 665,
+    "name": "粉蝶蛹",
+    "zhuyin": "ㄈㄣˇ ㄉㄧㄝˊ ㄩㄥˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 666,
+    "name": "碧粉蝶",
+    "zhuyin": "ㄅㄧˋ ㄈㄣˇ ㄉㄧㄝˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 667,
+    "name": "小獅獅",
+    "zhuyin": "ㄒㄧㄠˇ ㄕ ㄕ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 668,
+    "name": "火炎獅",
+    "zhuyin": "ㄏㄨㄛˇ ㄧㄢˊ ㄕ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 669,
+    "name": "花蓓蓓",
+    "zhuyin": "ㄏㄨㄚ ㄅㄟˋ ㄅㄟˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 670,
+    "name": "花葉蒂",
+    "zhuyin": "ㄏㄨㄚ ㄧㄝˋ ㄉㄧˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 671,
+    "name": "花潔夫人",
+    "zhuyin": "ㄏㄨㄚ ㄐㄧㄝˊ ㄈㄨ ㄖㄣˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 672,
+    "name": "咩咩羊",
+    "zhuyin": "ㄇㄧㄝ ㄇㄧㄝ ㄧㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 673,
+    "name": "坐騎山羊",
+    "zhuyin": "ㄗㄨㄛˋ ㄑㄧˊ ㄕㄢ ㄧㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 674,
+    "name": "頑皮熊貓",
+    "zhuyin": "ㄨㄢˊ ㄆㄧˊ ㄒㄩㄥˊ ㄇㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 675,
+    "name": "流氓熊貓",
+    "zhuyin": "ㄌㄧㄡˊ ㄇㄤˊ ㄒㄩㄥˊ ㄇㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 676,
+    "name": "多麗米亞",
+    "zhuyin": "ㄉㄨㄛ ㄌㄧˋ ㄇㄧˇ ㄧㄚˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 677,
+    "name": "妙喵",
+    "zhuyin": "ㄇㄧㄠˋ ㄇㄧㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 678,
+    "name": "超能妙喵",
+    "zhuyin": "ㄔㄠ ㄋㄥˊ ㄇㄧㄠˋ ㄇㄧㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 679,
+    "name": "獨劍鞘",
+    "zhuyin": "ㄉㄨˊ ㄐㄧㄢˋ ㄑㄧㄠˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 680,
+    "name": "雙劍鞘",
+    "zhuyin": "ㄕㄨㄤ ㄐㄧㄢˋ ㄑㄧㄠˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 681,
+    "name": "堅盾劍怪",
+    "zhuyin": "ㄐㄧㄢ ㄉㄨㄣˋ ㄐㄧㄢˋ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 682,
+    "name": "粉香香",
+    "zhuyin": "ㄈㄣˇ ㄒㄧㄤ ㄒㄧㄤ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 683,
+    "name": "芳香精",
+    "zhuyin": "ㄈㄤ ㄒㄧㄤ ㄐㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 684,
+    "name": "綿綿泡芙",
+    "zhuyin": "ㄇㄧㄢˊ ㄇㄧㄢˊ ㄆㄠˋ ㄈㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 685,
+    "name": "胖甜妮",
+    "zhuyin": "ㄆㄤˋ ㄊㄧㄢˊ ㄋㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 686,
+    "name": "豪喇花枝",
+    "zhuyin": "ㄏㄠˊ ㄌㄚˇ ㄏㄨㄚ ㄓ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 687,
+    "name": "烏賊王",
+    "zhuyin": "ㄨ ㄗㄟˊ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 688,
+    "name": "龜腳腳",
+    "zhuyin": "ㄍㄨㄟ ㄐㄧㄠˇ ㄐㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 689,
+    "name": "龜足巨鎧",
+    "zhuyin": "ㄍㄨㄟ ㄗㄨˊ ㄐㄩˋ ㄎㄞˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 690,
+    "name": "垃垃藻",
+    "zhuyin": "ㄌㄚ ㄌㄚ ㄗㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 691,
+    "name": "毒拉蜜妮",
+    "zhuyin": "ㄉㄨˊ ㄌㄚ ㄇㄧˋ ㄋㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 692,
+    "name": "鐵臂槍蝦",
+    "zhuyin": "ㄊㄧㄝˇ ㄅㄧˋ ㄑㄧㄤ ㄒㄧㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 693,
+    "name": "鋼砲臂蝦",
+    "zhuyin": "ㄍㄤ ㄆㄠˋ ㄅㄧˋ ㄒㄧㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 694,
+    "name": "傘電蜥",
+    "zhuyin": "ㄙㄢˇ ㄉㄧㄢˋ ㄒㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 695,
+    "name": "電傘查特",
+    "zhuyin": "ㄉㄧㄢˋ ㄙㄢˇ ㄔㄚˊ ㄊㄜˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 696,
+    "name": "寶寶暴龍",
+    "zhuyin": "ㄅㄠˇ ㄅㄠˇ ㄅㄠˋ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 697,
+    "name": "怪顎龍",
+    "zhuyin": "ㄍㄨㄞˋ ㄜˋ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 698,
+    "name": "冰雪龍",
+    "zhuyin": "ㄅㄧㄥ ㄒㄩㄝˇ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 699,
+    "name": "冰雪巨龍",
+    "zhuyin": "ㄅㄧㄥ ㄒㄩㄝˇ ㄐㄩˋ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 700,
+    "name": "仙子精靈",
+    "zhuyin": "ㄒㄧㄢ ㄗ˙ ㄐㄧㄥ ㄌㄧㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 701,
+    "name": "戰鬥飛鳥",
+    "zhuyin": "ㄓㄢˋ ㄉㄡˋ ㄈㄟ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 702,
+    "name": "咚咚鼠",
+    "zhuyin": "ㄉㄨㄥ ㄉㄨㄥ ㄕㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 703,
+    "name": "小碎鑽",
+    "zhuyin": "ㄒㄧㄠˇ ㄙㄨㄟˋ ㄗㄨㄢ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 704,
+    "name": "黏黏寶",
+    "zhuyin": "ㄋㄧㄢˊ ㄋㄧㄢˊ ㄅㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 705,
+    "name": "黏美伊兒",
+    "zhuyin": "ㄋㄧㄢˊ ㄇㄟˇ ㄧ ㄦˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 706,
+    "name": "黏美露龍",
+    "zhuyin": "ㄋㄧㄢˊ ㄇㄟˇ ㄌㄨˋ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 707,
+    "name": "鑰圈兒",
+    "zhuyin": "ㄧㄠˋ ㄑㄩㄢ ㄦˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 708,
+    "name": "小木靈",
+    "zhuyin": "ㄒㄧㄠˇ ㄇㄨˋ ㄌㄧㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 709,
+    "name": "朽木妖",
+    "zhuyin": "ㄒㄧㄡˇ ㄇㄨˋ ㄧㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 710,
+    "name": "南瓜精",
+    "zhuyin": "ㄋㄢˊ ㄍㄨㄚ ㄐㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 711,
+    "name": "南瓜怪人",
+    "zhuyin": "ㄋㄢˊ ㄍㄨㄚ ㄍㄨㄞˋ ㄖㄣˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 712,
+    "name": "冰寶",
+    "zhuyin": "ㄅㄧㄥ ㄅㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 713,
+    "name": "冰岩怪",
+    "zhuyin": "ㄅㄧㄥ ㄧㄢˊ ㄍㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 714,
+    "name": "嗡蝠",
+    "zhuyin": "ㄨㄥ ㄈㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 715,
+    "name": "音波龍",
+    "zhuyin": "ㄧㄣ ㄅㄛ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 716,
+    "name": "哲爾尼亞斯",
+    "zhuyin": "ㄓㄜˊ ㄦˇ ㄋㄧˊ ㄧㄚˋ ㄙ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 717,
+    "name": "伊裴爾塔爾",
+    "zhuyin": "ㄧ ㄆㄟˊ ㄦˇ ㄊㄚˇ ㄦˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 718,
+    "name": "基格爾德",
+    "zhuyin": "ㄐㄧ ㄍㄜˊ ㄦˇ ㄉㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 719,
+    "name": "蒂安希",
+    "zhuyin": "ㄉㄧˋ ㄢ ㄒㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 720,
+    "name": "胡帕",
+    "zhuyin": "ㄏㄨˊ ㄆㄚˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 721,
+    "name": "波爾凱尼恩",
+    "zhuyin": "ㄅㄛ ㄦˇ ㄎㄞˇ ㄋㄧˊ ㄣ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 722,
+    "name": "木木梟",
+    "zhuyin": "ㄇㄨˋ ㄇㄨˋ ㄒㄧㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 723,
+    "name": "投羽梟",
+    "zhuyin": "ㄊㄡˊ ㄩˇ ㄒㄧㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 724,
+    "name": "狙射樹梟",
+    "zhuyin": "ㄐㄩ ㄕㄜˋ ㄕㄨˋ ㄒㄧㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 725,
+    "name": "火斑喵",
+    "zhuyin": "ㄏㄨㄛˇ ㄅㄢ ㄇㄧㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 726,
+    "name": "炎熱喵",
+    "zhuyin": "ㄧㄢˊ ㄖㄜˋ ㄇㄧㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 727,
+    "name": "熾焰咆哮虎",
+    "zhuyin": "ㄔˋ ㄧㄢˋ ㄆㄠˊ ㄒㄧㄠ ㄏㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 728,
+    "name": "球球海獅",
+    "zhuyin": "ㄑㄧㄡˊ ㄑㄧㄡˊ ㄏㄞˇ ㄕ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 729,
+    "name": "花漾海獅",
+    "zhuyin": "ㄏㄨㄚ ㄧㄤˋ ㄏㄞˇ ㄕ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 730,
+    "name": "西獅海壬",
+    "zhuyin": "ㄒㄧ ㄕ ㄏㄞˇ ㄖㄣˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 731,
+    "name": "小篤兒",
+    "zhuyin": "ㄒㄧㄠˇ ㄉㄨˇ ㄦˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 732,
+    "name": "喇叭啄鳥",
+    "zhuyin": "ㄌㄚˇ ㄅㄚ ㄓㄨㄛˊ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 733,
+    "name": "銃嘴大鳥",
+    "zhuyin": "ㄔㄨㄥˋ ㄗㄨㄟˇ ㄉㄚˋ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 734,
+    "name": "貓鼬少",
+    "zhuyin": "ㄇㄠ ㄧㄡˋ ㄕㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 735,
+    "name": "貓鼬探長",
+    "zhuyin": "ㄇㄠ ㄧㄡˋ ㄊㄢˋ ㄓㄤˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 736,
+    "name": "強顎雞母蟲",
+    "zhuyin": "ㄑㄧㄤˊ ㄜˋ ㄐㄧ ㄇㄨˇ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 737,
+    "name": "蟲電寶",
+    "zhuyin": "ㄔㄨㄥˊ ㄉㄧㄢˋ ㄅㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 738,
+    "name": "鍬農炮蟲",
+    "zhuyin": "ㄑㄧㄠ ㄋㄨㄥˊ ㄆㄠˋ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 739,
+    "name": "好勝蟹",
+    "zhuyin": "ㄏㄠˇ ㄕㄥˋ ㄒㄧㄝˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 740,
+    "name": "好勝毛蟹",
+    "zhuyin": "ㄏㄠˇ ㄕㄥˋ ㄇㄠˊ ㄒㄧㄝˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 741,
+    "name": "花舞鳥",
+    "zhuyin": "ㄏㄨㄚ ㄨˇ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 742,
+    "name": "萌虻",
+    "zhuyin": "ㄇㄥˊ ㄇㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 743,
+    "name": "蝶結萌虻",
+    "zhuyin": "ㄉㄧㄝˊ ㄐㄧㄝˊ ㄇㄥˊ ㄇㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 744,
+    "name": "岩狗狗",
+    "zhuyin": "ㄧㄢˊ ㄍㄡˇ ㄍㄡˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 745,
+    "name": "鬃岩狼人",
+    "zhuyin": "ㄗㄨㄥ ㄧㄢˊ ㄌㄤˊ ㄖㄣˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 746,
+    "name": "弱丁魚",
+    "zhuyin": "ㄖㄨㄛˋ ㄉㄧㄥ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 747,
+    "name": "好壞星",
+    "zhuyin": "ㄏㄠˇ ㄏㄨㄞˋ ㄒㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 748,
+    "name": "超壞星",
+    "zhuyin": "ㄔㄠ ㄏㄨㄞˋ ㄒㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 749,
+    "name": "泥驢仔",
+    "zhuyin": "ㄋㄧˊ ㄌㄩˊ ㄗㄞˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 750,
+    "name": "重泥挽馬",
+    "zhuyin": "ㄓㄨㄥˋ ㄋㄧˊ ㄨㄢˇ ㄇㄚˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 751,
+    "name": "滴蛛",
+    "zhuyin": "ㄉㄧ ㄓㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 752,
+    "name": "滴蛛霸",
+    "zhuyin": "ㄉㄧ ㄓㄨ ㄅㄚˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 753,
+    "name": "偽螳草",
+    "zhuyin": "ㄨㄟˇ ㄊㄤˊ ㄘㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 754,
+    "name": "蘭螳花",
+    "zhuyin": "ㄌㄢˊ ㄊㄤˊ ㄏㄨㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 755,
+    "name": "睡睡菇",
+    "zhuyin": "ㄕㄨㄟˋ ㄕㄨㄟˋ ㄍㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 756,
+    "name": "燈罩夜菇",
+    "zhuyin": "ㄉㄥ ㄓㄠˋ ㄧㄝˋ ㄍㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 757,
+    "name": "夜盜火蜥",
+    "zhuyin": "ㄧㄝˋ ㄉㄠˋ ㄏㄨㄛˇ ㄒㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 758,
+    "name": "焰后蜥",
+    "zhuyin": "ㄧㄢˋ ㄏㄡˋ ㄒㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 759,
+    "name": "童偶熊",
+    "zhuyin": "ㄊㄨㄥˊ ㄡˇ ㄒㄩㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 760,
+    "name": "穿著熊",
+    "zhuyin": "ㄔㄨㄢ ㄓㄨˋ ㄒㄩㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 761,
+    "name": "甜竹竹",
+    "zhuyin": "ㄊㄧㄢˊ ㄓㄨˊ ㄓㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 762,
+    "name": "甜舞妮",
+    "zhuyin": "ㄊㄧㄢˊ ㄨˇ ㄋㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 763,
+    "name": "甜冷美后",
+    "zhuyin": "ㄊㄧㄢˊ ㄌㄥˇ ㄇㄟˇ ㄏㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 764,
+    "name": "花療環環",
+    "zhuyin": "ㄏㄨㄚ ㄌㄧㄠˊ ㄏㄨㄢˊ ㄏㄨㄢˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 765,
+    "name": "智揮猩",
+    "zhuyin": "ㄓˋ ㄏㄨㄟ ㄒㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 766,
+    "name": "投擲猴",
+    "zhuyin": "ㄊㄡˊ ㄓˋ ㄏㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 767,
+    "name": "膽小蟲",
+    "zhuyin": "ㄉㄢˇ ㄒㄧㄠˇ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 768,
+    "name": "具甲武者",
+    "zhuyin": "ㄐㄩˋ ㄐㄧㄚˇ ㄨˇ ㄓㄜˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 769,
+    "name": "沙丘娃",
+    "zhuyin": "ㄕㄚ ㄑㄧㄡ ㄨㄚˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 770,
+    "name": "噬沙堡爺",
+    "zhuyin": "ㄕˋ ㄕㄚ ㄅㄠˇ ㄧㄝˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 771,
+    "name": "拳海參",
+    "zhuyin": "ㄑㄩㄢˊ ㄏㄞˇ ㄘㄢ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 772,
+    "name": "屬性：空",
+    "zhuyin": "ㄕㄨˇ ㄒㄧㄥˋ ： ㄎㄨㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 773,
+    "name": "銀伴戰獸",
+    "zhuyin": "ㄧㄣˊ ㄅㄢˋ ㄓㄢˋ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 774,
+    "name": "小隕星",
+    "zhuyin": "ㄒㄧㄠˇ ㄩㄣˇ ㄒㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 775,
+    "name": "樹枕尾熊",
+    "zhuyin": "ㄕㄨˋ ㄓㄣˇ ㄨㄟˇ ㄒㄩㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 776,
+    "name": "爆焰龜獸",
+    "zhuyin": "ㄅㄠˋ ㄧㄢˋ ㄍㄨㄟ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 777,
+    "name": "托戈德瑪爾",
+    "zhuyin": "ㄊㄨㄛ ㄍㄜ ㄉㄜˊ ㄇㄚˇ ㄦˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 778,
+    "name": "謎擬Ｑ",
+    "zhuyin": "ㄇㄧˊ ㄋㄧˇ Ｑ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 779,
+    "name": "磨牙彩皮魚",
+    "zhuyin": "ㄇㄛˊ ㄧㄚˊ ㄘㄞˇ ㄆㄧˊ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 780,
+    "name": "老翁龍",
+    "zhuyin": "ㄌㄠˇ ㄨㄥ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 781,
+    "name": "破破舵輪",
+    "zhuyin": "ㄆㄛˋ ㄆㄛˋ ㄉㄨㄛˋ ㄌㄨㄣˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 782,
+    "name": "心鱗寶",
+    "zhuyin": "ㄒㄧㄣ ㄌㄧㄣˊ ㄅㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 783,
+    "name": "鱗甲龍",
+    "zhuyin": "ㄌㄧㄣˊ ㄐㄧㄚˇ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 784,
+    "name": "杖尾鱗甲龍",
+    "zhuyin": "ㄓㄤˋ ㄨㄟˇ ㄌㄧㄣˊ ㄐㄧㄚˇ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 785,
+    "name": "卡璞・鳴鳴",
+    "zhuyin": "ㄎㄚˇ ㄆㄨˊ ・ ㄇㄧㄥˊ ㄇㄧㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 786,
+    "name": "卡璞・蝶蝶",
+    "zhuyin": "ㄎㄚˇ ㄆㄨˊ ・ ㄉㄧㄝˊ ㄉㄧㄝˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 787,
+    "name": "卡璞・哞哞",
+    "zhuyin": "ㄎㄚˇ ㄆㄨˊ ・ ㄇㄡ ㄇㄡ",
+    "needsReview": true,
+    "missingCharacters": [
+      "哞"
+    ]
+  },
+  {
+    "id": 788,
+    "name": "卡璞・鰭鰭",
+    "zhuyin": "ㄎㄚˇ ㄆㄨˊ ・ ㄑㄧˊ ㄑㄧˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 789,
+    "name": "科斯莫古",
+    "zhuyin": "ㄎㄜ ㄙ ㄇㄛˋ ㄍㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 790,
+    "name": "科斯莫姆",
+    "zhuyin": "ㄎㄜ ㄙ ㄇㄛˋ ㄇㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 791,
+    "name": "索爾迦雷歐",
+    "zhuyin": "ㄙㄨㄛˇ ㄦˇ ㄐㄧㄚ ㄌㄟˊ ㄡ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 792,
+    "name": "露奈雅拉",
+    "zhuyin": "ㄌㄨˋ ㄋㄞˋ ㄧㄚˇ ㄌㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 793,
+    "name": "虛吾伊德",
+    "zhuyin": "ㄒㄩ ㄨˊ ㄧ ㄉㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 794,
+    "name": "爆肌蚊",
+    "zhuyin": "ㄅㄠˋ ㄐㄧ ㄨㄣˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 795,
+    "name": "費洛美螂",
+    "zhuyin": "ㄈㄟˋ ㄌㄨㄛˋ ㄇㄟˇ ㄌㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 796,
+    "name": "電束木",
+    "zhuyin": "ㄉㄧㄢˋ ㄕㄨˋ ㄇㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 797,
+    "name": "鐵火輝夜",
+    "zhuyin": "ㄊㄧㄝˇ ㄏㄨㄛˇ ㄏㄨㄟ ㄧㄝˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 798,
+    "name": "紙御劍",
+    "zhuyin": "ㄓˇ ㄩˋ ㄐㄧㄢˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 799,
+    "name": "惡食大王",
+    "zhuyin": "ㄜˋ ㄕˊ ㄉㄚˋ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 800,
+    "name": "奈克洛兹瑪",
+    "zhuyin": "ㄋㄞˋ ㄎㄜˋ ㄌㄨㄛˋ ㄗ ㄇㄚˇ",
+    "needsReview": true,
+    "missingCharacters": [
+      "兹"
+    ]
+  },
+  {
+    "id": 801,
+    "name": "瑪機雅娜",
+    "zhuyin": "ㄇㄚˇ ㄐㄧ ㄧㄚˇ ㄋㄚˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 802,
+    "name": "瑪夏多",
+    "zhuyin": "ㄇㄚˇ ㄒㄧㄚˋ ㄉㄨㄛ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 803,
+    "name": "毒貝比",
+    "zhuyin": "ㄉㄨˊ ㄅㄟˋ ㄅㄧˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 804,
+    "name": "四顎針龍",
+    "zhuyin": "ㄙˋ ㄜˋ ㄓㄣ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 805,
+    "name": "壘磊石",
+    "zhuyin": "ㄌㄟˇ ㄌㄟˇ ㄕˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 806,
+    "name": "砰頭小丑",
+    "zhuyin": "ㄆㄥ ㄊㄡˊ ㄒㄧㄠˇ ㄔㄡˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 807,
+    "name": "捷拉奧拉",
+    "zhuyin": "ㄐㄧㄝˊ ㄌㄚ ㄠˋ ㄌㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 808,
+    "name": "美錄坦",
+    "zhuyin": "ㄇㄟˇ ㄌㄨˋ ㄊㄢˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 809,
+    "name": "美錄梅塔",
+    "zhuyin": "ㄇㄟˇ ㄌㄨˋ ㄇㄟˊ ㄊㄚˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 810,
+    "name": "敲音猴",
+    "zhuyin": "ㄑㄧㄠ ㄧㄣ ㄏㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 811,
+    "name": "啪咚猴",
+    "zhuyin": "ㄆㄚ ㄉㄨㄥ ㄏㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 812,
+    "name": "轟擂金剛猩",
+    "zhuyin": "ㄏㄨㄥ ㄌㄟˊ ㄐㄧㄣ ㄍㄤ ㄒㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 813,
+    "name": "炎兔兒",
+    "zhuyin": "ㄧㄢˊ ㄊㄨˋ ㄦˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 814,
+    "name": "騰蹴小將",
+    "zhuyin": "ㄊㄥˊ ㄘㄨˋ ㄒㄧㄠˇ ㄐㄧㄤ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 815,
+    "name": "閃焰王牌",
+    "zhuyin": "ㄕㄢˇ ㄧㄢˋ ㄨㄤˊ ㄆㄞˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 816,
+    "name": "淚眼蜥",
+    "zhuyin": "ㄌㄟˋ ㄧㄢˇ ㄒㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 817,
+    "name": "變澀蜥",
+    "zhuyin": "ㄅㄧㄢˋ ㄙㄜˋ ㄒㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 818,
+    "name": "千面避役",
+    "zhuyin": "ㄑㄧㄢ ㄇㄧㄢˋ ㄅㄧˋ ㄧˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 819,
+    "name": "貪心栗鼠",
+    "zhuyin": "ㄊㄢ ㄒㄧㄣ ㄌㄧˋ ㄕㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 820,
+    "name": "藏飽栗鼠",
+    "zhuyin": "ㄘㄤˊ ㄅㄠˇ ㄌㄧˋ ㄕㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 821,
+    "name": "稚山雀",
+    "zhuyin": "ㄓˋ ㄕㄢ ㄑㄩㄝˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 822,
+    "name": "藍鴉",
+    "zhuyin": "ㄌㄢˊ ㄧㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 823,
+    "name": "鋼鎧鴉",
+    "zhuyin": "ㄍㄤ ㄎㄞˇ ㄧㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 824,
+    "name": "索偵蟲",
+    "zhuyin": "ㄙㄨㄛˇ ㄓㄣ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 825,
+    "name": "天罩蟲",
+    "zhuyin": "ㄊㄧㄢ ㄓㄠˋ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 826,
+    "name": "以歐路普",
+    "zhuyin": "ㄧˇ ㄡ ㄌㄨˋ ㄆㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 827,
+    "name": "偷兒狐",
+    "zhuyin": "ㄊㄡ ㄦˊ ㄏㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 828,
+    "name": "狐大盜",
+    "zhuyin": "ㄏㄨˊ ㄉㄚˋ ㄉㄠˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 829,
+    "name": "幼棉棉",
+    "zhuyin": "ㄧㄡˋ ㄇㄧㄢˊ ㄇㄧㄢˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 830,
+    "name": "白蓬蓬",
+    "zhuyin": "ㄅㄞˊ ㄆㄥˊ ㄆㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 831,
+    "name": "毛辮羊",
+    "zhuyin": "ㄇㄠˊ ㄅㄧㄢˋ ㄧㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 832,
+    "name": "毛毛角羊",
+    "zhuyin": "ㄇㄠˊ ㄇㄠˊ ㄐㄧㄠˇ ㄧㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 833,
+    "name": "咬咬龜",
+    "zhuyin": "ㄧㄠˇ ㄧㄠˇ ㄍㄨㄟ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 834,
+    "name": "暴噬龜",
+    "zhuyin": "ㄅㄠˋ ㄕˋ ㄍㄨㄟ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 835,
+    "name": "來電汪",
+    "zhuyin": "ㄌㄞˊ ㄉㄧㄢˋ ㄨㄤ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 836,
+    "name": "逐電犬",
+    "zhuyin": "ㄓㄨˊ ㄉㄧㄢˋ ㄑㄩㄢˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 837,
+    "name": "小炭仔",
+    "zhuyin": "ㄒㄧㄠˇ ㄊㄢˋ ㄗㄞˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 838,
+    "name": "大炭車",
+    "zhuyin": "ㄉㄚˋ ㄊㄢˋ ㄔㄜ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 839,
+    "name": "巨炭山",
+    "zhuyin": "ㄐㄩˋ ㄊㄢˋ ㄕㄢ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 840,
+    "name": "啃果蟲",
+    "zhuyin": "ㄎㄣˇ ㄍㄨㄛˇ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 841,
+    "name": "蘋裹龍",
+    "zhuyin": "ㄆㄧㄥˊ ㄍㄨㄛˇ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 842,
+    "name": "豐蜜龍",
+    "zhuyin": "ㄈㄥ ㄇㄧˋ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 843,
+    "name": "沙包蛇",
+    "zhuyin": "ㄕㄚ ㄅㄠ ㄕㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 844,
+    "name": "沙螺蟒",
+    "zhuyin": "ㄕㄚ ㄌㄨㄛˊ ㄇㄤˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 845,
+    "name": "古月鳥",
+    "zhuyin": "ㄍㄨˇ ㄩㄝˋ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 846,
+    "name": "刺梭魚",
+    "zhuyin": "ㄘˋ ㄙㄨㄛ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 847,
+    "name": "戽斗尖梭",
+    "zhuyin": "ㄏㄨˋ ㄉㄡˋ ㄐㄧㄢ ㄙㄨㄛ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 848,
+    "name": "毒電嬰",
+    "zhuyin": "ㄉㄨˊ ㄉㄧㄢˋ ㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 849,
+    "name": "顫弦蠑螈",
+    "zhuyin": "ㄔㄢˋ ㄒㄧㄢˊ ㄖㄨㄥˊ ㄩㄢˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 850,
+    "name": "燒火蚣",
+    "zhuyin": "ㄕㄠ ㄏㄨㄛˇ ㄍㄨㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 851,
+    "name": "焚焰蚣",
+    "zhuyin": "ㄈㄣˊ ㄧㄢˋ ㄍㄨㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 852,
+    "name": "拳拳蛸",
+    "zhuyin": "ㄑㄩㄢˊ ㄑㄩㄢˊ ㄕㄠ",
+    "needsReview": true,
+    "missingCharacters": [
+      "蛸"
+    ]
+  },
+  {
+    "id": 853,
+    "name": "八爪武師",
+    "zhuyin": "ㄅㄚ ㄓㄠˇ ㄨˇ ㄕ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 854,
+    "name": "來悲茶",
+    "zhuyin": "ㄌㄞˊ ㄅㄟ ㄔㄚˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 855,
+    "name": "怖思壺",
+    "zhuyin": "ㄅㄨˋ ㄙ ㄏㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 856,
+    "name": "迷布莉姆",
+    "zhuyin": "ㄇㄧˊ ㄅㄨˋ ㄌㄧˋ ㄇㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 857,
+    "name": "提布莉姆",
+    "zhuyin": "ㄊㄧˊ ㄅㄨˋ ㄌㄧˋ ㄇㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 858,
+    "name": "布莉姆溫",
+    "zhuyin": "ㄅㄨˋ ㄌㄧˋ ㄇㄨˇ ㄨㄣ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 859,
+    "name": "搗蛋小妖",
+    "zhuyin": "ㄉㄠˇ ㄉㄢˋ ㄒㄧㄠˇ ㄧㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 860,
+    "name": "詐唬魔",
+    "zhuyin": "ㄓㄚˋ ㄏㄨˇ ㄇㄛˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 861,
+    "name": "長毛巨魔",
+    "zhuyin": "ㄓㄤˇ ㄇㄠˊ ㄐㄩˋ ㄇㄛˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 862,
+    "name": "堵攔熊",
+    "zhuyin": "ㄉㄨˇ ㄌㄢˊ ㄒㄩㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 863,
+    "name": "喵頭目",
+    "zhuyin": "ㄇㄧㄠ ㄊㄡˊ ㄇㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 864,
+    "name": "魔靈珊瑚",
+    "zhuyin": "ㄇㄛˊ ㄌㄧㄥˊ ㄕㄢ ㄏㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 865,
+    "name": "蔥遊兵",
+    "zhuyin": "ㄘㄨㄥ ㄧㄡˊ ㄅㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 866,
+    "name": "踏冰人偶",
+    "zhuyin": "ㄊㄚˋ ㄅㄧㄥ ㄖㄣˊ ㄡˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 867,
+    "name": "死神板",
+    "zhuyin": "ㄙˇ ㄕㄣˊ ㄅㄢˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 868,
+    "name": "小仙奶",
+    "zhuyin": "ㄒㄧㄠˇ ㄒㄧㄢ ㄋㄞˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 869,
+    "name": "霜奶仙",
+    "zhuyin": "ㄕㄨㄤ ㄋㄞˇ ㄒㄧㄢ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 870,
+    "name": "列陣兵",
+    "zhuyin": "ㄌㄧㄝˋ ㄓㄣˋ ㄅㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 871,
+    "name": "啪嚓海膽",
+    "zhuyin": "ㄆㄚ ㄘㄚ ㄏㄞˇ ㄉㄢˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 872,
+    "name": "雪吞蟲",
+    "zhuyin": "ㄒㄩㄝˇ ㄊㄨㄣ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 873,
+    "name": "雪絨蛾",
+    "zhuyin": "ㄒㄩㄝˇ ㄖㄨㄥˊ ㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 874,
+    "name": "巨石丁",
+    "zhuyin": "ㄐㄩˋ ㄕˊ ㄉㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 875,
+    "name": "冰砌鵝",
+    "zhuyin": "ㄅㄧㄥ ㄑㄧˋ ㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 876,
+    "name": "愛管侍",
+    "zhuyin": "ㄞˋ ㄍㄨㄢˇ ㄕˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 877,
+    "name": "莫魯貝可",
+    "zhuyin": "ㄇㄛˋ ㄌㄨˇ ㄅㄟˋ ㄎㄜˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 878,
+    "name": "銅象",
+    "zhuyin": "ㄊㄨㄥˊ ㄒㄧㄤˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 879,
+    "name": "大王銅象",
+    "zhuyin": "ㄉㄚˋ ㄨㄤˊ ㄊㄨㄥˊ ㄒㄧㄤˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 880,
+    "name": "雷鳥龍",
+    "zhuyin": "ㄌㄟˊ ㄋㄧㄠˇ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 881,
+    "name": "雷鳥海獸",
+    "zhuyin": "ㄌㄟˊ ㄋㄧㄠˇ ㄏㄞˇ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 882,
+    "name": "鰓魚龍",
+    "zhuyin": "ㄙㄞ ㄩˊ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 883,
+    "name": "鰓魚海獸",
+    "zhuyin": "ㄙㄞ ㄩˊ ㄏㄞˇ ㄕㄡˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 884,
+    "name": "鋁鋼龍",
+    "zhuyin": "ㄌㄩˇ ㄍㄤ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 885,
+    "name": "多龍梅西亞",
+    "zhuyin": "ㄉㄨㄛ ㄌㄨㄥˊ ㄇㄟˊ ㄒㄧ ㄧㄚˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 886,
+    "name": "多龍奇",
+    "zhuyin": "ㄉㄨㄛ ㄌㄨㄥˊ ㄑㄧˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 887,
+    "name": "多龍巴魯托",
+    "zhuyin": "ㄉㄨㄛ ㄌㄨㄥˊ ㄅㄚ ㄌㄨˇ ㄊㄨㄛ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 888,
+    "name": "蒼響",
+    "zhuyin": "ㄘㄤ ㄒㄧㄤˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 889,
+    "name": "藏瑪然特",
+    "zhuyin": "ㄘㄤˊ ㄇㄚˇ ㄖㄢˊ ㄊㄜˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 890,
+    "name": "無極汰那",
+    "zhuyin": "ㄨˊ ㄐㄧˊ ㄊㄞˋ ㄋㄚˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 891,
+    "name": "熊徒弟",
+    "zhuyin": "ㄒㄩㄥˊ ㄊㄨˊ ㄉㄧˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 892,
+    "name": "武道熊師",
+    "zhuyin": "ㄨˇ ㄉㄠˋ ㄒㄩㄥˊ ㄕ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 893,
+    "name": "薩戮德",
+    "zhuyin": "ㄙㄚˋ ㄌㄨˋ ㄉㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 894,
+    "name": "雷吉艾勒奇",
+    "zhuyin": "ㄌㄟˊ ㄐㄧˊ ㄞˋ ㄌㄟ ㄑㄧˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 895,
+    "name": "雷吉鐸拉戈",
+    "zhuyin": "ㄌㄟˊ ㄐㄧˊ ㄉㄨㄛˊ ㄌㄚ ㄍㄜ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 896,
+    "name": "雪暴馬",
+    "zhuyin": "ㄒㄩㄝˇ ㄅㄠˋ ㄇㄚˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 897,
+    "name": "靈幽馬",
+    "zhuyin": "ㄌㄧㄥˊ ㄧㄡ ㄇㄚˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 898,
+    "name": "蕾冠王",
+    "zhuyin": "ㄌㄟˇ ㄍㄨㄢ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 899,
+    "name": "詭角鹿",
+    "zhuyin": "ㄍㄨㄟˇ ㄐㄧㄠˇ ㄌㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 900,
+    "name": "劈斧螳螂",
+    "zhuyin": "ㄆㄧ ㄈㄨˇ ㄊㄤˊ ㄌㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 901,
+    "name": "月月熊",
+    "zhuyin": "ㄩㄝˋ ㄩㄝˋ ㄒㄩㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 902,
+    "name": "幽尾玄魚",
+    "zhuyin": "ㄧㄡ ㄨㄟˇ ㄒㄩㄢˊ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 903,
+    "name": "大狃拉",
+    "zhuyin": "ㄉㄚˋ ㄋㄧㄡˇ ㄌㄚ",
+    "needsReview": true,
+    "missingCharacters": [
+      "狃"
+    ]
+  },
+  {
+    "id": 904,
+    "name": "萬針魚",
+    "zhuyin": "ㄨㄢˋ ㄓㄣ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 905,
+    "name": "眷戀雲",
+    "zhuyin": "ㄐㄩㄢˋ ㄌㄧㄢˋ ㄩㄣˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 906,
+    "name": "新葉喵",
+    "zhuyin": "ㄒㄧㄣ ㄧㄝˋ ㄇㄧㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 907,
+    "name": "蒂蕾喵",
+    "zhuyin": "ㄉㄧˋ ㄌㄟˇ ㄇㄧㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 908,
+    "name": "魔幻假面喵",
+    "zhuyin": "ㄇㄛˊ ㄏㄨㄢˋ ㄐㄧㄚˇ ㄇㄧㄢˋ ㄇㄧㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 909,
+    "name": "呆火鱷",
+    "zhuyin": "ㄉㄞ ㄏㄨㄛˇ ㄜˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 910,
+    "name": "炙燙鱷",
+    "zhuyin": "ㄓˋ ㄊㄤˋ ㄜˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 911,
+    "name": "骨紋巨聲鱷",
+    "zhuyin": "ㄍㄨˇ ㄨㄣˊ ㄐㄩˋ ㄕㄥ ㄜˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 912,
+    "name": "潤水鴨",
+    "zhuyin": "ㄖㄨㄣˋ ㄕㄨㄟˇ ㄧㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 913,
+    "name": "湧躍鴨",
+    "zhuyin": "ㄩㄥˇ ㄩㄝˋ ㄧㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 914,
+    "name": "狂歡浪舞鴨",
+    "zhuyin": "ㄎㄨㄤˊ ㄏㄨㄢ ㄌㄤˋ ㄨˇ ㄧㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 915,
+    "name": "愛吃豚",
+    "zhuyin": "ㄞˋ ㄔ ㄊㄨㄣˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 916,
+    "name": "飄香豚",
+    "zhuyin": "ㄆㄧㄠ ㄒㄧㄤ ㄊㄨㄣˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 917,
+    "name": "團珠蛛",
+    "zhuyin": "ㄊㄨㄢˊ ㄓㄨ ㄓㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 918,
+    "name": "操陷蛛",
+    "zhuyin": "ㄘㄠ ㄒㄧㄢˋ ㄓㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 919,
+    "name": "豆蟋蟀",
+    "zhuyin": "ㄉㄡˋ ㄒㄧ ㄕㄨㄞˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 920,
+    "name": "烈腿蝗",
+    "zhuyin": "ㄌㄧㄝˋ ㄊㄨㄟˇ ㄏㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 921,
+    "name": "布撥",
+    "zhuyin": "ㄅㄨˋ ㄅㄛ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 922,
+    "name": "布土撥",
+    "zhuyin": "ㄅㄨˋ ㄊㄨˇ ㄅㄛ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 923,
+    "name": "巴布土撥",
+    "zhuyin": "ㄅㄚ ㄅㄨˋ ㄊㄨˇ ㄅㄛ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 924,
+    "name": "一對鼠",
+    "zhuyin": "ㄧ ㄉㄨㄟˋ ㄕㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 925,
+    "name": "一家鼠",
+    "zhuyin": "ㄧ ㄐㄧㄚ ㄕㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 926,
+    "name": "狗仔包",
+    "zhuyin": "ㄍㄡˇ ㄗㄞˇ ㄅㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 927,
+    "name": "麻花犬",
+    "zhuyin": "ㄇㄚˊ ㄏㄨㄚ ㄑㄩㄢˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 928,
+    "name": "迷你芙",
+    "zhuyin": "ㄇㄧˊ ㄋㄧˇ ㄈㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 929,
+    "name": "奧利紐",
+    "zhuyin": "ㄠˋ ㄌㄧˋ ㄋㄧㄡˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 930,
+    "name": "奧利瓦",
+    "zhuyin": "ㄠˋ ㄌㄧˋ ㄨㄚˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 931,
+    "name": "怒鸚哥",
+    "zhuyin": "ㄋㄨˋ ㄧㄥ ㄍㄜ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 932,
+    "name": "鹽石寶",
+    "zhuyin": "ㄧㄢˊ ㄕˊ ㄅㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 933,
+    "name": "鹽石壘",
+    "zhuyin": "ㄧㄢˊ ㄕˊ ㄌㄟˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 934,
+    "name": "鹽石巨靈",
+    "zhuyin": "ㄧㄢˊ ㄕˊ ㄐㄩˋ ㄌㄧㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 935,
+    "name": "炭小侍",
+    "zhuyin": "ㄊㄢˋ ㄒㄧㄠˇ ㄕˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 936,
+    "name": "紅蓮鎧騎",
+    "zhuyin": "ㄏㄨㄥˊ ㄌㄧㄢˊ ㄎㄞˇ ㄑㄧˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 937,
+    "name": "蒼炎刃鬼",
+    "zhuyin": "ㄘㄤ ㄧㄢˊ ㄖㄣˋ ㄍㄨㄟˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 938,
+    "name": "光蚪仔",
+    "zhuyin": "ㄍㄨㄤ ㄉㄡˇ ㄗㄞˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 939,
+    "name": "電肚蛙",
+    "zhuyin": "ㄉㄧㄢˋ ㄉㄨˋ ㄨㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 940,
+    "name": "電海燕",
+    "zhuyin": "ㄉㄧㄢˋ ㄏㄞˇ ㄧㄢˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 941,
+    "name": "大電海燕",
+    "zhuyin": "ㄉㄚˋ ㄉㄧㄢˋ ㄏㄞˇ ㄧㄢˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 942,
+    "name": "偶叫獒",
+    "zhuyin": "ㄡˇ ㄐㄧㄠˋ ㄠˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 943,
+    "name": "獒教父",
+    "zhuyin": "ㄠˊ ㄐㄧㄠˋ ㄈㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 944,
+    "name": "滋汁鼴",
+    "zhuyin": "ㄗ ㄓ ㄧㄢˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 945,
+    "name": "塗標客",
+    "zhuyin": "ㄊㄨˊ ㄅㄧㄠ ㄎㄜˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 946,
+    "name": "納噬草",
+    "zhuyin": "ㄋㄚˋ ㄕˋ ㄘㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 947,
+    "name": "怖納噬草",
+    "zhuyin": "ㄅㄨˋ ㄋㄚˋ ㄕˋ ㄘㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 948,
+    "name": "原野水母",
+    "zhuyin": "ㄩㄢˊ ㄧㄝˇ ㄕㄨㄟˇ ㄇㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 949,
+    "name": "陸地水母",
+    "zhuyin": "ㄌㄨˋ ㄉㄧˋ ㄕㄨㄟˇ ㄇㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 950,
+    "name": "毛崖蟹",
+    "zhuyin": "ㄇㄠˊ ㄧㄚˊ ㄒㄧㄝˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 951,
+    "name": "熱辣娃",
+    "zhuyin": "ㄖㄜˋ ㄌㄚˋ ㄨㄚˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 952,
+    "name": "狠辣椒",
+    "zhuyin": "ㄏㄣˇ ㄌㄚˋ ㄐㄧㄠ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 953,
+    "name": "蟲滾泥",
+    "zhuyin": "ㄔㄨㄥˊ ㄍㄨㄣˇ ㄋㄧˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 954,
+    "name": "蟲甲聖",
+    "zhuyin": "ㄔㄨㄥˊ ㄐㄧㄚˇ ㄕㄥˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 955,
+    "name": "飄飄雛",
+    "zhuyin": "ㄆㄧㄠ ㄆㄧㄠ ㄔㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 956,
+    "name": "超能豔鴕",
+    "zhuyin": "ㄔㄠ ㄋㄥˊ ㄧㄢˋ ㄊㄨㄛˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 957,
+    "name": "小鍛匠",
+    "zhuyin": "ㄒㄧㄠˇ ㄉㄨㄢˋ ㄐㄧㄤˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 958,
+    "name": "巧鍛匠",
+    "zhuyin": "ㄑㄧㄠˇ ㄉㄨㄢˋ ㄐㄧㄤˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 959,
+    "name": "巨鍛匠",
+    "zhuyin": "ㄐㄩˋ ㄉㄨㄢˋ ㄐㄧㄤˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 960,
+    "name": "海地鼠",
+    "zhuyin": "ㄏㄞˇ ㄉㄧˋ ㄕㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 961,
+    "name": "三海地鼠",
+    "zhuyin": "ㄙㄢ ㄏㄞˇ ㄉㄧˋ ㄕㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 962,
+    "name": "下石鳥",
+    "zhuyin": "ㄒㄧㄚˋ ㄕˊ ㄋㄧㄠˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 963,
+    "name": "波普海豚",
+    "zhuyin": "ㄅㄛ ㄆㄨˇ ㄏㄞˇ ㄊㄨㄣˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 964,
+    "name": "海豚俠",
+    "zhuyin": "ㄏㄞˇ ㄊㄨㄣˊ ㄒㄧㄚˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 965,
+    "name": "噗隆隆",
+    "zhuyin": "ㄆㄨ ㄌㄨㄥˊ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 966,
+    "name": "普隆隆姆",
+    "zhuyin": "ㄆㄨˇ ㄌㄨㄥˊ ㄌㄨㄥˊ ㄇㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 967,
+    "name": "摩托蜥",
+    "zhuyin": "ㄇㄛˊ ㄊㄨㄛ ㄒㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 968,
+    "name": "拖拖蚓",
+    "zhuyin": "ㄊㄨㄛ ㄊㄨㄛ ㄧㄣˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 969,
+    "name": "晶光芽",
+    "zhuyin": "ㄐㄧㄥ ㄍㄨㄤ ㄧㄚˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 970,
+    "name": "晶光花",
+    "zhuyin": "ㄐㄧㄥ ㄍㄨㄤ ㄏㄨㄚ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 971,
+    "name": "墓仔狗",
+    "zhuyin": "ㄇㄨˋ ㄗㄞˇ ㄍㄡˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 972,
+    "name": "墓揚犬",
+    "zhuyin": "ㄇㄨˋ ㄧㄤˊ ㄑㄩㄢˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 973,
+    "name": "纏紅鶴",
+    "zhuyin": "ㄔㄢˊ ㄏㄨㄥˊ ㄏㄜˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 974,
+    "name": "走鯨",
+    "zhuyin": "ㄗㄡˇ ㄐㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 975,
+    "name": "浩大鯨",
+    "zhuyin": "ㄏㄠˋ ㄉㄚˋ ㄐㄧㄥ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 976,
+    "name": "輕身鱈",
+    "zhuyin": "ㄑㄧㄥ ㄕㄣ ㄒㄩㄝˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 977,
+    "name": "吃吼霸",
+    "zhuyin": "ㄔ ㄏㄡˇ ㄅㄚˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 978,
+    "name": "米立龍",
+    "zhuyin": "ㄇㄧˇ ㄌㄧˋ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 979,
+    "name": "棄世猴",
+    "zhuyin": "ㄑㄧˋ ㄕˋ ㄏㄡˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 980,
+    "name": "土王",
+    "zhuyin": "ㄊㄨˇ ㄨㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 981,
+    "name": "奇麒麟",
+    "zhuyin": "ㄑㄧˊ ㄑㄧˊ ㄌㄧㄣˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 982,
+    "name": "土龍節節",
+    "zhuyin": "ㄊㄨˇ ㄌㄨㄥˊ ㄐㄧㄝˊ ㄐㄧㄝˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 983,
+    "name": "仆斬將軍",
+    "zhuyin": "ㄆㄨ ㄓㄢˇ ㄐㄧㄤ ㄐㄩㄣ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 984,
+    "name": "雄偉牙",
+    "zhuyin": "ㄒㄩㄥˊ ㄨㄟˇ ㄧㄚˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 985,
+    "name": "吼叫尾",
+    "zhuyin": "ㄏㄡˇ ㄐㄧㄠˋ ㄨㄟˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 986,
+    "name": "猛惡菇",
+    "zhuyin": "ㄇㄥˇ ㄜˋ ㄍㄨ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 987,
+    "name": "振翼髮",
+    "zhuyin": "ㄓㄣˋ ㄧˋ ㄈㄚˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 988,
+    "name": "爬地翅",
+    "zhuyin": "ㄆㄚˊ ㄉㄧˋ ㄔˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 989,
+    "name": "沙鐵皮",
+    "zhuyin": "ㄕㄚ ㄊㄧㄝˇ ㄆㄧˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 990,
+    "name": "鐵轍跡",
+    "zhuyin": "ㄊㄧㄝˇ ㄓㄜˊ ㄐㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 991,
+    "name": "鐵包袱",
+    "zhuyin": "ㄊㄧㄝˇ ㄅㄠ ㄈㄨˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 992,
+    "name": "鐵臂膀",
+    "zhuyin": "ㄊㄧㄝˇ ㄅㄧˋ ㄅㄤˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 993,
+    "name": "鐵脖頸",
+    "zhuyin": "ㄊㄧㄝˇ ㄅㄛˊ ㄐㄧㄥˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 994,
+    "name": "鐵毒蛾",
+    "zhuyin": "ㄊㄧㄝˇ ㄉㄨˊ ㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 995,
+    "name": "鐵荊棘",
+    "zhuyin": "ㄊㄧㄝˇ ㄐㄧㄥ ㄐㄧˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 996,
+    "name": "涼脊龍",
+    "zhuyin": "ㄌㄧㄤˊ ㄐㄧˊ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 997,
+    "name": "凍脊龍",
+    "zhuyin": "ㄉㄨㄥˋ ㄐㄧˊ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 998,
+    "name": "戟脊龍",
+    "zhuyin": "ㄐㄧˇ ㄐㄧˊ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 999,
+    "name": "索財靈",
+    "zhuyin": "ㄙㄨㄛˇ ㄘㄞˊ ㄌㄧㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1000,
+    "name": "賽富豪",
+    "zhuyin": "ㄙㄞˋ ㄈㄨˋ ㄏㄠˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1001,
+    "name": "古簡蝸",
+    "zhuyin": "ㄍㄨˇ ㄐㄧㄢˇ ㄨㄛ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1002,
+    "name": "古劍豹",
+    "zhuyin": "ㄍㄨˇ ㄐㄧㄢˋ ㄅㄠˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1003,
+    "name": "古鼎鹿",
+    "zhuyin": "ㄍㄨˇ ㄉㄧㄥˇ ㄌㄨˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1004,
+    "name": "古玉魚",
+    "zhuyin": "ㄍㄨˇ ㄩˋ ㄩˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1005,
+    "name": "轟鳴月",
+    "zhuyin": "ㄏㄨㄥ ㄇㄧㄥˊ ㄩㄝˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1006,
+    "name": "鐵武者",
+    "zhuyin": "ㄊㄧㄝˇ ㄨˇ ㄓㄜˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1007,
+    "name": "故勒頓",
+    "zhuyin": "ㄍㄨˋ ㄌㄟ ㄉㄨㄣˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1008,
+    "name": "密勒頓",
+    "zhuyin": "ㄇㄧˋ ㄌㄟ ㄉㄨㄣˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1009,
+    "name": "波盪水",
+    "zhuyin": "ㄅㄛ ㄉㄤˋ ㄕㄨㄟˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1010,
+    "name": "鐵斑葉",
+    "zhuyin": "ㄊㄧㄝˇ ㄅㄢ ㄧㄝˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1011,
+    "name": "裹蜜蟲",
+    "zhuyin": "ㄍㄨㄛˇ ㄇㄧˋ ㄔㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1012,
+    "name": "斯魔茶",
+    "zhuyin": "ㄙ ㄇㄛˊ ㄔㄚˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1013,
+    "name": "來悲粗茶",
+    "zhuyin": "ㄌㄞˊ ㄅㄟ ㄘㄨ ㄔㄚˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1014,
+    "name": "夠讚狗",
+    "zhuyin": "ㄍㄡˋ ㄗㄢˋ ㄍㄡˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1015,
+    "name": "願增猿",
+    "zhuyin": "ㄩㄢˋ ㄗㄥ ㄩㄢˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1016,
+    "name": "吉雉雞",
+    "zhuyin": "ㄐㄧˊ ㄓˋ ㄐㄧ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1017,
+    "name": "厄鬼椪",
+    "zhuyin": "ㄜˋ ㄍㄨㄟˇ ㄆㄥˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1018,
+    "name": "鋁鋼橋龍",
+    "zhuyin": "ㄌㄩˇ ㄍㄤ ㄑㄧㄠˊ ㄌㄨㄥˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1019,
+    "name": "蜜集大蛇",
+    "zhuyin": "ㄇㄧˋ ㄐㄧˊ ㄉㄚˋ ㄕㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1020,
+    "name": "破空焰",
+    "zhuyin": "ㄆㄛˋ ㄎㄨㄥ ㄧㄢˋ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1021,
+    "name": "猛雷鼓",
+    "zhuyin": "ㄇㄥˇ ㄌㄟˊ ㄍㄨˇ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1022,
+    "name": "鐵磐岩",
+    "zhuyin": "ㄊㄧㄝˇ ㄆㄢˊ ㄧㄢˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1023,
+    "name": "鐵頭殼",
+    "zhuyin": "ㄊㄧㄝˇ ㄊㄡˊ ㄎㄜˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1024,
+    "name": "太樂巴戈斯",
+    "zhuyin": "ㄊㄞˋ ㄌㄜˋ ㄅㄚ ㄍㄜ ㄙ",
+    "needsReview": false,
+    "missingCharacters": []
+  },
+  {
+    "id": 1025,
+    "name": "桃歹郎",
+    "zhuyin": "ㄊㄠˊ ㄉㄞˇ ㄌㄤˊ",
+    "needsReview": false,
+    "missingCharacters": []
+  }
+]
