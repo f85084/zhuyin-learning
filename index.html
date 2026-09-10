@@ -543,64 +543,109 @@
     }
 
     @media print {
-      @page { size: A4 portrait; margin: 11mm; }
-      body { background: #fff; }
-      .app-header { color: var(--ink); background: #fff; border-bottom: 3px solid var(--red); }
-      .header-inner { min-height: auto; padding-block: 3px 7px; }
-      .brand-badge, .header-copy p, .collection-count, .toolbar, .learning-note { display: none !important; }
-      h1 { font-size: 1.35rem; }
+      @page { size: A4 portrait; margin: 7mm; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      html, body { width: 100%; min-height: 100%; background: #fff; }
+      .app-header, .toolbar, .learning-note { display: none !important; }
       .page-shell { width: 100%; padding: 0; }
-      .worksheet-sheet { margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; background: #fff; }
-      .worksheet-sheet .worksheet-head { margin: 0 0 4px; padding-top: 6px; }
+      .worksheet-sheet {
+        width: 100%;
+        height: 282mm;
+        display: grid;
+        grid-template-rows: auto auto 1.07fr 1fr 1fr .93fr;
+        gap: 3mm;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background: #fff;
+      }
+      .worksheet-sheet .worksheet-head { margin: 0; padding: 0 0 2mm; border-bottom: 2px solid var(--red); }
+      .worksheet-head h2 { font-size: 1.25rem; }
       .worksheet-head p { display: none; }
-      .batch-summary { padding: 4px 8px; font-size: .72rem; }
-      .student-fields { margin: 0 0 7px; gap: 22px; font-size: .75rem; }
-      .exercise-section + .exercise-section { margin-top: 7px; }
-      .exercise-heading { gap: 6px; margin-bottom: 4px; }
-      .exercise-heading > span { width: 22px; height: 22px; border-radius: 6px; font-size: .72rem; }
-      .exercise-heading h3 { font-size: .88rem; }
+      .batch-summary { padding: 4px 9px; font-size: .72rem; }
+      .student-fields { align-items: center; margin: 0; gap: 24px; font-size: .78rem; }
+      .exercise-section {
+        min-height: 0;
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr);
+      }
+      .exercise-section + .exercise-section { margin-top: 0; }
+      .exercise-heading { gap: 7px; margin-bottom: 1.5mm; }
+      .exercise-heading > span { width: 23px; height: 23px; border-radius: 6px; font-size: .74rem; }
+      .exercise-heading h3 { font-size: .92rem; }
       .exercise-heading p { display: none; }
-      .pokemon-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
-      .pokemon-card { break-inside: avoid; box-shadow: none; border-radius: 12px; }
+      .pokemon-grid { height: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5mm; }
+      body[data-print-count="1"] .pokemon-grid { grid-template-columns: 1fr; }
+      body[data-print-count="3"] .pokemon-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .pokemon-card {
+        height: 100%;
+        display: grid;
+        grid-template-rows: auto 58px minmax(0, 1fr);
+        break-inside: avoid;
+        box-shadow: none;
+        border-top-width: 3px;
+        border-radius: 10px;
+      }
       .pokemon-card:hover { transform: none; }
-      .card-meta { padding: 4px 7px 0; font-size: .56rem; }
-      .artwork-wrap { height: 52px; }
-      .artwork-wrap img { width: 48px; height: 48px; filter: none; }
-      .name-panel { min-height: 62px; padding: 3px 3px 5px; }
-      .ruby-name { gap: 2px; }
-      .annotated-character { grid-template-columns: auto 1.08rem; }
-      .hanzi { font-size: 1.05rem; }
-      .phonetic { height: 2.85rem; grid-template-columns: .62rem .46rem; }
-      .phonetic-symbols { font-size: .7rem; }
-      .tone { font-size: .82rem; }
-      .question-card { break-inside: avoid; border-radius: 9px; box-shadow: none; }
-      .question-heading { padding: 3px 6px; font-size: .58rem; }
-      .quiz-prompt { min-height: 68px; padding: 2px; }
-      .quiz-art { width: 48px; height: 48px; filter: none; }
-      .writing-card { break-inside: avoid; border-radius: 9px; box-shadow: none; }
-      .writing-body { min-height: 68px; grid-template-columns: 42px 1fr; gap: 4px; padding: 3px 6px 5px; }
-      .writing-art { width: 38px; height: 38px; }
-      .writing-name { gap: 2px; }
-      .writing-character { grid-template-columns: auto 1.05rem; gap: 1px; }
-      .zhuyin-writing-slot { width: 1rem; height: 2.85rem; grid-template-columns: .6rem .34rem; gap: 1px; }
-      .symbol-writing-box, .tone-writing-box { border-width: 1px; border-radius: 3px; }
-      .tone-writing-box { height: 1.1rem; }
-      .pronunciation-prompt { gap: 5px; padding: 4px 7px; border-radius: 8px; }
-      .pronunciation-prompt .phonetic { height: 3rem; transform: scale(1.08); }
-      .choice-list { gap: 3px; padding: 0 5px 5px; }
-      .choice { min-height: 28px; padding: 2px; border-width: 1px; border-radius: 6px; }
-      .choice-image { min-height: 43px; }
-      .choice-image img { width: 30px; height: 30px; }
-      .choice .hanzi { font-size: .72rem; }
-      .choice .annotated-character { grid-template-columns: auto .62rem; }
-      .choice .phonetic { width: .72rem; height: 1.8rem; grid-template-columns: .42rem .3rem; }
-      .choice .phonetic-symbols { font-size: .48rem; }
-      .choice .tone { font-size: .56rem; }
+      .card-meta { padding: 4px 8px 0; font-size: .6rem; }
+      .artwork-wrap { height: 58px; padding: 0; }
+      .artwork-wrap img { width: 54px; height: 54px; filter: none; }
+      .name-panel { min-height: 0; padding: 4px 5px 7px; }
+      .ruby-name { gap: 3px; }
+      .annotated-character { grid-template-columns: auto 1.28rem; }
+      .hanzi { font-size: 1.18rem; }
+      .phonetic { height: 3.4rem; grid-template-columns: .74rem .5rem; }
+      .phonetic-symbols { font-size: .82rem; }
+      .tone { font-size: 1.02rem; }
+      .question-card {
+        height: 100%;
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr) auto;
+        break-inside: avoid;
+        border-radius: 9px;
+        box-shadow: none;
+      }
+      .question-heading { padding: 4px 7px; font-size: .62rem; }
+      .quiz-prompt { min-height: 0; padding: 4px; }
+      .quiz-art { width: 54px; height: 54px; filter: none; }
+      .writing-card {
+        height: 100%;
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr);
+        break-inside: avoid;
+        border-radius: 9px;
+        box-shadow: none;
+      }
+      .writing-body { min-height: 0; grid-template-columns: 50px 1fr; gap: 7px; padding: 4px 8px 7px; }
+      .writing-art { width: 46px; height: 46px; }
+      .writing-name { gap: 3px; }
+      .writing-character { grid-template-columns: auto 1.35rem; gap: 2px; }
+      .zhuyin-writing-slot { width: 1.3rem; height: 3.55rem; grid-template-columns: .78rem .44rem; gap: 2px; }
+      .symbol-writing-box, .tone-writing-box { border-width: 1.5px; border-radius: 4px; }
+      .tone-writing-box { height: 1.35rem; }
+      .pronunciation-prompt { gap: 7px; padding: 8px 10px; border-radius: 8px; }
+      .pronunciation-prompt .phonetic { height: 3.65rem; transform: scale(1.18); }
+      .choice-list { gap: 4px; padding: 0 7px 7px; }
+      .choice { min-height: 38px; padding: 3px; border-width: 1.5px; border-radius: 6px; }
+      .choice-image { min-height: 52px; }
+      .choice-image img { width: 42px; height: 42px; }
+      .choice .hanzi { font-size: .82rem; }
+      .choice .annotated-character { grid-template-columns: auto .72rem; }
+      .choice .phonetic { width: .8rem; height: 2.15rem; grid-template-columns: .48rem .31rem; }
+      .choice .phonetic-symbols { font-size: .53rem; }
+      .choice .tone { font-size: .64rem; }
+      body[data-print-count="3"] .hanzi { font-size: 1.02rem; }
+      body[data-print-count="3"] .annotated-character { grid-template-columns: auto 1.08rem; }
+      body[data-print-count="3"] .phonetic { height: 3rem; grid-template-columns: .65rem .42rem; }
+      body[data-print-count="3"] .phonetic-symbols { font-size: .72rem; }
+      body[data-print-count="3"] .tone { font-size: .88rem; }
       .answer-feedback { display: none; }
     }
   </style>
 </head>
-<body>
+<body data-print-count="2">
   <header class="app-header">
     <div class="header-inner">
       <div class="brand">
@@ -847,6 +892,7 @@
 
     function render() {
       const poolSize = filteredPokemon().length;
+      document.body.dataset.printCount = String(state.count);
       renderSummary(poolSize);
       if (!state.sections.study?.length) {
         elements.studyGrid.innerHTML = `<div class="empty-state">找不到符合條件的寶可夢，請換個名稱或世代。</div>`;
