@@ -303,20 +303,48 @@
 
     .pronunciation-prompt .phonetic { height: 5.2rem; transform: scale(1.35); }
 
-    .missing-prompt {
+    .writing-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 21px;
+      background: #fff;
+      box-shadow: 0 9px 24px rgba(24, 51, 86, .09);
+    }
+
+    .writing-body {
+      min-height: 148px;
       display: grid;
-      place-items: center;
-      gap: 8px;
+      grid-template-columns: 88px 1fr;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px 16px;
     }
 
-    .missing-prompt .quiz-art { width: 86px; height: 86px; }
+    .writing-art { width: 82px; height: 82px; object-fit: contain; }
+    .writing-name { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; }
 
-    .missing-name .hanzi.is-blank {
-      width: 1.1em;
-      height: 1.1em;
-      border-bottom: 4px solid var(--red);
-      color: transparent;
+    .writing-character {
+      display: inline-grid;
+      grid-template-columns: auto 2.2rem;
+      align-items: center;
+      gap: 3px;
     }
+
+    .zhuyin-writing-slot {
+      width: 2.1rem;
+      height: 5.25rem;
+      display: grid;
+      grid-template-columns: 1.25rem .65rem;
+      gap: 2px;
+    }
+
+    .symbol-writing-box, .tone-writing-box {
+      border: 2px dashed #a9b9cd;
+      border-radius: 7px;
+      background: repeating-linear-gradient(to bottom, transparent 0 31%, rgba(35,104,181,.12) 32% 34%, transparent 35% 65%, rgba(35,104,181,.12) 66% 68%, transparent 69% 100%);
+    }
+
+    .tone-writing-box { height: 2rem; align-self: center; background: none; }
 
     .choice-list {
       display: grid;
@@ -345,7 +373,6 @@
     .choice.is-wrong { border-color: var(--red); color: #a51d2c; background: #fff0f1; }
     .choice-image { min-height: 78px; }
     .choice-image img { width: 62px; height: 62px; object-fit: contain; }
-    .choice-character { font-family: "BiauKai", "DFKai-SB", "標楷體", serif; font-size: 2.1rem; }
     .choice .ruby-name { gap: 2px; }
     .choice .annotated-character { grid-template-columns: auto 1rem; }
     .choice .hanzi { font-size: 1.25rem; }
@@ -550,15 +577,20 @@
       .question-heading { padding: 3px 6px; font-size: .58rem; }
       .quiz-prompt { min-height: 68px; padding: 2px; }
       .quiz-art { width: 48px; height: 48px; filter: none; }
-      .missing-prompt { grid-template-columns: 46px 1fr; gap: 2px; }
-      .missing-prompt .quiz-art { width: 44px; height: 44px; }
+      .writing-card { break-inside: avoid; border-radius: 9px; box-shadow: none; }
+      .writing-body { min-height: 68px; grid-template-columns: 42px 1fr; gap: 4px; padding: 3px 6px 5px; }
+      .writing-art { width: 38px; height: 38px; }
+      .writing-name { gap: 2px; }
+      .writing-character { grid-template-columns: auto 1.05rem; gap: 1px; }
+      .zhuyin-writing-slot { width: 1rem; height: 2.85rem; grid-template-columns: .6rem .34rem; gap: 1px; }
+      .symbol-writing-box, .tone-writing-box { border-width: 1px; border-radius: 3px; }
+      .tone-writing-box { height: 1.1rem; }
       .pronunciation-prompt { gap: 5px; padding: 4px 7px; border-radius: 8px; }
       .pronunciation-prompt .phonetic { height: 3rem; transform: scale(1.08); }
       .choice-list { gap: 3px; padding: 0 5px 5px; }
       .choice { min-height: 28px; padding: 2px; border-width: 1px; border-radius: 6px; }
       .choice-image { min-height: 43px; }
       .choice-image img { width: 30px; height: 30px; }
-      .choice-character { font-size: 1.05rem; }
       .choice .hanzi { font-size: .72rem; }
       .choice .annotated-character { grid-template-columns: auto .62rem; }
       .choice .phonetic { width: .72rem; height: 1.8rem; grid-template-columns: .42rem .3rem; }
@@ -629,9 +661,9 @@
         <div class="pokemon-grid exercise-grid" id="soundPictureGrid"></div>
       </section>
 
-      <section class="exercise-section" aria-labelledby="missingCharacterHeading">
-        <div class="exercise-heading"><span>四</span><div><h3 id="missingCharacterHeading">缺字挑戰</h3><p>依圖片和注音，圈出缺少的字。</p></div></div>
-        <div class="pokemon-grid exercise-grid" id="missingCharacterGrid"></div>
+      <section class="exercise-section" aria-labelledby="writeZhuyinHeading">
+        <div class="exercise-heading"><span>四</span><div><h3 id="writeZhuyinHeading">看圖寫注音</h3><p>看名稱，在每個中文字右側寫上注音。</p></div></div>
+        <div class="pokemon-grid exercise-grid" id="writeZhuyinGrid"></div>
       </section>
     </article>
 
@@ -659,7 +691,7 @@
       studyGrid: document.getElementById('studyGrid'),
       pictureNameGrid: document.getElementById('pictureNameGrid'),
       soundPictureGrid: document.getElementById('soundPictureGrid'),
-      missingCharacterGrid: document.getElementById('missingCharacterGrid'),
+      writeZhuyinGrid: document.getElementById('writeZhuyinGrid'),
       worksheet: document.querySelector('.worksheet-sheet')
     };
 
@@ -680,18 +712,16 @@
       return { symbols: match?.[1] || value, tone: match?.[2] || '' };
     }
 
-    function renderAnnotatedName(entry, options = {}) {
+    function renderAnnotatedName(entry) {
       const characters = [...entry.name];
       const syllables = entry.zhuyin.trim().split(/\s+/u);
       const label = `${entry.name}，${entry.zhuyin}`;
       const content = characters.map((character, index) => {
         const { symbols, tone } = splitSyllable(syllables[index] || '');
         const toneClass = tone === '˙' ? 'tone tone-light' : tone ? 'tone' : 'tone tone-empty';
-        const isBlank = options.blankIndex === index;
-        return `<span class="annotated-character" aria-hidden="true"><span class="hanzi${isBlank ? ' is-blank' : ''}">${isBlank ? '？' : escapeHtml(character)}</span><span class="phonetic"><span class="phonetic-symbols">${escapeHtml(symbols)}</span><span class="${toneClass}">${escapeHtml(tone || 'ˉ')}</span></span></span>`;
+        return `<span class="annotated-character" aria-hidden="true"><span class="hanzi">${escapeHtml(character)}</span><span class="phonetic"><span class="phonetic-symbols">${escapeHtml(symbols)}</span><span class="${toneClass}">${escapeHtml(tone || 'ˉ')}</span></span></span>`;
       }).join('');
-      const extraClass = options.blankIndex === undefined ? '' : ' missing-name';
-      return `<div class="ruby-name${extraClass}" role="text" aria-label="${escapeHtml(label)}">${content}</div>`;
+      return `<div class="ruby-name" role="text" aria-label="${escapeHtml(label)}">${content}</div>`;
     }
 
     function renderPhoneticPrompt(entry) {
@@ -718,23 +748,8 @@
       return shuffled([correct, ...shuffled(sameGeneration).slice(0, 2)]);
     }
 
-    function optionCharacters(correctCharacter) {
-      const candidates = [...new Set(state.data.flatMap((entry) => [...entry.name]))]
-        .filter((character) => character !== correctCharacter && /\p{Script=Han}/u.test(character));
-      return shuffled([correctCharacter, ...shuffled(candidates).slice(0, 2)]);
-    }
-
     function buildQuizItems(type, entries) {
-      return entries.map((entry, index) => {
-        if (type === 'pictureName' || type === 'soundPicture') {
-          return { type, entry, options: optionEntries(entry), key: `${type}-${entry.id}-${index}` };
-        }
-        const characters = [...entry.name];
-        const eligibleIndices = characters.map((character, characterIndex) => /\p{Script=Han}/u.test(character) ? characterIndex : -1).filter((characterIndex) => characterIndex >= 0);
-        const blankIndex = eligibleIndices[Math.floor(Math.random() * eligibleIndices.length)] ?? 0;
-        const answer = characters[blankIndex];
-        return { type, entry, blankIndex, answer, options: optionCharacters(answer), key: `${type}-${entry.id}-${index}` };
-      });
+      return entries.map((entry, index) => ({ type, entry, options: optionEntries(entry), key: `${type}-${entry.id}-${index}` }));
     }
 
     function filteredPokemon() {
@@ -754,19 +769,18 @@
         study: group(0),
         pictureName: group(1),
         soundPicture: group(2),
-        missingCharacter: group(3)
+        writeZhuyin: group(3)
       };
       state.quizItems = {
         pictureName: buildQuizItems('pictureName', state.sections.pictureName),
-        soundPicture: buildQuizItems('soundPicture', state.sections.soundPicture),
-        missingCharacter: buildQuizItems('missingCharacter', state.sections.missingCharacter)
+        soundPicture: buildQuizItems('soundPicture', state.sections.soundPicture)
       };
       state.answers = {};
       render();
     }
 
     function correctValue(item) {
-      return item.type === 'missingCharacter' ? item.answer : String(item.entry.id);
+      return String(item.entry.id);
     }
 
     function answerDetails(item) {
@@ -779,6 +793,13 @@
       return entries.map((entry) => {
         const generation = generationOf(entry.id);
         return `<article class="pokemon-card"><div class="card-meta"><span class="dex-number">全國圖鑑 #${String(entry.id).padStart(4, '0')}</span><span>第 ${generation} 世代</span></div><div class="artwork-wrap"><img src="${artworkPath(entry)}" alt="${escapeHtml(entry.name)}" loading="lazy"></div><div class="name-panel">${renderAnnotatedName(entry)}</div></article>`;
+      }).join('');
+    }
+
+    function renderWritingCards(entries) {
+      return entries.map((entry, index) => {
+        const characters = [...entry.name].map((character) => `<span class="writing-character"><span class="hanzi">${escapeHtml(character)}</span><span class="zhuyin-writing-slot" aria-label="在這裡寫注音"><span class="symbol-writing-box"></span><span class="tone-writing-box"></span></span></span>`).join('');
+        return `<article class="writing-card"><div class="question-heading"><span>第 ${index + 1} 題</span><span>寫注音</span></div><div class="writing-body"><img class="writing-art" src="${artworkPath(entry)}" alt="${escapeHtml(entry.name)}"><div class="writing-name">${characters}</div></div></article>`;
       }).join('');
     }
 
@@ -806,11 +827,6 @@
         choices = item.options.map((option) => `<button class="${choiceClass(item, String(option.id))} choice-image" type="button" data-question="${item.key}" data-answer="${option.id}" aria-label="選擇這張寶可夢圖片" ${answered ? 'disabled' : ''}><img src="${artworkPath(option)}" alt="選項圖片" loading="lazy"></button>`).join('');
       }
 
-      if (item.type === 'missingCharacter') {
-        prompt = `<div class="missing-prompt"><img class="quiz-art" src="${artworkPath(item.entry)}" alt="${escapeHtml(item.entry.name)}">${renderAnnotatedName(item.entry, { blankIndex: item.blankIndex })}</div>`;
-        choices = item.options.map((option) => `<button class="${choiceClass(item, option)} choice-character" type="button" data-question="${item.key}" data-answer="${escapeHtml(option)}" ${answered ? 'disabled' : ''}>${escapeHtml(option)}</button>`).join('');
-      }
-
       const feedback = answered
         ? `<div class="answer-feedback ${correct ? 'correct' : 'wrong'}">${correct ? '答對了！' : `再記一次：${escapeHtml(item.entry.name)}`}</div>`
         : '<div class="answer-feedback" aria-hidden="true">&nbsp;</div>';
@@ -836,13 +852,13 @@
         elements.studyGrid.innerHTML = `<div class="empty-state">找不到符合條件的寶可夢，請換個名稱或世代。</div>`;
         elements.pictureNameGrid.innerHTML = '';
         elements.soundPictureGrid.innerHTML = '';
-        elements.missingCharacterGrid.innerHTML = '';
+        elements.writeZhuyinGrid.innerHTML = '';
         return;
       }
       elements.studyGrid.innerHTML = renderStudyCards(state.sections.study);
       elements.pictureNameGrid.innerHTML = state.quizItems.pictureName.map(renderQuizCard).join('');
       elements.soundPictureGrid.innerHTML = state.quizItems.soundPicture.map(renderQuizCard).join('');
-      elements.missingCharacterGrid.innerHTML = state.quizItems.missingCharacter.map(renderQuizCard).join('');
+      elements.writeZhuyinGrid.innerHTML = renderWritingCards(state.sections.writeZhuyin);
     }
 
     elements.search.addEventListener('input', (event) => { state.query = event.target.value; chooseBatch(); });
