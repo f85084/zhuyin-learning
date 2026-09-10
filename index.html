@@ -1,102 +1,550 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>注音學習單產生器</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="用寶可夢圖片與逐字直式注音，練習辨認和朗讀寶可夢名稱。">
+  <title>寶可夢注音圖鑑</title>
   <style>
-    @media print { body{background:white!important}.no-print{display:none!important}.workspace{padding:0!important;display:block!important}.paper{width:210mm!important;min-height:297mm!important;margin:0!important;box-shadow:none!important;border:0!important} }
-    .paper{width:210mm;min-height:297mm}.trace{color:transparent;-webkit-text-stroke:2px #cbd5e1}.solid-word{color:#0f172a;-webkit-text-stroke:0}.trace-cell{background:linear-gradient(to bottom,transparent 49%,#dbeafe 50%,transparent 51%),linear-gradient(to right,transparent 49%,#dbeafe 50%,transparent 51%)}.choice.active{background:#0f766e;color:white;border-color:#0f766e;box-shadow:0 3px 0 #115e59;transform:translateY(-1px)}.choice{transition:.15s ease}.choice:hover{border-color:#5eead4;background:#f0fdfa}.choice.active:hover{background:#0f766e;color:white}
+    :root {
+      --red: #e33536;
+      --red-dark: #b91c2a;
+      --blue: #2368b5;
+      --blue-dark: #123d72;
+      --yellow: #ffcb05;
+      --ink: #15243a;
+      --muted: #637083;
+      --line: #d9e2ef;
+      --paper: #ffffff;
+      --surface: #f3f7fc;
+      --shadow: 0 14px 36px rgba(25, 54, 94, .12);
+    }
+
+    * { box-sizing: border-box; }
+    html { color-scheme: light; }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 6%, rgba(255, 203, 5, .2), transparent 21rem),
+        radial-gradient(circle at 92% 0%, rgba(35, 104, 181, .13), transparent 24rem),
+        var(--surface);
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      font-size: 16px;
+    }
+
+    button, input, select { font: inherit; }
+    button, select { cursor: pointer; }
+    img { display: block; max-width: 100%; }
+
+    .app-header {
+      color: #fff;
+      background: linear-gradient(120deg, #c91f31 0%, var(--red) 52%, #ef5361 100%);
+      border-bottom: 7px solid var(--yellow);
+    }
+
+    .header-inner, .page-shell {
+      width: min(1180px, calc(100% - 32px));
+      margin-inline: auto;
+    }
+
+    .header-inner {
+      min-height: 108px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding-block: 20px;
+    }
+
+    .brand { display: flex; align-items: center; gap: 16px; }
+
+    .brand-badge {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border: 4px solid #fff;
+      border-radius: 18px;
+      color: var(--blue-dark);
+      background: var(--yellow);
+      box-shadow: 0 7px 0 rgba(85, 10, 24, .25);
+      font-size: 30px;
+      font-weight: 1000;
+      transform: rotate(-3deg);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.6rem, 3.8vw, 2.45rem);
+      line-height: 1.15;
+      letter-spacing: .04em;
+    }
+
+    .header-copy p {
+      margin: 7px 0 0;
+      color: rgba(255, 255, 255, .88);
+      font-size: .98rem;
+    }
+
+    .collection-count {
+      min-width: 140px;
+      padding: 11px 16px;
+      border: 1px solid rgba(255,255,255,.55);
+      border-radius: 16px;
+      background: rgba(101, 8, 24, .19);
+      text-align: center;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .collection-count strong {
+      display: block;
+      color: var(--yellow);
+      font-size: 1.45rem;
+      line-height: 1.1;
+    }
+
+    .page-shell { padding: 28px 0 52px; }
+
+    .toolbar {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: minmax(190px, 1.25fr) repeat(2, minmax(130px, .7fr)) auto auto auto;
+      gap: 12px;
+      align-items: end;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255,255,255,.94);
+      box-shadow: var(--shadow);
+    }
+
+    .field { display: grid; gap: 6px; }
+
+    .field label {
+      color: var(--blue-dark);
+      font-size: .88rem;
+      font-weight: 900;
+    }
+
+    input, select, .button { min-height: 46px; border-radius: 12px; outline: none; }
+
+    input, select {
+      width: 100%;
+      padding: 0 13px;
+      border: 2px solid #cbd7e6;
+      color: var(--ink);
+      background: #fff;
+    }
+
+    input:focus, select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 4px rgba(35, 104, 181, .13);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 0 15px;
+      border: 2px solid transparent;
+      font-weight: 900;
+      white-space: nowrap;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+
+    .button:hover { transform: translateY(-2px); }
+    .button:focus-visible { outline: 4px solid rgba(35,104,181,.25); outline-offset: 2px; }
+
+    .button-primary { color: #fff; background: var(--blue); box-shadow: 0 5px 0 var(--blue-dark); }
+    .button-secondary { color: var(--blue-dark); border-color: #bfd0e5; background: #eef5fd; }
+    .button-print { color: #fff; background: var(--red); box-shadow: 0 5px 0 var(--red-dark); }
+
+    .worksheet-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin: 30px 2px 18px;
+    }
+
+    .worksheet-head h2 {
+      margin: 0;
+      font-size: clamp(1.35rem, 2vw, 1.8rem);
+      color: var(--blue-dark);
+    }
+
+    .worksheet-head p { margin: 5px 0 0; color: var(--muted); line-height: 1.55; }
+
+    .batch-summary {
+      flex: 0 0 auto;
+      padding: 8px 13px;
+      border-radius: 999px;
+      color: #8f2330;
+      background: #ffe8ea;
+      font-size: .9rem;
+      font-weight: 900;
+    }
+
+    .pokemon-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .pokemon-card {
+      position: relative;
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--red);
+      border-radius: 21px;
+      background: var(--paper);
+      box-shadow: 0 9px 24px rgba(24, 51, 86, .09);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .pokemon-card:hover { transform: translateY(-4px); box-shadow: 0 15px 30px rgba(24, 51, 86, .14); }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 15px 0;
+      color: var(--muted);
+      font-size: .8rem;
+      font-weight: 900;
+      letter-spacing: .03em;
+    }
+
+    .dex-number { color: var(--red-dark); }
+
+    .artwork-wrap {
+      height: 180px;
+      display: grid;
+      place-items: center;
+      padding: 4px 18px 0;
+      background: radial-gradient(circle, #f8fbff 0 43%, transparent 44%);
+    }
+
+    .artwork-wrap img {
+      width: 164px;
+      height: 164px;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 7px rgba(25, 44, 71, .13));
+    }
+
+    .name-panel {
+      min-height: 116px;
+      display: grid;
+      place-items: center;
+      padding: 15px 12px 20px;
+      border-top: 1px dashed #c9d5e4;
+      background: linear-gradient(#fff, #fbfdff);
+    }
+
+    .ruby-name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 7px;
+      max-width: 100%;
+    }
+
+    .annotated-character {
+      display: inline-grid;
+      grid-template-columns: auto 1.55rem;
+      align-items: center;
+      column-gap: 2px;
+    }
+
+    .hanzi {
+      color: #111827;
+      font-family: "BiauKai", "DFKai-SB", "標楷體", "Noto Serif TC", serif;
+      font-size: clamp(2rem, 3.2vw, 2.55rem);
+      font-weight: 900;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .phonetic {
+      height: 4.15rem;
+      display: grid;
+      grid-template-columns: .85rem .65rem;
+      align-items: center;
+      justify-content: start;
+      color: var(--blue);
+      font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      font-weight: 900;
+    }
+
+    .phonetic-symbols {
+      justify-self: center;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      font-size: 1rem;
+      line-height: .9;
+      letter-spacing: .03em;
+    }
+
+    .tone {
+      align-self: center;
+      justify-self: start;
+      color: var(--red);
+      font-size: 1.25rem;
+      font-weight: 1000;
+      line-height: 1;
+    }
+
+    .tone-light { align-self: start; margin-top: .18rem; }
+    .tone-empty { visibility: hidden; }
+    body.zhuyin-hidden .phonetic { visibility: hidden; }
+
+    .empty-state, .loading-state {
+      grid-column: 1 / -1;
+      min-height: 300px;
+      display: grid;
+      place-items: center;
+      padding: 32px;
+      border: 2px dashed #bdcadb;
+      border-radius: 22px;
+      color: var(--muted);
+      background: rgba(255,255,255,.72);
+      text-align: center;
+      font-weight: 800;
+    }
+
+    .learning-note {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 22px;
+      padding: 14px 17px;
+      border-left: 5px solid var(--yellow);
+      border-radius: 12px;
+      color: #34445a;
+      background: #fff;
+      box-shadow: 0 7px 18px rgba(24, 51, 86, .06);
+      line-height: 1.55;
+    }
+
+    .learning-note strong { color: var(--blue-dark); }
+
+    @media (max-width: 980px) {
+      .toolbar { grid-template-columns: repeat(3, 1fr); }
+      .pokemon-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 640px) {
+      .header-inner, .page-shell { width: min(100% - 22px, 1180px); }
+      .header-inner { min-height: auto; align-items: flex-start; }
+      .brand-badge { width: 48px; height: 48px; border-radius: 14px; font-size: 25px; }
+      .header-copy p { font-size: .9rem; }
+      .collection-count { display: none; }
+      .page-shell { padding-top: 18px; }
+      .toolbar { grid-template-columns: 1fr 1fr; padding: 14px; }
+      .field-search { grid-column: 1 / -1; }
+      .button { padding-inline: 10px; }
+      .worksheet-head { align-items: flex-start; flex-direction: column; margin-top: 24px; }
+      .pokemon-grid { grid-template-columns: 1fr; }
+      .artwork-wrap { height: 200px; }
+      .artwork-wrap img { width: 182px; height: 182px; }
+      .hanzi { font-size: 2.5rem; }
+    }
+
+    @media print {
+      @page { size: A4 portrait; margin: 11mm; }
+      body { background: #fff; }
+      .app-header { color: var(--ink); background: #fff; border-bottom: 3px solid var(--red); }
+      .header-inner { min-height: auto; padding-block: 8px 12px; }
+      .brand-badge, .header-copy p, .collection-count, .toolbar, .learning-note { display: none !important; }
+      .page-shell { width: 100%; padding: 0; }
+      .worksheet-head { margin: 14px 0 10px; }
+      .worksheet-head p { display: none; }
+      .pokemon-grid { grid-template-columns: repeat(3, 1fr); gap: 9px; }
+      .pokemon-card { break-inside: avoid; box-shadow: none; border-radius: 12px; }
+      .pokemon-card:hover { transform: none; }
+      .artwork-wrap { height: 112px; }
+      .artwork-wrap img { width: 108px; height: 108px; filter: none; }
+      .name-panel { min-height: 82px; padding: 8px 5px 10px; }
+      .ruby-name { gap: 2px; }
+      .annotated-character { grid-template-columns: auto 1.2rem; }
+      .hanzi { font-size: 1.5rem; }
+      .phonetic { height: 3rem; grid-template-columns: .7rem .5rem; }
+      .phonetic-symbols { font-size: .75rem; }
+      .tone { font-size: .9rem; }
+    }
   </style>
 </head>
-<body class="bg-slate-100 text-slate-800">
-  <div class="min-h-screen flex flex-col lg:flex-row">
-    <aside class="no-print lg:w-[390px] shrink-0 bg-white border-r border-slate-200 p-5 lg:p-7 overflow-y-auto">
-      <div class="mb-7"><div class="inline-flex rounded-full bg-teal-50 px-3 py-1 text-sm font-bold text-teal-700 mb-3">注音教學工具</div><h1 class="text-3xl font-black tracking-tight">注音學習單<br><span class="text-teal-600">線上產生器</span></h1><p class="mt-3 text-sm leading-6 text-slate-500">可以練單拼、雙拼、三拼和聲調。選好條件後即可產生一張 A4 學習單。</p></div>
-      <section class="space-y-6">
-        <div><div class="flex items-center justify-between mb-2"><label class="font-bold">① 選擇韻母</label><button id="allFinals" class="text-xs text-teal-700 font-bold">全選</button></div><div id="finals" class="grid grid-cols-4 gap-2"></div></div>
-        <div><div class="flex items-center justify-between mb-2"><label class="font-bold">② 選擇起首音</label><button id="allInitials" class="text-xs text-teal-700 font-bold">全選</button></div><div id="initials" class="grid grid-cols-6 gap-2"></div></div>
-        <div><label class="font-bold block mb-2">③ 拼音方式</label><div id="syllableTypes" class="grid grid-cols-4 gap-2"></div></div>
-        <div><label class="font-bold block mb-2">④ 聲調</label><div id="tones" class="grid grid-cols-5 gap-2"></div></div>
-        <div class="rounded-2xl bg-amber-50 border border-amber-200 p-4"><label class="font-bold block mb-2">④ 每張學習單題數</label><input id="count" type="range" min="3" max="9" value="6" class="w-full accent-teal-600" /><div class="flex justify-between text-xs text-slate-500"><span>3 題</span><strong id="countLabel" class="text-amber-700">6 題</strong><span>9 題</span></div></div>
-        <div class="flex gap-2 pt-1"><button id="generate" class="flex-1 rounded-xl bg-teal-700 hover:bg-teal-800 text-white font-bold py-3 shadow-sm">重新產生</button><button id="print" class="rounded-xl border border-slate-300 bg-white px-4 font-bold hover:bg-slate-50">列印</button></div><label class="flex items-center gap-2 rounded-xl bg-violet-50 border border-violet-200 p-3 text-sm font-bold"><input id="pokemonMode" type="checkbox" checked class="h-4 w-4 accent-violet-600" />使用寶可夢名稱注音題庫</label>
-        <div class="border-t border-slate-200 pt-5"><div class="flex items-center justify-between mb-2"><label class="font-bold">可愛詞語圖庫</label><span class="text-xs text-slate-400">AI 生成</span></div><div class="grid grid-cols-4 gap-2"><img class="rounded-xl bg-sky-50 p-1" src="assets/gallery/home.png" alt="家"><img class="rounded-xl bg-sky-50 p-1" src="assets/gallery/tooth.png" alt="牙"><img class="rounded-xl bg-sky-50 p-1" src="assets/gallery/bird.png" alt="鳥"><img class="rounded-xl bg-sky-50 p-1" src="assets/gallery/flower.png" alt="花"><img class="rounded-xl bg-sky-50 p-1" src="assets/gallery/moon.png" alt="月"><img class="rounded-xl bg-sky-50 p-1" src="assets/gallery/leaf.png" alt="葉"><img class="rounded-xl bg-sky-50 p-1" src="assets/gallery/also.png" alt="也"><img class="rounded-xl bg-sky-50 p-1" src="assets/gallery/cow.png" alt="牛"><img class="rounded-xl bg-sky-50 p-1" src="assets/gallery/watermelon.png" alt="瓜"><img class="rounded-xl bg-sky-50 p-1" src="assets/gallery/book.png" alt="學"><img class="rounded-xl bg-sky-50 p-1" src="assets/gallery/play.png" alt="玩"><img class="rounded-xl bg-sky-50 p-1" src="assets/gallery/circle.png" alt="圓"></div></div>
-      </section>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-badge" aria-hidden="true">注</div>
+        <div class="header-copy">
+          <h1>寶可夢注音圖鑑</h1>
+          <p>看圖片、認名字，逐字練習正確讀音</p>
+        </div>
+      </div>
+      <div class="collection-count" aria-label="題庫收錄數量"><strong id="totalCount">—</strong>隻寶可夢</div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="toolbar" aria-label="題目設定">
+      <div class="field field-search">
+        <label for="searchInput">搜尋寶可夢</label>
+        <input id="searchInput" type="search" placeholder="例如：皮卡丘" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="generationSelect">選擇世代</label>
+        <select id="generationSelect">
+          <option value="all">全部世代</option><option value="1">第一世代</option><option value="2">第二世代</option>
+          <option value="3">第三世代</option><option value="4">第四世代</option><option value="5">第五世代</option>
+          <option value="6">第六世代</option><option value="7">第七世代</option><option value="8">第八世代</option><option value="9">第九世代</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="countSelect">每次題數</label>
+        <select id="countSelect"><option value="6">6 題</option><option value="9" selected>9 題</option><option value="12">12 題</option><option value="18">18 題</option></select>
+      </div>
+      <button class="button button-primary" id="shuffleButton" type="button">↻ 換一批</button>
+      <button class="button button-secondary" id="toggleButton" type="button" aria-pressed="false">遮住注音</button>
+      <button class="button button-print" id="printButton" type="button">列印學習單</button>
+    </section>
+
+    <section aria-labelledby="worksheetTitle">
+      <div class="worksheet-head">
+        <div>
+          <h2 id="worksheetTitle">看圖讀出寶可夢名稱</h2>
+          <p>每個中文字的右側，都是它自己的直式注音與聲調。</p>
+        </div>
+        <div class="batch-summary" id="batchSummary" aria-live="polite">準備題目中</div>
+      </div>
+      <div class="pokemon-grid" id="pokemonGrid" aria-live="polite"><div class="loading-state">正在打開寶可夢圖鑑⋯⋯</div></div>
+    </section>
+
+    <aside class="learning-note">
+      <span aria-hidden="true">💡</span>
+      <div><strong>練習方法：</strong>先按「遮住注音」自己念一次，再顯示注音核對；按「換一批」可繼續挑戰。</div>
     </aside>
-    <main class="workspace flex-1 overflow-auto p-4 lg:p-10 flex justify-center"><article class="paper bg-white shadow-xl border border-slate-200 p-[13mm] relative overflow-hidden"><div class="absolute inset-[7mm] border-2 border-dashed border-teal-700/15 rounded-3xl pointer-events-none"></div><div class="relative z-10">
-      <header class="flex justify-between items-start border-b-2 border-slate-800 pb-3 mb-5"><div><p class="text-sm font-bold text-violet-700 tracking-widest">寶可夢名稱注音練習</p><h2 class="text-3xl font-black mt-1">寶可夢注音小達人</h2></div><div class="text-sm font-bold pt-2">姓名：<span class="inline-block w-28 border-b border-slate-600"></span></div></header>
-      <div class="rounded-2xl bg-teal-50 border border-teal-100 px-5 py-3 mb-5 flex items-center justify-between"><div><p class="text-xs font-bold text-teal-700">今天練習</p><p id="summary" class="font-bold">聲母＋結合韻＋聲調</p></div><div class="text-3xl">✏️</div></div>
-      <section class="mb-5"><div class="flex items-center gap-2 mb-2"><span class="rounded-full bg-amber-200 px-3 py-1 text-sm font-bold text-amber-900">一、看圖拼出寶可夢名稱</span><span class="text-xs text-slate-500">先看寶可夢，再讀出完整注音</span></div><div id="cards" class="grid grid-cols-3 gap-3"></div></section>
-      <section class="mb-5"><div class="flex items-center gap-2 mb-2"><span class="rounded-full bg-sky-200 px-3 py-1 text-sm font-bold text-sky-900">二、描一描寶可夢注音</span><span class="text-xs text-slate-500">沿著灰色注音練習書寫</span></div><div id="traceGrid" class="grid grid-cols-3 gap-3"></div></section>
-      <section class="mb-5"><div class="flex items-center gap-2 mb-2"><span class="rounded-full bg-rose-200 px-3 py-1 text-sm font-bold text-rose-900">三、看圖配注音</span><span class="text-xs text-slate-500">把寶可夢名稱和完整注音配對</span></div><div id="bubbleGrid" class="space-y-2 border-2 border-slate-200 rounded-2xl p-3"></div></section>
-      <section><div class="flex items-center gap-2 mb-2"><span class="rounded-full bg-violet-200 px-3 py-1 text-sm font-bold text-violet-900">四、寶可夢名稱連連看</span><span class="text-xs text-slate-500">看圖和名稱，連到正確的完整注音</span></div><div id="words" class="grid grid-cols-2 gap-3"></div></section>
-      <footer class="mt-5 pt-3 border-t border-slate-200 flex justify-between text-xs text-slate-400"><span>我會把聲母和韻母拼在一起！</span><span>完成日期：＿＿＿＿</span></footer>
-    </div></article></main>
-  </div>
+  </main>
+
   <script>
-    const finals=[
-      ['ㄧㄚ',[['ㄐ','ㄐㄧㄚ','家','家','assets/gallery/round-01/home.png'],['ㄧ','ㄧㄚˊ','牙','牙','assets/gallery/round-01/tooth.png'],['ㄒ','ㄒㄧㄚˋ','下','下','']]],
-      ['ㄧㄝ',[['ㄧ','ㄧㄝˇ','野','野','assets/gallery/all/野.png'],['ㄒ','ㄒㄧㄝˋ','謝','謝',''],['ㄐ','ㄐㄧㄝˇ','姐','姐',''],['ㄧ','ㄧㄝˋ','葉','葉','assets/gallery/round-01/leaf.png']]],
-      ['ㄧㄠ',[['ㄧ','ㄧㄠˋ','要','要',''],['ㄋ','ㄋㄧㄠˇ','鳥','鳥','assets/gallery/round-01/bird.png'],['ㄐ','ㄐㄧㄠˇ','腳','腳','']]],
-      ['ㄧㄡ',[['ㄧ','ㄧㄡˇ','有','有',''],['ㄋ','ㄋㄧㄡˊ','牛','牛','assets/gallery/cow.png'],['ㄒ','ㄒㄧㄡˋ','秀','秀','']]],
-      ['ㄧㄢ',[['ㄊ','ㄊㄧㄢ','天','天',''],['ㄑ','ㄑㄧㄢˊ','錢','錢',''],['ㄒ','ㄒㄧㄢˋ','線','線','']]],
-      ['ㄧㄣ',[['ㄧ','ㄧㄣ','音','音',''],['ㄒ','ㄒㄧㄣ','心','心',''],['ㄐ','ㄐㄧㄣ','金','金','']]],
-      ['ㄧㄤ',[['ㄧ','ㄧㄤˊ','羊','羊',''],['ㄒ','ㄒㄧㄤ','香','香',''],['ㄐ','ㄐㄧㄤ','江','江','']]],
-      ['ㄧㄥ',[['ㄒ','ㄒㄧㄥ','星','星',''],['ㄅ','ㄅㄧㄥ','冰','冰',''],['ㄐ','ㄐㄧㄥ','京','京','']]],
-      ['ㄨㄚ',[['ㄏ','ㄏㄨㄚ','花','花','assets/gallery/round-01/flower.png'],['ㄍ','ㄍㄨㄚ','瓜','瓜',''],['ㄓ','ㄓㄨㄚ','抓','抓','']]],
-      ['ㄨㄛ',[['ㄨ','ㄨㄛˇ','我','我','assets/gallery/me.png'],['ㄍ','ㄍㄨㄛˊ','國','國',''],['ㄏ','ㄏㄨㄛˇ','火','火','']]],
-      ['ㄨㄞ',[['ㄨ','ㄨㄞ','歪','歪',''],['ㄍ','ㄍㄨㄞˋ','怪','怪',''],['ㄎ','ㄎㄨㄞˋ','快','快','']]],
-      ['ㄨㄟ',[['ㄏ','ㄏㄨㄟˊ','回','回','assets/gallery/back.png'],['ㄍ','ㄍㄨㄟ','龜','龜',''],['ㄨ','ㄨㄟˋ','味','味','']]],
-      ['ㄨㄢ',[['ㄨ','ㄨㄢˊ','玩','玩','assets/gallery/play.png'],['ㄍ','ㄍㄨㄢ','關','關','']]],
-      ['ㄨㄣ',[['ㄨ','ㄨㄣˊ','文','文',''],['ㄨ','ㄨㄣˋ','問','問',''],['ㄍ','ㄍㄨㄣˇ','滾','滾','']]],
-      ['ㄨㄤ',[['ㄨ','ㄨㄤˊ','王','王',''],['ㄍ','ㄍㄨㄤ','光','光',''],['ㄏ','ㄏㄨㄤˊ','黃','黃','']]],
-      ['ㄨㄥ',[['ㄨ','ㄨㄥ','翁','翁',''],['ㄍ','ㄍㄨㄥ','公','公',''],['ㄓ','ㄓㄨㄥ','中','中','']]],
-      ['ㄩㄝ',[['ㄩ','ㄩㄝˋ','月','月','assets/gallery/round-01/moon.png'],['ㄒ','ㄒㄩㄝˊ','學','學','assets/gallery/book.png'],['ㄐ','ㄐㄩㄝˊ','決','決','']]],
-      ['ㄩㄢ',[['ㄩ','ㄩㄢˊ','圓','圓','assets/gallery/circle.png'],['ㄒ','ㄒㄩㄢˇ','選','選',''],['ㄐ','ㄐㄩㄢˋ','卷','卷','']]],
-      ['ㄩㄣ',[['ㄩ','ㄩㄣˊ','雲','雲',''],['ㄑ','ㄑㄩㄣˊ','群','群',''],['ㄒ','ㄒㄩㄣˊ','尋','尋','']]],
-      ['ㄩㄥ',[['ㄩ','ㄩㄥˇ','永','永',''],['ㄩ','ㄩㄥˋ','用','用',''],['ㄒ','ㄒㄩㄥˊ','熊','熊','']]]
+    const generationRanges = [
+      [1, 151], [152, 251], [252, 386], [387, 493], [494, 649],
+      [650, 721], [722, 809], [810, 905], [906, 1025]
     ];
-    const initials='ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙ'.split('');
-    const toneOptions=[['不限聲調',null],['一聲',''],['二聲','ˊ'],['三聲','ˇ'],['四聲','ˋ']],syllableTypeOptions=[['混合','all'],['單拼','single'],['雙拼','double'],['三拼','triple']];let savedRecent=[];try{savedRecent=JSON.parse(localStorage.getItem('zhuyinRecentQuestionKeys')||'[]')}catch(e){}let savedChallenge=[];try{savedChallenge=JSON.parse(localStorage.getItem('zhuyinChallengeKeys')||'[]')}catch(e){}let selectedFinals=new Set(['ㄧㄚ','ㄧㄝ','ㄧㄠ','ㄧㄡ','ㄨㄚ','ㄨㄛ','ㄨㄟ','ㄨㄢ','ㄩㄝ','ㄩㄢ']),selectedInitials=new Set(['ㄅ','ㄋ','ㄐ','ㄒ','ㄍ','ㄏ','ㄓ','ㄊ','ㄑ']),selectedTone=null,selectedSyllableType='all',recentQuestionKeys=new Set(savedRecent),challengeRecentQuestionKeys=new Set(savedChallenge),lastConfig=localStorage.getItem('zhuyinQuestionConfig')||'';let questions=[];const $=id=>document.getElementById(id);
-    function choice(text,active,click){const b=document.createElement('button');b.className='choice border border-slate-200 rounded-lg py-2 text-sm font-bold bg-slate-50';b.textContent=text;if(active)b.classList.add('active');b.onclick=click;return b}
-    function renderControls(){$('finals').innerHTML='';finals.forEach(f=>$('finals').append(choice(f[0],selectedFinals.has(f[0]),()=>{selectedFinals.has(f[0])?selectedFinals.delete(f[0]):selectedFinals.add(f[0]);renderControls();generate()})));$('initials').innerHTML='';initials.forEach(i=>$('initials').append(choice(i,selectedInitials.has(i),()=>{selectedInitials.has(i)?selectedInitials.delete(i):selectedInitials.add(i);renderControls();generate()})));$('tones').innerHTML='';toneOptions.forEach(t=>$('tones').append(choice(t[0],selectedTone===t[1],()=>{selectedTone=t[1];renderControls();generate()})))}
-    const baseRenderControls=renderControls;renderControls=()=>{baseRenderControls();$('syllableTypes').innerHTML='';syllableTypeOptions.forEach(t=>$('syllableTypes').append(choice(t[0],selectedSyllableType===t[1],()=>{selectedSyllableType=t[1];renderControls();generate()})))};
-    const singleEntries=[['ㄧ','衣','衣服','assets/gallery/all/衣.png'],['ㄨ','屋','屋子','assets/gallery/all/家.png'],['ㄩ','魚','魚','assets/gallery/vocabulary/fish.png']].map(e=>({final:e[0],initial:'',syllable:e[0],word:e[1],phrase:e[2],reading:e[0],image:e[3],type:'single'}));
-    const allEntries=()=>[...singleEntries,...finals.flatMap(f=>f[1].map(e=>({final:f[0],initial:e[0],syllable:e[1],word:e[2],phrase:phraseFor[e[2]]||`${e[2]}詞`,reading:e[3],image:`assets/gallery/all/${e[2]}.png`,type:isZeroInitial(e[0])?'double':'triple'})))];
-    const isZeroInitial=initial=>['ㄧ','ㄨ','ㄩ'].includes(initial);
-    const phraseFor={家:'家人',牙:'牙齒',下:'下雨',野:'野餐',謝:'謝謝',姐:'姐姐',葉:'葉子',要:'要不要',鳥:'小鳥',腳:'腳丫',有:'有趣',牛:'牛奶',秀:'秀麗',天:'天氣',錢:'錢包',線:'線條',音:'音樂',心:'心情',金:'金魚',羊:'綿羊',香:'香水',江:'江河',星:'星星',冰:'冰淇淋',京:'北京',花:'花朵',瓜:'西瓜',抓:'抓住',我:'我們',國:'國家',火:'火車',歪:'歪頭',怪:'奇怪',快:'快樂',回:'回家',龜:'烏龜',味:'味道',玩:'遊玩',關:'關心',文:'文章',問:'問題',滾:'滾動',王:'王國',光:'陽光',黃:'黃色',翁:'老翁',公:'公園',中:'中國',月:'月亮',學:'學校',決:'決定',圓:'圓形',選:'選擇',卷:'考卷',雲:'白雲',群:'群組',尋:'尋找',永:'永遠',用:'使用',熊:'熊貓'};
-    const vocabularyEntries=[['貓','ㄇㄠ','ㄠ','assets/gallery/vocabulary/cat.png'],['狗','ㄍㄡ','ㄡ','assets/gallery/vocabulary/dog.png'],['魚','ㄩˊ','ㄩ','assets/gallery/vocabulary/fish.png'],['兔','ㄊㄨˋ','ㄨ','assets/gallery/vocabulary/rabbit.png'],['車','ㄔㄜ','ㄜ','assets/gallery/vocabulary/car.png'],['樹','ㄕㄨˋ','ㄨ','assets/gallery/vocabulary/tree.png'],['傘','ㄙㄢˇ','ㄢ','assets/gallery/vocabulary/umbrella.png'],['果','ㄍㄨㄛˇ','ㄨㄛ','assets/gallery/vocabulary/apple.png'],['糕','ㄍㄠ','ㄠ','assets/gallery/vocabulary/cake.png'],['球','ㄑㄧㄡˊ','ㄧㄡ','assets/gallery/vocabulary/ball.png'],['公','ㄍㄨㄥ','ㄨㄥ','assets/gallery/vocabulary/bus.png'],['星','ㄒㄧㄥ','ㄧㄥ','assets/gallery/vocabulary/star.png'],['雲','ㄩㄣˊ','ㄩㄣ','assets/gallery/vocabulary/cloud.png'],['帽','ㄇㄠˋ','ㄠ','assets/gallery/vocabulary/hat.png'],['杯','ㄅㄟ','ㄟ','assets/gallery/vocabulary/cup.png'],['牛','ㄋㄧㄡˊ','ㄧㄡ','assets/gallery/vocabulary/milk.png'],['包','ㄅㄠ','ㄠ','assets/gallery/vocabulary/bookbag.png'],['太','ㄊㄞˋ','ㄞ','assets/gallery/vocabulary/sun.png'],['朵','ㄉㄨㄛˇ','ㄨㄛ','assets/gallery/vocabulary/flower2.png'],['椅','ㄧˇ','ㄧ','assets/gallery/vocabulary/chair.png']].map(e=>({word:e[0],syllable:e[1],final:e[2],image:e[3]}));
-    function makeQuestions(){const config=[...selectedFinals].sort().join(',')+'|'+[...selectedInitials].sort().join(',')+'|'+selectedSyllableType+'|'+(selectedTone??'all');if(config!==lastConfig){recentQuestionKeys.clear();lastConfig=config;localStorage.setItem('zhuyinQuestionConfig',config);localStorage.removeItem('zhuyinRecentQuestionKeys')}const typeOK=e=>selectedSyllableType==='all'||e.type===selectedSyllableType;let pool=allEntries().filter(e=>typeOK(e)&&e.image&&!isZeroInitial(e.initial)&&selectedFinals.has(e.final)&&selectedInitials.has(e.initial)&&(selectedTone===null||e.syllable.endsWith(selectedTone)));if(!pool.length)pool=allEntries().filter(e=>typeOK(e)&&e.image&&!isZeroInitial(e.initial)&&selectedFinals.has(e.final)&&(selectedTone===null||e.syllable.endsWith(selectedTone)));if(!pool.length)pool=allEntries().filter(e=>typeOK(e)&&e.image);const count=Number($('count').value),key=e=>`${e.syllable}|${e.word}`,available=pool.filter(e=>!recentQuestionKeys.has(key(e)));if(available.length<count){recentQuestionKeys.clear();localStorage.removeItem('zhuyinRecentQuestionKeys');available.length=0;available.push(...pool)}const groups=new Map();available.forEach(e=>{if(!groups.has(e.final))groups.set(e.final,[]);groups.get(e.final).push(e)});const finalsOrder=[...groups.keys()].sort(()=>Math.random()-.5),picked=[];for(const final of finalsOrder){if(picked.length>=count)break;const options=groups.get(final);picked.push(options[Math.floor(Math.random()*options.length)])}if(picked.length<count){const used=new Set(picked.map(key));available.sort(()=>Math.random()-.5).forEach(e=>{if(picked.length<count&&!used.has(key(e))){picked.push(e);used.add(key(e))}})}questions=picked;questions.forEach(e=>recentQuestionKeys.add(key(e)));localStorage.setItem('zhuyinRecentQuestionKeys',JSON.stringify([...recentQuestionKeys]));}
-    function generate(){makeQuestions();const targets=[...new Set(questions.map(q=>q.final))];$('summary').textContent=`合法音節 ${targets.join('、')}　共 ${questions.length} 題`;$('cards').innerHTML=questions.map(q=>`<div class="border-2 border-slate-200 rounded-xl p-3 text-center"><div class="h-20 flex items-center justify-center mb-1">${q.image?`<img class="h-20 w-20 object-contain" src="${q.image}" alt="${q.word}">`:'<span class="text-4xl">🔤</span>'}</div><div class="font-black text-lg">${q.word}</div>${isZeroInitial(q.initial)?`<div class="text-sm font-bold text-slate-500 mt-1">直接念</div><div class="text-3xl font-black mt-1 tracking-widest text-amber-600">${q.syllable}</div>`:`<div class="text-xl font-black mt-1"><span class="text-teal-700">${q.initial}</span> <span class="text-amber-600">＋ ${q.final}</span></div><div class="text-3xl font-black mt-1 tracking-widest">${q.syllable}</div>`}<div class="mt-2 border-t border-dashed border-slate-300 pt-2 text-xs text-slate-500">我會拼：＿＿＿＿</div></div>`).join('');$('traceGrid').innerHTML=questions.map(q=>`<div class="trace-cell h-28 border-2 border-dashed border-slate-300 rounded-xl flex items-center justify-center"><span class="trace text-5xl font-black">${q.syllable}</span></div>`).join('');const distractors=allEntries().map(e=>e.final).filter(x=>!targets.includes(x));const bubbles=[...targets,...[...new Set(distractors)].sort(()=>Math.random()-.5).slice(0,Math.max(18-targets.length,0))].sort(()=>Math.random()-.5);$('bubbleGrid').innerHTML=bubbles.map(x=>`<div class="h-11 rounded-full border-2 border-slate-300 flex items-center justify-center font-black text-lg">${x}</div>`).join('');$('words').innerHTML=questions.slice(0,3).map(q=>`<div class="rounded-xl bg-slate-50 border border-slate-200 p-3 flex items-center gap-3">${q.image?`<img class="w-14 h-14 object-contain" src="${q.image}" alt="${q.word}">`:'<div class="text-3xl">✏️</div>'}<div><div class="font-black text-lg">${q.word}</div><div class="text-sm text-slate-500 tracking-widest">${q.syllable}</div><div class="text-xs mt-1">圈出：<span class="font-bold">${q.final}</span></div></div></div>`).join('')}
-    function makeQuestions(){const config=[...selectedFinals].sort().join(',')+'|'+[...selectedInitials].sort().join(',')+'|'+selectedSyllableType+'|'+(selectedTone??'all');if(config!==lastConfig){recentQuestionKeys.clear();lastConfig=config;localStorage.setItem('zhuyinQuestionConfig',config);localStorage.removeItem('zhuyinRecentQuestionKeys')}const typeOK=e=>selectedSyllableType==='all'||e.type===selectedSyllableType;const allowed=e=>e.type==='single'||(e.type==='double'&&selectedFinals.has(e.final))||(e.type==='triple'&&selectedFinals.has(e.final)&&selectedInitials.has(e.initial));let pool=allEntries().filter(e=>e.image&&typeOK(e)&&allowed(e)&&(selectedTone===null||e.syllable.endsWith(selectedTone)));if(!pool.length)pool=allEntries().filter(e=>e.image&&typeOK(e)&&allowed(e));if(!pool.length)pool=allEntries().filter(e=>e.image&&typeOK(e));const count=Number($('count').value),key=e=>`${e.syllable}|${e.word}`,available=pool.filter(e=>!recentQuestionKeys.has(key(e)));if(available.length<count){recentQuestionKeys.clear();localStorage.removeItem('zhuyinRecentQuestionKeys');available.length=0;available.push(...pool)}const groups=new Map();available.forEach(e=>{if(!groups.has(e.final))groups.set(e.final,[]);groups.get(e.final).push(e)});const finalsOrder=[...groups.keys()].sort(()=>Math.random()-.5),picked=[];for(const final of finalsOrder){if(picked.length>=count)break;const options=groups.get(final);picked.push(options[Math.floor(Math.random()*options.length)])}if(picked.length<count){const used=new Set(picked.map(key));available.sort(()=>Math.random()-.5).forEach(e=>{if(picked.length<count&&!used.has(key(e))){picked.push(e);used.add(key(e))}})}questions=picked;questions.forEach(e=>recentQuestionKeys.add(key(e)));localStorage.setItem('zhuyinRecentQuestionKeys',JSON.stringify([...recentQuestionKeys]));}
-    function generate(){makeQuestions();const targets=[...new Set(questions.map(q=>q.final))];$('summary').textContent=`${selectedSyllableType==='all'?'混合':syllableTypeOptions.find(x=>x[1]===selectedSyllableType)[0]}　共 ${questions.length} 題`;$('cards').innerHTML=questions.map(q=>`<div class="border-2 border-slate-200 rounded-xl p-3 text-center"><div class="h-20 flex items-center justify-center mb-1"><img class="h-20 w-20 object-contain" src="${q.image}" alt="${q.phrase}"></div><div class="solid-word font-black text-lg">${q.phrase}</div><div class="text-xl font-black mt-1">${q.type==='single'?`<span class="text-amber-600">${q.syllable}</span>`:`<span class="text-teal-700">${q.initial}</span> <span class="text-amber-600">＋ ${q.final}</span>`}</div><div class="text-3xl font-black mt-1 tracking-widest">${q.syllable}</div><div class="mt-2 border-t border-dashed border-slate-300 pt-2 text-xs text-slate-500">我會拼：＿＿＿＿</div></div>`).join('');$('traceGrid').innerHTML=questions.map(q=>`<div class="trace-cell h-28 border-2 border-dashed border-slate-300 rounded-xl flex items-center justify-center"><span class="trace text-5xl font-black">${q.syllable}</span></div>`).join('');const syllables=[...new Set(allEntries().filter(e=>e.type!=='single').map(e=>e.syllable))];$('bubbleGrid').innerHTML=questions.slice(0,3).map(q=>{const options=[q.syllable,...syllables.filter(x=>x!==q.syllable).sort(()=>Math.random()-.5).slice(0,2)].sort(()=>Math.random()-.5);return `<div class="flex items-center gap-3 rounded-xl bg-rose-50 p-2"><img class="h-12 w-12 object-contain" src="${q.image}" alt="${q.phrase}"><div class="solid-word min-w-24 font-black">${q.phrase}</div><div class="flex flex-1 gap-2">${options.map(x=>`<span class="flex-1 rounded-lg border-2 border-white bg-white py-2 text-center font-black">${x}</span>`).join('')}</div></div>`}).join('');$('words').innerHTML=questions.slice(0,3).map(q=>`<div class="rounded-xl bg-slate-50 border border-slate-200 p-3 text-center"><img class="mx-auto h-20 w-20 object-contain" src="${q.image}" alt="${q.phrase}"><div class="solid-word font-black text-xl mt-1">${q.phrase}</div><div class="mt-2 text-sm text-slate-500">圈出目標音：<span class="font-black text-violet-700">${q.syllable}</span></div><div class="mt-2 border-b-2 border-dashed border-slate-300 pb-1 text-sm text-slate-400">我會說：＿＿＿＿</div></div>`).join('')}
-    function renderWriting(){ const key=q=>`${q.syllable}|${q.word}`,allEntriesPool=[...vocabularyEntries,...allEntries().filter(e=>e.image&&!isZeroInitial(e.initial))],mainKeys=new Set(questions.slice(0,3).map(key));let available=allEntriesPool.filter(e=>!challengeRecentQuestionKeys.has(key(e))&&!mainKeys.has(key(e)));if(available.length<3){challengeRecentQuestionKeys.clear();localStorage.removeItem('zhuyinChallengeKeys');available=allEntriesPool.filter(e=>!mainKeys.has(key(e)))}const challengeQuestions=available.sort(()=>Math.random()-.5).slice(0,3);challengeQuestions.forEach(q=>challengeRecentQuestionKeys.add(key(q)));localStorage.setItem('zhuyinChallengeKeys',JSON.stringify([...challengeRecentQuestionKeys]));const allFinalOptions=[...new Set(allEntriesPool.map(e=>e.final))];$('words').innerHTML=challengeQuestions.map(q=>{const options=[q.final,...allFinalOptions.filter(x=>x!==q.final).sort(()=>Math.random()-.5).slice(0,2)].sort(()=>Math.random()-.5);return `<div class="rounded-xl bg-slate-50 border border-slate-200 p-3 text-center"><img class="mx-auto h-16 w-16 object-contain" src="${q.image}" alt="${q.word}"><div class="solid-word font-black text-3xl mt-1">${q.word}</div><div class="mt-2 text-xs text-slate-500">請看圖說出兩字詞語，再圈出目標音</div><div class="mt-2 flex justify-center gap-2">${options.map(x=>`<span class="min-w-12 rounded-full border-2 border-violet-200 bg-white px-2 py-1 text-lg font-black">${x}</span>`).join('')}</div></div>`}).join('') }
-    renderWriting=()=>{const key=q=>`${q.syllable}|${q.word}`,pool=[...vocabularyEntries,...allEntries().filter(e=>e.image&&!isZeroInitial(e.initial))],mainKeys=new Set(questions.map(key));let available=pool.filter(e=>!challengeRecentQuestionKeys.has(key(e))&&!mainKeys.has(key(e)));if(available.length<6){challengeRecentQuestionKeys.clear();localStorage.removeItem('zhuyinChallengeKeys');available=pool.filter(e=>!mainKeys.has(key(e)))}const challengeQuestions=available.sort(()=>Math.random()-.5).slice(0,6);challengeQuestions.forEach(q=>challengeRecentQuestionKeys.add(key(q)));localStorage.setItem('zhuyinChallengeKeys',JSON.stringify([...challengeRecentQuestionKeys]));const left=challengeQuestions.map((q,i)=>`<div class="flex items-center gap-2 rounded-xl border-2 border-violet-100 bg-violet-50 p-2"><span class="w-6 text-center font-bold text-violet-500">${i+1}</span><img class="h-12 w-12 object-contain" src="${q.image}" alt="${q.word}"><span class="solid-word text-2xl font-black">${q.word}</span></div>`).join(''),right=[...challengeQuestions].sort(()=>Math.random()-.5).map((q,i)=>`<div class="flex h-16 items-center justify-center rounded-xl border-2 border-dashed border-teal-200 bg-teal-50 text-2xl font-black tracking-widest text-teal-800"><span>${q.syllable}</span></div>`).join('');$('words').innerHTML=`<div class="space-y-2"><div class="mb-1 text-center text-xs font-bold text-violet-700">圖片和國字</div>${left}</div><div class="space-y-2"><div class="mb-1 text-center text-xs font-bold text-teal-700">完整注音</div>${right}</div>`};
-    renderWriting=()=>{const key=q=>`${q.syllable}|${q.word}`,pool=[...vocabularyEntries,...allEntries().filter(e=>e.image&&!isZeroInitial(e.initial)&&e.type!=='single')],mainKeys=new Set(questions.map(key));let available=pool.filter(e=>!challengeRecentQuestionKeys.has(key(e))&&!mainKeys.has(key(e)));if(available.length<6){challengeRecentQuestionKeys.clear();localStorage.removeItem('zhuyinChallengeKeys');available=pool.filter(e=>!mainKeys.has(key(e)))}const challengeQuestions=available.sort(()=>Math.random()-.5).slice(0,6);challengeQuestions.forEach(q=>challengeRecentQuestionKeys.add(key(q)));localStorage.setItem('zhuyinChallengeKeys',JSON.stringify([...challengeRecentQuestionKeys]));const left=challengeQuestions.map((q,i)=>`<div class="flex min-h-16 items-center gap-3 px-2"><span class="w-6 text-center text-lg font-bold text-violet-500">${i+1}</span><img class="h-12 w-12 object-contain" src="${q.image}" alt="${q.word}"><span class="solid-word text-2xl font-black">${q.word}</span></div>`).join(''),right=[...challengeQuestions].sort(()=>Math.random()-.5).map(q=>`<div class="flex min-h-16 items-center justify-center border-b-2 border-dotted border-teal-200 px-2 text-2xl font-black tracking-widest text-teal-800">${q.syllable}</div>`).join('');$('words').innerHTML=`<div class="space-y-5"><div class="mb-2 text-center text-xs font-bold text-violet-700">圖片和國字</div>${left}</div><div class="space-y-5"><div class="mb-2 text-center text-xs font-bold text-teal-700">完整注音</div>${right}</div>`};
-    makeQuestions=()=>{const typeOK=e=>selectedSyllableType==='all'||e.type===selectedSyllableType,hasVisual=e=>e.image||e.type==='single',allowed=e=>e.type==='single'||(e.type==='double'&&selectedFinals.has(e.final))||(e.type==='triple'&&selectedFinals.has(e.final)&&selectedInitials.has(e.initial)),pool=allEntries().filter(e=>hasVisual(e)&&typeOK(e)&&allowed(e)&&(selectedTone===null||e.syllable.endsWith(selectedTone))),key=e=>`${e.syllable}|${e.word}`;let available=pool.filter(e=>!recentQuestionKeys.has(key(e)));if(available.length<Number($('count').value)){recentQuestionKeys.clear();available=pool.slice()}const count=Number($('count').value),groups=new Map();available.forEach(e=>{if(!groups.has(e.final))groups.set(e.final,[]);groups.get(e.final).push(e)});const picked=[];[...groups.keys()].sort(()=>Math.random()-.5).forEach(final=>{if(picked.length<count)picked.push(groups.get(final)[Math.floor(Math.random()*groups.get(final).length)])});const used=new Set(picked.map(key));available.sort(()=>Math.random()-.5).forEach(e=>{if(picked.length<count&&!used.has(key(e))){picked.push(e);used.add(key(e))}});questions=picked;questions.forEach(e=>recentQuestionKeys.add(key(e)));localStorage.setItem('zhuyinRecentQuestionKeys',JSON.stringify([...recentQuestionKeys]));};
-    renderWriting=()=>{const key=q=>`${q.syllable}|${q.word}`,phrase={...phraseFor,貓:'貓咪',狗:'小狗',魚:'金魚',兔:'兔子',車:'汽車',樹:'大樹',傘:'雨傘',果:'蘋果',糕:'蛋糕',球:'皮球',公:'公車',星:'星星',雲:'雲朵',帽:'帽子',杯:'杯子',牛:'牛奶',包:'書包',太:'太陽',朵:'花朵',椅:'椅子'},pool=[...vocabularyEntries,...allEntries().filter(e=>e.image&&!isZeroInitial(e.initial)&&e.type!=='single')],mainKeys=new Set(questions.map(key));let available=pool.filter(e=>!challengeRecentQuestionKeys.has(key(e))&&!mainKeys.has(key(e)));if(available.length<6){challengeRecentQuestionKeys.clear();localStorage.removeItem('zhuyinChallengeKeys');available=pool.filter(e=>!mainKeys.has(key(e)))}const challengeQuestions=available.sort(()=>Math.random()-.5).slice(0,6);challengeQuestions.forEach(q=>challengeRecentQuestionKeys.add(key(q)));localStorage.setItem('zhuyinChallengeKeys',JSON.stringify([...challengeRecentQuestionKeys]));const left=challengeQuestions.map((q,i)=>`<div class="flex justify-center"><div class="inline-flex min-h-16 items-center gap-3 rounded-xl bg-violet-50 px-3 py-2"><span class="w-6 text-center text-lg font-bold text-violet-500">${i+1}</span><img class="h-12 w-12 object-contain" src="${q.image}" alt="${phrase[q.word]||q.word}"><span class="solid-word text-2xl font-black">${phrase[q.word]||q.word+'詞'}</span></div></div>`).join(''),right=[...challengeQuestions].sort(()=>Math.random()-.5).map(q=>`<div class="flex justify-center"><div class="flex min-h-16 items-center rounded-xl bg-teal-50 px-5 text-2xl font-black tracking-widest text-teal-800">${q.syllable}</div></div>`).join('');$('words').innerHTML=`<div class="space-y-5"><div class="mb-2 text-center text-xs font-bold text-violet-700">圖片和詞語</div>${left}</div><div class="space-y-5"><div class="mb-2 text-center text-xs font-bold text-teal-700">完整注音</div>${right}</div>`};
-    const safeGenerate=generate;generate=()=>{safeGenerate();if(questions.some(q=>!q.image))$('bubbleGrid').innerHTML=questions.slice(0,3).map(q=>`<div class="flex items-center gap-3 rounded-xl bg-rose-50 p-2"><div class="flex h-12 w-12 items-center justify-center rounded-lg bg-amber-100 text-2xl font-black text-amber-700">${q.syllable}</div><div class="solid-word min-w-24 font-black">${q.phrase}</div><div class="flex flex-1 gap-2"><span class="flex-1 rounded-lg border-2 border-white bg-white py-2 text-center font-black">${q.syllable}</span></div></div>`).join('')};
-    const matchingVocabulary={貓:['貓咪','ㄇㄠ ㄇㄧ'],狗:['小狗','ㄒㄧㄠˇ ㄍㄡˇ'],魚:['金魚','ㄐㄧㄣ ㄩˊ'],兔:['兔子','ㄊㄨˋ ㄗ˙'],車:['汽車','ㄑㄧˋ ㄔㄜ'],樹:['大樹','ㄉㄚˋ ㄕㄨˋ'],傘:['雨傘','ㄩˇ ㄙㄢˇ'],果:['蘋果','ㄆㄧㄥˊ ㄍㄨㄛˇ'],糕:['蛋糕','ㄉㄢˋ ㄍㄠ'],球:['皮球','ㄆㄧˊ ㄑㄧㄡˊ'],公:['公車','ㄍㄨㄥ ㄔㄜ'],星:['星星','ㄒㄧㄥ ㄒㄧㄥ'],雲:['雲朵','ㄩㄣˊ ㄉㄨㄛˇ'],帽:['帽子','ㄇㄠˋ ㄗ˙'],杯:['杯子','ㄅㄟ ㄗ˙'],牛:['牛奶','ㄋㄧㄡˊ ㄋㄞˇ'],包:['書包','ㄕㄨ ㄅㄠ'],太:['太陽','ㄊㄞˋ ㄧㄤˊ'],朵:['花朵','ㄏㄨㄚ ㄉㄨㄛˇ'],椅:['椅子','ㄧˇ ㄗ˙']};
-    renderWriting=()=>{const key=q=>q.word,mainKeys=new Set(questions.map(q=>q.word));let pool=vocabularyEntries.filter(q=>!mainKeys.has(q.word)&&matchingVocabulary[q.word]);if(pool.length<6){challengeRecentQuestionKeys.clear();localStorage.removeItem('zhuyinChallengeKeys');pool=vocabularyEntries.filter(q=>!mainKeys.has(q.word)&&matchingVocabulary[q.word])}const challengeQuestions=pool.sort(()=>Math.random()-.5).slice(0,6);const left=challengeQuestions.map((q,i)=>{const [phrase]=matchingVocabulary[q.word];return `<div class="flex justify-center"><div class="inline-flex min-h-16 items-center gap-3 rounded-xl bg-violet-50 px-3 py-2"><span class="w-6 text-center text-lg font-bold text-violet-500">${i+1}</span><img class="h-12 w-12 object-contain" src="${q.image}" alt="${phrase}"><span class="solid-word text-2xl font-black">${phrase}</span></div></div>`}).join(''),right=[...challengeQuestions].sort(()=>Math.random()-.5).map(q=>`<div class="flex justify-center"><div class="flex min-h-16 items-center rounded-xl bg-teal-50 px-5 text-2xl font-black tracking-widest text-teal-800"><span>${matchingVocabulary[q.word][1]}</span></div></div>`).join('');$('words').innerHTML=`<div class="space-y-5"><div class="mb-2 text-center text-xs font-bold text-violet-700">圖片和詞語</div>${left}</div><div class="space-y-5"><div class="mb-2 text-center text-xs font-bold text-teal-700">完整詞語注音</div>${right}</div>`};
-    const baseGenerate=generate;generate=()=>{baseGenerate();renderWriting()};const worksheetGenerate=generate;generate=()=>{worksheetGenerate();if(questions.some(q=>!q.image))$('cards').innerHTML=questions.map(q=>`<div class="border-2 border-slate-200 rounded-xl p-3 text-center"><div class="h-20 flex items-center justify-center mb-1">${q.image?`<img class="h-20 w-20 object-contain" src="${q.image}" alt="${q.phrase}">`:`<span class="text-5xl font-black text-amber-600">${q.syllable}</span>`}</div><div class="solid-word font-black text-lg">${q.phrase}</div><div class="text-3xl font-black mt-1 tracking-widest">${q.syllable}</div><div class="mt-2 border-t border-dashed border-slate-300 pt-2 text-xs text-slate-500">我會拼：＿＿＿＿</div></div>`).join('')};$('allFinals').onclick=()=>{selectedFinals=new Set(finals.map(f=>f[0]));selectedSyllableType='all';renderControls();generate()};$('allInitials').onclick=()=>{selectedInitials=new Set(initials);selectedSyllableType='all';renderControls();generate()};$('generate').onclick=generate;$('print').onclick=()=>window.print();$('count').oninput=()=>{$('countLabel').textContent=`${$('count').value} 題`;generate()};renderControls();generate();
-    const pokemonGenerationRanges={1:[1,151],2:[152,251],3:[252,386],4:[387,493],5:[494,649],6:[650,721],7:[722,809],8:[810,905],9:[906,1025]};let pokemonNames=[];
-    let pokemonData=[];async function loadPokemonData(){try{const response=await fetch('pokemon-zhuyin.json');if(!response.ok)throw new Error('pokemon data unavailable');pokemonData=await response.json();pokemonNames=pokemonData}catch(error){pokemonData=[];pokemonNames=[]}if($('pokemonMode').checked)generate()}
-    const originalMakeQuestions=makeQuestions,originalGenerate=generate;
-    function makePokemonQuestions(){const count=Number($('count').value),pool=pokemonData.filter(e=>e.name&&e.zhuyin),available=pool.filter(e=>!recentQuestionKeys.has(`pokemon|${e.id}`));let source=available.length>=count?available:pool;questions=[...source].sort(()=>Math.random()-.5).slice(0,count).map(e=>({word:e.name,phrase:e.name,syllable:e.zhuyin,final:'寶可夢',initial:'',image:`assets/pokemon/gen${Math.ceil(e.id<=151?1:e.id<=251?2:e.id<=386?3:e.id<=493?4:e.id<=649?5:e.id<=721?6:e.id<=809?7:e.id<=905?8:9)}/${String(e.id).padStart(3,'0')}.png`,type:'pokemon',id:e.id}));questions.forEach(e=>recentQuestionKeys.add(`pokemon|${e.id}`))}
-    function renderPokemonWorksheet(){const names=questions.map(q=>q.phrase).join('、');$('summary').textContent=`寶可夢名稱注音　共 ${questions.length} 題`;$('cards').innerHTML=questions.map(q=>`<div class="border-2 border-violet-200 rounded-xl p-3 text-center bg-violet-50"><div class="flex items-center justify-center gap-2 mb-1"><img class="h-24 w-24 object-contain" src="${q.image}" alt="${q.phrase}"><div class="text-left"><div class="font-black text-lg">${q.phrase}</div><div class="text-2xl font-black mt-1 tracking-widest text-violet-700">${q.syllable}</div></div></div><div class="mt-2 border-t border-dashed border-violet-300 pt-2 text-xs text-slate-500">我會拼：＿＿＿＿</div></div>`).join('');$('traceGrid').innerHTML=questions.map(q=>`<div class="trace-cell h-28 border-2 border-dashed border-violet-300 rounded-xl flex items-center justify-center"><span class="trace text-3xl font-black">${q.syllable}</span></div>`).join('');$('bubbleGrid').innerHTML=questions.slice(0,3).map(q=>`<div class="flex items-center gap-3 rounded-xl bg-rose-50 p-2"><img class="h-12 w-12 object-contain" src="${q.image}" alt="${q.phrase}"><div class="solid-word min-w-24 font-black">${q.phrase}</div><div class="flex-1 rounded-lg border-2 border-white bg-white py-2 text-center font-black tracking-widest">${q.syllable}</div></div>`).join('');$('words').innerHTML=questions.slice(0,3).map(q=>`<div class="rounded-xl bg-slate-50 border border-violet-200 p-3 text-center"><img class="mx-auto h-20 w-20 object-contain" src="${q.image}" alt="${q.phrase}"><div class="solid-word font-black text-xl mt-1">${q.phrase}</div><div class="mt-2 text-lg text-violet-700 tracking-widest">${q.syllable}</div></div>`).join('')}
-    function renderPokemonWorksheet(){$('summary').textContent=`寶可夢名稱注音　共 ${questions.length} 題`;$('cards').innerHTML=questions.map(q=>`<div class="border-2 border-violet-200 rounded-xl p-3 text-center bg-violet-50"><div class="h-24 flex items-center justify-center mb-1"><img class="h-24 w-24 object-contain" src="${q.image}" alt="${q.phrase}"></div><div class="flex flex-wrap items-center justify-center gap-2">${q.phrase.split('').map((ch,i)=>`<span class="inline-flex items-center gap-0.5"><span class="font-black text-lg">${ch}</span><span class="text-sm font-black tracking-wider text-violet-700" style="writing-mode:vertical-rl;text-orientation:upright">${q.syllable.split(' ')[i]||''}</span></span>`).join('')}</div><div class="mt-2 border-t border-dashed border-violet-300 pt-2 text-xs text-slate-500">我會拼：＿＿＿＿</div></div>`).join('')}
-    function verticalZhuyin(value){const tone=/[ˊˇˋ˙]$/.test(value)?value.slice(-1):'';const body=tone?value.slice(0,-1):value;return `<span class="inline-flex items-center gap-0.5"><span class="text-sm font-black tracking-wider text-violet-700" style="writing-mode:vertical-rl;text-orientation:upright">${body}</span><span class="text-base font-black text-rose-600">${tone}</span></span>`}
-    function renderPokemonWorksheet(){$('summary').textContent=`寶可夢名稱注音　共 ${questions.length} 題`;$('cards').innerHTML=questions.map(q=>`<div class="border-2 border-violet-200 rounded-xl p-3 text-center bg-violet-50"><div class="h-24 flex items-center justify-center mb-1"><img class="h-24 w-24 object-contain" src="${q.image}" alt="${q.phrase}"></div><div class="flex flex-wrap items-center justify-center gap-2">${q.phrase.split('').map((ch,i)=>`<span class="inline-flex items-center gap-0.5"><span class="font-black text-lg">${ch}</span>${verticalZhuyin(q.syllable.split(' ')[i]||'')}</span>`).join('')}</div><div class="mt-2 border-t border-dashed border-violet-300 pt-2 text-xs text-slate-500">我會拼：＿＿＿＿</div></div>`).join('')}
-    function verticalZhuyin(value){const tone=/[ˊˇˋ˙]$/.test(value)?value.slice(-1):'';const body=tone?value.slice(0,-1):value;return `<span class="inline-flex items-start gap-1"><span class="inline-block text-sm font-black leading-tight tracking-wider text-violet-700" style="writing-mode:vertical-rl;text-orientation:upright">${body}</span><span class="inline-block text-2xl font-black leading-none text-rose-600">${tone}</span></span>`}
-    function renderPokemonWorksheet(){
-      $('summary').textContent=`寶可夢名稱注音　共 ${questions.length} 題`;
-      $('cards').innerHTML=questions.map(q=>`<div class="border-2 border-violet-200 rounded-xl p-3 text-center bg-violet-50"><div class="h-24 flex items-center justify-center mb-2"><img class="h-24 w-24 object-contain" src="${q.image}" alt="${q.phrase}"></div><div class="inline-flex flex-col items-start gap-1">${q.phrase.split('').map((ch,i)=>`<span class="grid grid-cols-[2rem_auto] items-start gap-1"><span class="w-8 text-center text-2xl font-black leading-none">${ch}</span>${verticalZhuyin(q.syllable.split(' ')[i]||'')}</span>`).join('')}</div><div class="mt-2 border-t border-dashed border-violet-300 pt-2 text-xs text-slate-500">我會拼：＿＿＿＿</div></div>`).join('');
-      $('traceGrid').innerHTML=questions.map(q=>`<div class="trace-cell h-28 border-2 border-dashed border-violet-300 rounded-xl flex items-center justify-center"><span class="trace text-3xl font-black">${q.syllable}</span></div>`).join('');
-      $('bubbleGrid').innerHTML=questions.slice(0,3).map(q=>`<div class="flex items-center gap-3 rounded-xl bg-rose-50 p-2"><img class="h-12 w-12 object-contain" src="${q.image}" alt="${q.phrase}"><div class="solid-word min-w-24 font-black">${q.phrase}</div><div class="flex-1 rounded-lg border-2 border-white bg-white py-2 text-center font-black tracking-widest">${q.syllable}</div></div>`).join('');
-      $('words').innerHTML=questions.slice(0,3).map(q=>`<div class="rounded-xl bg-slate-50 border border-violet-200 p-3 text-center"><img class="mx-auto h-20 w-20 object-contain" src="${q.image}" alt="${q.phrase}"><div class="solid-word font-black text-xl mt-1">${q.phrase}</div><div class="mt-2 text-lg text-violet-700 tracking-widest">${q.syllable}</div></div>`).join('')
+
+    const state = { data: [], batch: [], generation: 'all', count: 9, query: '', zhuyinHidden: false };
+    const elements = {
+      totalCount: document.getElementById('totalCount'), search: document.getElementById('searchInput'),
+      generation: document.getElementById('generationSelect'), count: document.getElementById('countSelect'),
+      shuffle: document.getElementById('shuffleButton'), toggle: document.getElementById('toggleButton'),
+      print: document.getElementById('printButton'), summary: document.getElementById('batchSummary'),
+      grid: document.getElementById('pokemonGrid')
+    };
+
+    function escapeHtml(value) {
+      return String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#039;');
     }
-    makeQuestions=()=>makePokemonQuestions();generate=()=>{makePokemonQuestions();renderPokemonWorksheet()};$('pokemonMode').onchange=()=>generate();
-    loadPokemonData();
+
+    function generationOf(id) {
+      return generationRanges.findIndex(([start, end]) => id >= start && id <= end) + 1;
+    }
+
+    function artworkPath(entry) {
+      return `assets/pokemon/gen${generationOf(entry.id)}/${String(entry.id).padStart(3, '0')}.png`;
+    }
+
+    function splitSyllable(value) {
+      const match = value.match(/^(.*?)([ˊˇˋ˙])?$/u);
+      return { symbols: match?.[1] || value, tone: match?.[2] || '' };
+    }
+
+    function renderAnnotatedName(entry) {
+      const characters = [...entry.name];
+      const syllables = entry.zhuyin.trim().split(/\s+/u);
+      const label = `${entry.name}，${entry.zhuyin}`;
+      const content = characters.map((character, index) => {
+        const { symbols, tone } = splitSyllable(syllables[index] || '');
+        const toneClass = tone === '˙' ? 'tone tone-light' : tone ? 'tone' : 'tone tone-empty';
+        return `<span class="annotated-character" aria-hidden="true"><span class="hanzi">${escapeHtml(character)}</span><span class="phonetic"><span class="phonetic-symbols">${escapeHtml(symbols)}</span><span class="${toneClass}">${escapeHtml(tone || 'ˉ')}</span></span></span>`;
+      }).join('');
+      return `<div class="ruby-name" role="text" aria-label="${escapeHtml(label)}">${content}</div>`;
+    }
+
+    function shuffled(items) {
+      const copy = [...items];
+      for (let index = copy.length - 1; index > 0; index -= 1) {
+        const target = Math.floor(Math.random() * (index + 1));
+        [copy[index], copy[target]] = [copy[target], copy[index]];
+      }
+      return copy;
+    }
+
+    function filteredPokemon() {
+      const query = state.query.trim();
+      return state.data.filter((entry) => {
+        const generationMatches = state.generation === 'all' || generationOf(entry.id) === Number(state.generation);
+        const nameMatches = !query || entry.name.includes(query) || String(entry.id).includes(query);
+        return generationMatches && nameMatches;
+      });
+    }
+
+    function chooseBatch() {
+      const pool = filteredPokemon();
+      state.batch = shuffled(pool).slice(0, state.count);
+      render();
+    }
+
+    function render() {
+      const poolSize = filteredPokemon().length;
+      const generationLabel = state.generation === 'all' ? '全部世代' : `第 ${state.generation} 世代`;
+      elements.summary.textContent = `${generationLabel}・顯示 ${state.batch.length}／${poolSize} 隻`;
+      if (!state.batch.length) {
+        elements.grid.innerHTML = `<div class="empty-state">找不到符合條件的寶可夢，請換個名稱或世代。</div>`;
+        return;
+      }
+      elements.grid.innerHTML = state.batch.map((entry) => {
+        const generation = generationOf(entry.id);
+        return `<article class="pokemon-card"><div class="card-meta"><span class="dex-number">全國圖鑑 #${String(entry.id).padStart(4, '0')}</span><span>第 ${generation} 世代</span></div><div class="artwork-wrap"><img src="${artworkPath(entry)}" alt="${escapeHtml(entry.name)}" loading="lazy"></div><div class="name-panel">${renderAnnotatedName(entry)}</div></article>`;
+      }).join('');
+    }
+
+    elements.search.addEventListener('input', (event) => { state.query = event.target.value; chooseBatch(); });
+    elements.generation.addEventListener('change', (event) => { state.generation = event.target.value; chooseBatch(); });
+    elements.count.addEventListener('change', (event) => { state.count = Number(event.target.value); chooseBatch(); });
+    elements.shuffle.addEventListener('click', chooseBatch);
+    elements.toggle.addEventListener('click', () => {
+      state.zhuyinHidden = !state.zhuyinHidden;
+      document.body.classList.toggle('zhuyin-hidden', state.zhuyinHidden);
+      elements.toggle.textContent = state.zhuyinHidden ? '顯示注音' : '遮住注音';
+      elements.toggle.setAttribute('aria-pressed', String(state.zhuyinHidden));
+    });
+    elements.print.addEventListener('click', () => window.print());
+
+    async function start() {
+      try {
+        const response = await fetch('pokemon-zhuyin.json');
+        if (!response.ok) throw new Error('題庫讀取失敗');
+        state.data = await response.json();
+        elements.totalCount.textContent = state.data.length.toLocaleString('zh-TW');
+        chooseBatch();
+      } catch (error) {
+        elements.summary.textContent = '無法載入題庫';
+        elements.grid.innerHTML = `<div class="empty-state">寶可夢題庫暫時無法載入，請重新整理頁面。</div>`;
+      }
+    }
+
+    start();
   </script>
 </body>
 </html>
