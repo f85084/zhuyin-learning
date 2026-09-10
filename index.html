@@ -114,7 +114,7 @@
       position: relative;
       z-index: 2;
       display: grid;
-      grid-template-columns: minmax(190px, 1.25fr) repeat(2, minmax(130px, .7fr)) auto auto auto;
+      grid-template-columns: minmax(190px, 1.25fr) repeat(2, minmax(130px, .7fr)) auto auto;
       gap: 12px;
       align-items: end;
       padding: 18px;
@@ -168,48 +168,6 @@
 
     .button:disabled { cursor: not-allowed; opacity: .48; transform: none; }
 
-    .mode-switcher {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 18px;
-      padding: 8px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: rgba(255,255,255,.76);
-    }
-
-    .mode-button {
-      min-height: 62px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 13px;
-      border: 2px solid transparent;
-      border-radius: 13px;
-      color: #425269;
-      background: transparent;
-      text-align: left;
-      font-weight: 900;
-    }
-
-    .mode-number {
-      width: 31px;
-      height: 31px;
-      display: grid;
-      place-items: center;
-      flex: 0 0 auto;
-      border-radius: 10px;
-      color: var(--blue-dark);
-      background: #dfeaf8;
-      font-size: .88rem;
-    }
-
-    .mode-button:hover { background: #edf4fc; }
-    .mode-button:focus-visible { outline: 4px solid rgba(35,104,181,.2); outline-offset: 1px; }
-    .mode-button.is-active { color: #fff; border-color: var(--blue-dark); background: var(--blue); }
-    .mode-button.is-active .mode-number { color: var(--red-dark); background: var(--yellow); }
-
     .worksheet-head {
       display: flex;
       align-items: end;
@@ -236,11 +194,57 @@
       font-weight: 900;
     }
 
+    .worksheet-sheet {
+      margin-top: 24px;
+      padding: 0 22px 28px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: rgba(255,255,255,.72);
+      box-shadow: var(--shadow);
+    }
+
+    .worksheet-sheet .worksheet-head { margin-top: 0; padding-top: 22px; }
+
+    .student-fields {
+      display: flex;
+      justify-content: flex-end;
+      gap: 28px;
+      margin: -4px 2px 20px;
+      color: #45546a;
+      font-weight: 800;
+    }
+
+    .exercise-section + .exercise-section { margin-top: 26px; }
+
+    .exercise-heading {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 11px;
+    }
+
+    .exercise-heading > span {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 11px;
+      color: #fff;
+      background: var(--blue);
+      font-weight: 1000;
+    }
+
+    .exercise-heading h3 { margin: 0; color: var(--blue-dark); font-size: 1.15rem; }
+    .exercise-heading p { margin: 2px 0 0; color: var(--muted); font-size: .86rem; }
+
     .pokemon-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
     }
+
+    .exercise-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
     .pokemon-card {
       position: relative;
@@ -488,7 +492,6 @@
 
     @media (max-width: 980px) {
       .toolbar { grid-template-columns: repeat(3, 1fr); }
-      .mode-switcher { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .pokemon-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
@@ -502,11 +505,10 @@
       .toolbar { grid-template-columns: 1fr 1fr; padding: 14px; }
       .field-search { grid-column: 1 / -1; }
       .button { padding-inline: 10px; }
-      .mode-switcher { grid-template-columns: 1fr 1fr; gap: 7px; padding: 7px; }
-      .mode-button { min-height: 58px; gap: 7px; padding: 8px; font-size: .9rem; }
-      .mode-number { width: 27px; height: 27px; }
       .worksheet-head { align-items: flex-start; flex-direction: column; margin-top: 24px; }
       .pokemon-grid { grid-template-columns: 1fr; }
+      .worksheet-sheet { margin-top: 18px; padding: 0 11px 20px; border-radius: 18px; }
+      .student-fields { flex-direction: column; gap: 7px; margin-bottom: 18px; }
       .artwork-wrap { height: 200px; }
       .artwork-wrap img { width: 182px; height: 182px; }
       .hanzi { font-size: 2.5rem; }
@@ -517,23 +519,52 @@
       @page { size: A4 portrait; margin: 11mm; }
       body { background: #fff; }
       .app-header { color: var(--ink); background: #fff; border-bottom: 3px solid var(--red); }
-      .header-inner { min-height: auto; padding-block: 8px 12px; }
-      .brand-badge, .header-copy p, .collection-count, .toolbar, .mode-switcher, .learning-note { display: none !important; }
+      .header-inner { min-height: auto; padding-block: 3px 7px; }
+      .brand-badge, .header-copy p, .collection-count, .toolbar, .learning-note { display: none !important; }
+      h1 { font-size: 1.35rem; }
       .page-shell { width: 100%; padding: 0; }
-      .worksheet-head { margin: 14px 0 10px; }
+      .worksheet-sheet { margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; background: #fff; }
+      .worksheet-sheet .worksheet-head { margin: 0 0 4px; padding-top: 6px; }
       .worksheet-head p { display: none; }
-      .pokemon-grid { grid-template-columns: repeat(3, 1fr); gap: 9px; }
+      .batch-summary { padding: 4px 8px; font-size: .72rem; }
+      .student-fields { margin: 0 0 7px; gap: 22px; font-size: .75rem; }
+      .exercise-section + .exercise-section { margin-top: 7px; }
+      .exercise-heading { gap: 6px; margin-bottom: 4px; }
+      .exercise-heading > span { width: 22px; height: 22px; border-radius: 6px; font-size: .72rem; }
+      .exercise-heading h3 { font-size: .88rem; }
+      .exercise-heading p { display: none; }
+      .pokemon-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
       .pokemon-card { break-inside: avoid; box-shadow: none; border-radius: 12px; }
       .pokemon-card:hover { transform: none; }
-      .artwork-wrap { height: 112px; }
-      .artwork-wrap img { width: 108px; height: 108px; filter: none; }
-      .name-panel { min-height: 82px; padding: 8px 5px 10px; }
+      .card-meta { padding: 4px 7px 0; font-size: .56rem; }
+      .artwork-wrap { height: 72px; }
+      .artwork-wrap img { width: 70px; height: 70px; filter: none; }
+      .name-panel { min-height: 48px; padding: 3px 3px 5px; }
       .ruby-name { gap: 2px; }
-      .annotated-character { grid-template-columns: auto 1.2rem; }
-      .hanzi { font-size: 1.5rem; }
-      .phonetic { height: 3rem; grid-template-columns: .7rem .5rem; }
-      .phonetic-symbols { font-size: .75rem; }
-      .tone { font-size: .9rem; }
+      .annotated-character { grid-template-columns: auto .9rem; }
+      .hanzi { font-size: 1.05rem; }
+      .phonetic { height: 2.35rem; grid-template-columns: .52rem .38rem; }
+      .phonetic-symbols { font-size: .55rem; }
+      .tone { font-size: .65rem; }
+      .question-card { break-inside: avoid; border-radius: 9px; box-shadow: none; }
+      .question-heading { padding: 3px 6px; font-size: .58rem; }
+      .quiz-prompt { min-height: 68px; padding: 2px; }
+      .quiz-art { width: 66px; height: 66px; filter: none; }
+      .missing-prompt { grid-template-columns: 62px 1fr; gap: 2px; }
+      .missing-prompt .quiz-art { width: 60px; height: 60px; }
+      .pronunciation-prompt { gap: 4px; padding: 4px 7px; border-radius: 8px; }
+      .pronunciation-prompt .phonetic { height: 2.7rem; transform: none; }
+      .choice-list { gap: 3px; padding: 0 5px 5px; }
+      .choice { min-height: 28px; padding: 2px; border-width: 1px; border-radius: 6px; }
+      .choice-image { min-height: 43px; }
+      .choice-image img { width: 40px; height: 40px; }
+      .choice-character { font-size: 1.05rem; }
+      .choice .hanzi { font-size: .72rem; }
+      .choice .annotated-character { grid-template-columns: auto .62rem; }
+      .choice .phonetic { width: .62rem; height: 1.55rem; grid-template-columns: .36rem .26rem; }
+      .choice .phonetic-symbols { font-size: .38rem; }
+      .choice .tone { font-size: .42rem; }
+      .answer-feedback { display: none; }
     }
   </style>
 </head>
@@ -566,35 +597,47 @@
         </select>
       </div>
       <div class="field">
-        <label for="countSelect">每次題數</label>
-        <select id="countSelect"><option value="6">6 題</option><option value="9" selected>9 題</option><option value="12">12 題</option><option value="18">18 題</option></select>
+        <label for="countSelect">每種題數</label>
+        <select id="countSelect"><option value="1">1 題</option><option value="2" selected>2 題</option><option value="3">3 題</option></select>
       </div>
-      <button class="button button-primary" id="shuffleButton" type="button">↻ 換一批</button>
-      <button class="button button-secondary" id="toggleButton" type="button" aria-pressed="false">遮住注音</button>
+      <button class="button button-primary" id="shuffleButton" type="button">↻ 重新產生</button>
       <button class="button button-print" id="printButton" type="button">列印學習單</button>
     </section>
 
-    <nav class="mode-switcher" aria-label="選擇題型">
-      <button class="mode-button is-active" type="button" data-mode="study" aria-pressed="true"><span class="mode-number">01</span><span>看圖認讀</span></button>
-      <button class="mode-button" type="button" data-mode="pictureName" aria-pressed="false"><span class="mode-number">02</span><span>看圖選名字</span></button>
-      <button class="mode-button" type="button" data-mode="soundPicture" aria-pressed="false"><span class="mode-number">03</span><span>看注音選圖片</span></button>
-      <button class="mode-button" type="button" data-mode="missingCharacter" aria-pressed="false"><span class="mode-number">04</span><span>缺字挑戰</span></button>
-    </nav>
-
-    <section aria-labelledby="worksheetTitle">
+    <article class="worksheet-sheet" aria-labelledby="worksheetTitle">
       <div class="worksheet-head">
         <div>
-          <h2 id="worksheetTitle">看圖讀出寶可夢名稱</h2>
-          <p id="worksheetDescription">每個中文字的右側，都是它自己的直式注音與聲調。</p>
+          <h2 id="worksheetTitle">寶可夢注音綜合學習單</h2>
+          <p>四種題型一次完成，每個中文字右側都有直式注音。</p>
         </div>
         <div class="batch-summary" id="batchSummary" aria-live="polite">準備題目中</div>
       </div>
-      <div class="pokemon-grid" id="pokemonGrid" aria-live="polite"><div class="loading-state">正在打開寶可夢圖鑑⋯⋯</div></div>
-    </section>
+      <div class="student-fields"><span>姓名：________________</span><span>日期：________________</span></div>
+
+      <section class="exercise-section" aria-labelledby="studyHeading">
+        <div class="exercise-heading"><span>一</span><div><h3 id="studyHeading">看圖認讀</h3><p>看圖片，讀出寶可夢名稱。</p></div></div>
+        <div class="pokemon-grid exercise-grid" id="studyGrid"><div class="loading-state">正在準備學習單⋯⋯</div></div>
+      </section>
+
+      <section class="exercise-section" aria-labelledby="pictureNameHeading">
+        <div class="exercise-heading"><span>二</span><div><h3 id="pictureNameHeading">看圖選名字</h3><p>看圖片，圈出正確名稱。</p></div></div>
+        <div class="pokemon-grid exercise-grid" id="pictureNameGrid"></div>
+      </section>
+
+      <section class="exercise-section" aria-labelledby="soundPictureHeading">
+        <div class="exercise-heading"><span>三</span><div><h3 id="soundPictureHeading">看注音選圖片</h3><p>讀注音，圈出正確圖片。</p></div></div>
+        <div class="pokemon-grid exercise-grid" id="soundPictureGrid"></div>
+      </section>
+
+      <section class="exercise-section" aria-labelledby="missingCharacterHeading">
+        <div class="exercise-heading"><span>四</span><div><h3 id="missingCharacterHeading">缺字挑戰</h3><p>依圖片和注音，圈出缺少的字。</p></div></div>
+        <div class="pokemon-grid exercise-grid" id="missingCharacterGrid"></div>
+      </section>
+    </article>
 
     <aside class="learning-note">
       <span aria-hidden="true">💡</span>
-      <div><strong>練習方法：</strong>先選擇題型，作答後會立即顯示結果；按「換一批」可繼續挑戰新的寶可夢。</div>
+      <div><strong>使用方式：</strong>完成四個區塊後可直接列印；按「重新產生」會一次更換整張學習單。</div>
     </aside>
   </main>
 
@@ -604,25 +647,20 @@
       [650, 721], [722, 809], [810, 905], [906, 1025]
     ];
 
-    const modeCopy = {
-      study: ['看圖讀出寶可夢名稱', '每個中文字的右側，都是它自己的直式注音與聲調。'],
-      pictureName: ['看圖片，選出正確名稱', '從三個附有逐字注音的名稱中，找出圖片裡的寶可夢。'],
-      soundPicture: ['看注音，選出正確圖片', '先讀出直式注音，再從三張圖片中找答案。'],
-      missingCharacter: ['找出名字中缺少的字', '觀察圖片與注音，選出空格裡應該填入的中文字。']
-    };
-
     const state = {
-      data: [], batch: [], quizItems: [], answers: {}, mode: 'study',
-      generation: 'all', count: 9, query: '', zhuyinHidden: false
+      data: [], sections: {}, quizItems: {}, answers: {},
+      generation: 'all', count: 2, query: ''
     };
     const elements = {
       totalCount: document.getElementById('totalCount'), search: document.getElementById('searchInput'),
       generation: document.getElementById('generationSelect'), count: document.getElementById('countSelect'),
-      shuffle: document.getElementById('shuffleButton'), toggle: document.getElementById('toggleButton'),
-      print: document.getElementById('printButton'), summary: document.getElementById('batchSummary'),
-      grid: document.getElementById('pokemonGrid'), title: document.getElementById('worksheetTitle'),
-      description: document.getElementById('worksheetDescription'),
-      modeButtons: [...document.querySelectorAll('[data-mode]')]
+      shuffle: document.getElementById('shuffleButton'), print: document.getElementById('printButton'),
+      summary: document.getElementById('batchSummary'),
+      studyGrid: document.getElementById('studyGrid'),
+      pictureNameGrid: document.getElementById('pictureNameGrid'),
+      soundPictureGrid: document.getElementById('soundPictureGrid'),
+      missingCharacterGrid: document.getElementById('missingCharacterGrid'),
+      worksheet: document.querySelector('.worksheet-sheet')
     };
 
     function escapeHtml(value) {
@@ -686,20 +724,16 @@
       return shuffled([correctCharacter, ...shuffled(candidates).slice(0, 2)]);
     }
 
-    function prepareQuizItems() {
-      state.answers = {};
-      state.quizItems = state.batch.map((entry, index) => {
-        if (state.mode === 'pictureName' || state.mode === 'soundPicture') {
-          return { entry, options: optionEntries(entry), key: `${state.mode}-${entry.id}-${index}` };
+    function buildQuizItems(type, entries) {
+      return entries.map((entry, index) => {
+        if (type === 'pictureName' || type === 'soundPicture') {
+          return { type, entry, options: optionEntries(entry), key: `${type}-${entry.id}-${index}` };
         }
-        if (state.mode === 'missingCharacter') {
-          const characters = [...entry.name];
-          const eligibleIndices = characters.map((character, characterIndex) => /\p{Script=Han}/u.test(character) ? characterIndex : -1).filter((characterIndex) => characterIndex >= 0);
-          const blankIndex = eligibleIndices[Math.floor(Math.random() * eligibleIndices.length)] ?? 0;
-          const answer = characters[blankIndex];
-          return { entry, blankIndex, answer, options: optionCharacters(answer), key: `${state.mode}-${entry.id}-${index}` };
-        }
-        return { entry, key: `${state.mode}-${entry.id}-${index}` };
+        const characters = [...entry.name];
+        const eligibleIndices = characters.map((character, characterIndex) => /\p{Script=Han}/u.test(character) ? characterIndex : -1).filter((characterIndex) => characterIndex >= 0);
+        const blankIndex = eligibleIndices[Math.floor(Math.random() * eligibleIndices.length)] ?? 0;
+        const answer = characters[blankIndex];
+        return { type, entry, blankIndex, answer, options: optionCharacters(answer), key: `${type}-${entry.id}-${index}` };
       });
     }
 
@@ -714,13 +748,25 @@
 
     function chooseBatch() {
       const pool = filteredPokemon();
-      state.batch = shuffled(pool).slice(0, state.count);
-      prepareQuizItems();
+      const picked = shuffled(pool);
+      const group = (groupIndex) => Array.from({ length: Math.min(state.count, picked.length) }, (_, index) => picked[(groupIndex * state.count + index) % picked.length]);
+      state.sections = {
+        study: group(0),
+        pictureName: group(1),
+        soundPicture: group(2),
+        missingCharacter: group(3)
+      };
+      state.quizItems = {
+        pictureName: buildQuizItems('pictureName', state.sections.pictureName),
+        soundPicture: buildQuizItems('soundPicture', state.sections.soundPicture),
+        missingCharacter: buildQuizItems('missingCharacter', state.sections.missingCharacter)
+      };
+      state.answers = {};
       render();
     }
 
     function correctValue(item) {
-      return state.mode === 'missingCharacter' ? item.answer : String(item.entry.id);
+      return item.type === 'missingCharacter' ? item.answer : String(item.entry.id);
     }
 
     function answerDetails(item) {
@@ -729,8 +775,8 @@
       return { selected, answered, correct: answered && selected === correctValue(item) };
     }
 
-    function renderStudyCards() {
-      return state.batch.map((entry) => {
+    function renderStudyCards(entries) {
+      return entries.map((entry) => {
         const generation = generationOf(entry.id);
         return `<article class="pokemon-card"><div class="card-meta"><span class="dex-number">全國圖鑑 #${String(entry.id).padStart(4, '0')}</span><span>第 ${generation} 世代</span></div><div class="artwork-wrap"><img src="${artworkPath(entry)}" alt="${escapeHtml(entry.name)}" loading="lazy"></div><div class="name-panel">${renderAnnotatedName(entry)}</div></article>`;
       }).join('');
@@ -750,17 +796,17 @@
       let prompt = '';
       let choices = '';
 
-      if (state.mode === 'pictureName') {
+      if (item.type === 'pictureName') {
         prompt = `<img class="quiz-art" src="${artworkPath(item.entry)}" alt="題目中的寶可夢">`;
         choices = item.options.map((option) => `<button class="${choiceClass(item, String(option.id))}" type="button" data-question="${item.key}" data-answer="${option.id}" ${answered ? 'disabled' : ''}>${renderAnnotatedName(option)}</button>`).join('');
       }
 
-      if (state.mode === 'soundPicture') {
+      if (item.type === 'soundPicture') {
         prompt = renderPhoneticPrompt(item.entry);
         choices = item.options.map((option) => `<button class="${choiceClass(item, String(option.id))} choice-image" type="button" data-question="${item.key}" data-answer="${option.id}" aria-label="選擇這張寶可夢圖片" ${answered ? 'disabled' : ''}><img src="${artworkPath(option)}" alt="選項圖片" loading="lazy"></button>`).join('');
       }
 
-      if (state.mode === 'missingCharacter') {
+      if (item.type === 'missingCharacter') {
         prompt = `<div class="missing-prompt"><img class="quiz-art" src="${artworkPath(item.entry)}" alt="${escapeHtml(item.entry.name)}">${renderAnnotatedName(item.entry, { blankIndex: item.blankIndex })}</div>`;
         choices = item.options.map((option) => `<button class="${choiceClass(item, option)} choice-character" type="button" data-question="${item.key}" data-answer="${escapeHtml(option)}" ${answered ? 'disabled' : ''}>${escapeHtml(option)}</button>`).join('');
       }
@@ -774,28 +820,29 @@
 
     function renderSummary(poolSize) {
       const generationLabel = state.generation === 'all' ? '全部世代' : `第 ${state.generation} 世代`;
-      if (state.mode === 'study') {
-        elements.summary.textContent = `${generationLabel}・顯示 ${state.batch.length}／${poolSize} 隻`;
-        return;
-      }
-      const answeredItems = state.quizItems.filter((item) => state.answers[item.key] !== undefined);
+      const allQuizItems = Object.values(state.quizItems).flat();
+      const answeredItems = allQuizItems.filter((item) => state.answers[item.key] !== undefined);
       const correctCount = answeredItems.filter((item) => state.answers[item.key] === correctValue(item)).length;
-      elements.summary.textContent = `${generationLabel}・已答 ${answeredItems.length}/${state.batch.length}・答對 ${correctCount}`;
+      const totalQuestions = Object.values(state.sections).reduce((total, entries) => total + entries.length, 0);
+      elements.summary.textContent = answeredItems.length
+        ? `${generationLabel}・共 ${totalQuestions} 題・答對 ${correctCount}/${answeredItems.length}`
+        : `${generationLabel}・共 ${totalQuestions} 題・題庫 ${poolSize} 隻`;
     }
 
     function render() {
       const poolSize = filteredPokemon().length;
-      const [title, description] = modeCopy[state.mode];
-      elements.title.textContent = title;
-      elements.description.textContent = description;
       renderSummary(poolSize);
-      if (!state.batch.length) {
-        elements.grid.innerHTML = `<div class="empty-state">找不到符合條件的寶可夢，請換個名稱或世代。</div>`;
+      if (!state.sections.study?.length) {
+        elements.studyGrid.innerHTML = `<div class="empty-state">找不到符合條件的寶可夢，請換個名稱或世代。</div>`;
+        elements.pictureNameGrid.innerHTML = '';
+        elements.soundPictureGrid.innerHTML = '';
+        elements.missingCharacterGrid.innerHTML = '';
         return;
       }
-      elements.grid.innerHTML = state.mode === 'study'
-        ? renderStudyCards()
-        : state.quizItems.map(renderQuizCard).join('');
+      elements.studyGrid.innerHTML = renderStudyCards(state.sections.study);
+      elements.pictureNameGrid.innerHTML = state.quizItems.pictureName.map(renderQuizCard).join('');
+      elements.soundPictureGrid.innerHTML = state.quizItems.soundPicture.map(renderQuizCard).join('');
+      elements.missingCharacterGrid.innerHTML = state.quizItems.missingCharacter.map(renderQuizCard).join('');
     }
 
     elements.search.addEventListener('input', (event) => { state.query = event.target.value; chooseBatch(); });
@@ -803,33 +850,7 @@
     elements.count.addEventListener('change', (event) => { state.count = Number(event.target.value); chooseBatch(); });
     elements.shuffle.addEventListener('click', chooseBatch);
 
-    function setZhuyinHidden(hidden) {
-      state.zhuyinHidden = hidden;
-      document.body.classList.toggle('zhuyin-hidden', hidden);
-      elements.toggle.textContent = hidden ? '顯示注音' : '遮住注音';
-      elements.toggle.setAttribute('aria-pressed', String(hidden));
-    }
-
-    elements.toggle.addEventListener('click', () => {
-      setZhuyinHidden(!state.zhuyinHidden);
-    });
-
-    elements.modeButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        state.mode = button.dataset.mode;
-        elements.modeButtons.forEach((item) => {
-          const active = item === button;
-          item.classList.toggle('is-active', active);
-          item.setAttribute('aria-pressed', String(active));
-        });
-        const needsVisibleZhuyin = state.mode === 'soundPicture' || state.mode === 'missingCharacter';
-        if (needsVisibleZhuyin) setZhuyinHidden(false);
-        elements.toggle.disabled = needsVisibleZhuyin;
-        chooseBatch();
-      });
-    });
-
-    elements.grid.addEventListener('click', (event) => {
+    elements.worksheet.addEventListener('click', (event) => {
       const choice = event.target.closest('[data-question][data-answer]');
       if (!choice || choice.disabled) return;
       state.answers[choice.dataset.question] = choice.dataset.answer;
@@ -847,7 +868,7 @@
         chooseBatch();
       } catch (error) {
         elements.summary.textContent = '無法載入題庫';
-        elements.grid.innerHTML = `<div class="empty-state">寶可夢題庫暫時無法載入，請重新整理頁面。</div>`;
+        elements.studyGrid.innerHTML = `<div class="empty-state">寶可夢題庫暫時無法載入，請重新整理頁面。</div>`;
       }
     }
 
