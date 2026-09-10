@@ -5,7 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="用寶可夢圖片與逐字直式注音，練習辨認和朗讀寶可夢名稱。">
   <title>寶可夢注音圖鑑</title>
+  <link rel="preload" href="assets/fonts/iansui-pokemon.woff2" as="font" type="font/woff2" crossorigin>
   <style>
+    @font-face {
+      font-family: "Iansui Pokemon";
+      src: url("assets/fonts/iansui-pokemon.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+    }
+
     :root {
       --red: #e33536;
       --red-dark: #b91c2a;
@@ -447,9 +456,10 @@
 
     .hanzi {
       color: #111827;
-      font-family: "BiauKai", "DFKai-SB", "標楷體", "Noto Serif TC", serif;
+      font-family: "Iansui Pokemon", "BiauKai", "DFKai-SB", "標楷體", cursive;
       font-size: clamp(2rem, 3vw, 2.4rem);
-      font-weight: 900;
+      font-weight: 400;
+      font-synthesis: none;
       line-height: 1;
       white-space: nowrap;
     }
@@ -636,11 +646,44 @@
       .choice .phonetic { width: .8rem; height: 2.15rem; grid-template-columns: .48rem .31rem; }
       .choice .phonetic-symbols { font-size: .53rem; }
       .choice .tone { font-size: .64rem; }
-      body[data-print-count="3"] .hanzi { font-size: 1.02rem; }
-      body[data-print-count="3"] .annotated-character { grid-template-columns: auto 1.08rem; }
-      body[data-print-count="3"] .phonetic { height: 3rem; grid-template-columns: .65rem .42rem; }
-      body[data-print-count="3"] .phonetic-symbols { font-size: .72rem; }
-      body[data-print-count="3"] .tone { font-size: .88rem; }
+      body[data-print-count="3"] .pokemon-card .hanzi,
+      body[data-print-count="3"] .writing-card .hanzi { font-size: 1.02rem; }
+      body[data-print-count="3"] .pokemon-card .annotated-character { grid-template-columns: auto 1.08rem; }
+      body[data-print-count="3"] .pokemon-card .phonetic { height: 3rem; grid-template-columns: .65rem .42rem; }
+      body[data-print-count="3"] .pokemon-card .phonetic-symbols { font-size: .72rem; }
+      body[data-print-count="3"] .pokemon-card .tone { font-size: .88rem; }
+      body[data-print-count="3"] #pictureNameGrid .question-card { grid-template-rows: auto 48px minmax(0, 1fr); }
+      body[data-print-count="3"] #pictureNameGrid .quiz-art { width: 42px; height: 42px; }
+      body[data-print-count="3"] #pictureNameGrid .choice-list {
+        grid-template-columns: 1fr;
+        gap: 2px;
+        padding: 0 5px 5px;
+      }
+      body[data-print-count="3"] #pictureNameGrid .choice { min-height: 0; padding: 1px 3px; }
+      body[data-print-count="3"] #pictureNameGrid .ruby-name { flex-wrap: nowrap; gap: 1px; }
+      body[data-print-count="3"] #pictureNameGrid .choice .hanzi { font-size: .76rem; }
+      body[data-print-count="3"] #pictureNameGrid .choice .annotated-character { grid-template-columns: auto .7rem; }
+      body[data-print-count="3"] #pictureNameGrid .choice .phonetic { width: .7rem; height: 1.85rem; grid-template-columns: .42rem .27rem; }
+      body[data-print-count="3"] #pictureNameGrid .choice .phonetic-symbols { font-size: .47rem; }
+      body[data-print-count="3"] #pictureNameGrid .choice .tone { font-size: .56rem; }
+      body[data-print-count="3"] #soundPictureGrid .choice-image { min-height: 46px; }
+      body[data-print-count="3"] #soundPictureGrid .choice-image img { width: 36px; height: 36px; }
+      body[data-print-count="3"] #writeZhuyinGrid .writing-body {
+        grid-template-columns: 28px minmax(0, 1fr);
+        gap: 2px;
+        padding: 4px;
+      }
+      body[data-print-count="3"] #writeZhuyinGrid .writing-art { width: 26px; height: 26px; }
+      body[data-print-count="3"] #writeZhuyinGrid .writing-name { flex-wrap: nowrap; gap: 1px; }
+      body[data-print-count="3"] #writeZhuyinGrid .writing-character { grid-template-columns: auto .95rem; gap: 1px; }
+      body[data-print-count="3"] #writeZhuyinGrid .hanzi { font-size: .88rem; }
+      body[data-print-count="3"] #writeZhuyinGrid .zhuyin-writing-slot {
+        width: .93rem;
+        height: 2.9rem;
+        grid-template-columns: .56rem .32rem;
+        gap: 1px;
+      }
+      body[data-print-count="3"] #writeZhuyinGrid .tone-writing-box { height: 1.1rem; }
       .answer-feedback { display: none; }
     }
   </style>
@@ -678,7 +721,7 @@
         <select id="countSelect"><option value="1">1 題</option><option value="2" selected>2 題</option><option value="3">3 題</option></select>
       </div>
       <button class="button button-primary" id="shuffleButton" type="button">↻ 重新產生</button>
-      <button class="button button-print" id="printButton" type="button">列印學習單</button>
+      <button class="button button-print" id="printButton" type="button" disabled>列印學習單</button>
     </section>
 
     <article class="worksheet-sheet" aria-labelledby="worksheetTitle">
@@ -837,14 +880,14 @@
     function renderStudyCards(entries) {
       return entries.map((entry) => {
         const generation = generationOf(entry.id);
-        return `<article class="pokemon-card"><div class="card-meta"><span class="dex-number">全國圖鑑 #${String(entry.id).padStart(4, '0')}</span><span>第 ${generation} 世代</span></div><div class="artwork-wrap"><img src="${artworkPath(entry)}" alt="${escapeHtml(entry.name)}" loading="lazy"></div><div class="name-panel">${renderAnnotatedName(entry)}</div></article>`;
+        return `<article class="pokemon-card"><div class="card-meta"><span class="dex-number">全國圖鑑 #${String(entry.id).padStart(4, '0')}</span><span>第 ${generation} 世代</span></div><div class="artwork-wrap"><img src="${artworkPath(entry)}" alt="${escapeHtml(entry.name)}" loading="eager" decoding="sync"></div><div class="name-panel">${renderAnnotatedName(entry)}</div></article>`;
       }).join('');
     }
 
     function renderWritingCards(entries) {
       return entries.map((entry, index) => {
         const characters = [...entry.name].map((character) => `<span class="writing-character"><span class="hanzi">${escapeHtml(character)}</span><span class="zhuyin-writing-slot" aria-label="在這裡寫注音"><span class="symbol-writing-box"></span><span class="tone-writing-box"></span></span></span>`).join('');
-        return `<article class="writing-card"><div class="question-heading"><span>第 ${index + 1} 題</span><span>寫注音</span></div><div class="writing-body"><img class="writing-art" src="${artworkPath(entry)}" alt="${escapeHtml(entry.name)}"><div class="writing-name">${characters}</div></div></article>`;
+        return `<article class="writing-card"><div class="question-heading"><span>第 ${index + 1} 題</span><span>寫注音</span></div><div class="writing-body"><img class="writing-art" src="${artworkPath(entry)}" alt="${escapeHtml(entry.name)}" loading="eager" decoding="sync"><div class="writing-name">${characters}</div></div></article>`;
       }).join('');
     }
 
@@ -863,13 +906,13 @@
       let choices = '';
 
       if (item.type === 'pictureName') {
-        prompt = `<img class="quiz-art" src="${artworkPath(item.entry)}" alt="題目中的寶可夢">`;
+        prompt = `<img class="quiz-art" src="${artworkPath(item.entry)}" alt="題目中的寶可夢" loading="eager" decoding="sync">`;
         choices = item.options.map((option) => `<button class="${choiceClass(item, String(option.id))}" type="button" data-question="${item.key}" data-answer="${option.id}" ${answered ? 'disabled' : ''}>${renderAnnotatedName(option)}</button>`).join('');
       }
 
       if (item.type === 'soundPicture') {
         prompt = renderPhoneticPrompt(item.entry);
-        choices = item.options.map((option) => `<button class="${choiceClass(item, String(option.id))} choice-image" type="button" data-question="${item.key}" data-answer="${option.id}" aria-label="選擇這張寶可夢圖片" ${answered ? 'disabled' : ''}><img src="${artworkPath(option)}" alt="選項圖片" loading="lazy"></button>`).join('');
+        choices = item.options.map((option) => `<button class="${choiceClass(item, String(option.id))} choice-image" type="button" data-question="${item.key}" data-answer="${option.id}" aria-label="選擇這張寶可夢圖片" ${answered ? 'disabled' : ''}><img src="${artworkPath(option)}" alt="選項圖片" loading="eager" decoding="sync"></button>`).join('');
       }
 
       const feedback = answered
@@ -905,6 +948,20 @@
       elements.pictureNameGrid.innerHTML = state.quizItems.pictureName.map(renderQuizCard).join('');
       elements.soundPictureGrid.innerHTML = state.quizItems.soundPicture.map(renderQuizCard).join('');
       elements.writeZhuyinGrid.innerHTML = renderWritingCards(state.sections.writeZhuyin);
+      updatePrintReadiness();
+    }
+
+    function updatePrintReadiness() {
+      elements.print.disabled = true;
+      const imageTasks = [...elements.worksheet.querySelectorAll('img')].map((image) => {
+        if (image.complete) return image.decode?.().catch(() => {}) || Promise.resolve();
+        return new Promise((resolve) => {
+          image.addEventListener('load', resolve, { once: true });
+          image.addEventListener('error', resolve, { once: true });
+        });
+      });
+      const fontTask = document.fonts?.load('1rem "Iansui Pokemon"') || Promise.resolve();
+      Promise.allSettled([fontTask, ...imageTasks]).then(() => { elements.print.disabled = false; });
     }
 
     elements.search.addEventListener('input', (event) => { state.query = event.target.value; chooseBatch(); });
