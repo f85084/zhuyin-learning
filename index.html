@@ -166,6 +166,50 @@
     .button-secondary { color: var(--blue-dark); border-color: #bfd0e5; background: #eef5fd; }
     .button-print { color: #fff; background: var(--red); box-shadow: 0 5px 0 var(--red-dark); }
 
+    .button:disabled { cursor: not-allowed; opacity: .48; transform: none; }
+
+    .mode-switcher {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.76);
+    }
+
+    .mode-button {
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 13px;
+      border: 2px solid transparent;
+      border-radius: 13px;
+      color: #425269;
+      background: transparent;
+      text-align: left;
+      font-weight: 900;
+    }
+
+    .mode-number {
+      width: 31px;
+      height: 31px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 10px;
+      color: var(--blue-dark);
+      background: #dfeaf8;
+      font-size: .88rem;
+    }
+
+    .mode-button:hover { background: #edf4fc; }
+    .mode-button:focus-visible { outline: 4px solid rgba(35,104,181,.2); outline-offset: 1px; }
+    .mode-button.is-active { color: #fff; border-color: var(--blue-dark); background: var(--blue); }
+    .mode-button.is-active .mode-number { color: var(--red-dark); background: var(--yellow); }
+
     .worksheet-head {
       display: flex;
       align-items: end;
@@ -211,6 +255,111 @@
     }
 
     .pokemon-card:hover { transform: translateY(-4px); box-shadow: 0 15px 30px rgba(24, 51, 86, .14); }
+
+    .question-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 21px;
+      background: #fff;
+      box-shadow: 0 9px 24px rgba(24, 51, 86, .09);
+    }
+
+    .question-card.is-correct { border-color: #159468; box-shadow: 0 0 0 3px rgba(21,148,104,.14); }
+    .question-card.is-wrong { border-color: var(--red); box-shadow: 0 0 0 3px rgba(227,53,54,.12); }
+
+    .question-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 14px;
+      color: #435168;
+      background: #edf4fc;
+      font-size: .86rem;
+      font-weight: 900;
+    }
+
+    .quiz-prompt {
+      min-height: 190px;
+      display: grid;
+      place-items: center;
+      padding: 15px;
+    }
+
+    .quiz-art { width: 170px; height: 170px; object-fit: contain; filter: drop-shadow(0 9px 7px rgba(25,44,71,.13)); }
+
+    .pronunciation-prompt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      padding: 18px;
+      border-radius: 18px;
+      background: #eef5fd;
+    }
+
+    .pronunciation-prompt .phonetic { height: 5rem; transform: scale(1.2); }
+
+    .missing-prompt {
+      display: grid;
+      place-items: center;
+      gap: 8px;
+    }
+
+    .missing-prompt .quiz-art { width: 125px; height: 125px; }
+
+    .missing-name .hanzi.is-blank {
+      width: 1.1em;
+      height: 1.1em;
+      border-bottom: 4px solid var(--red);
+      color: transparent;
+    }
+
+    .choice-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 9px;
+      padding: 0 14px 15px;
+    }
+
+    .choice {
+      min-height: 54px;
+      display: grid;
+      place-items: center;
+      padding: 8px;
+      border: 2px solid #cbd7e6;
+      border-radius: 12px;
+      color: var(--ink);
+      background: #fff;
+      font-weight: 900;
+      transition: border-color .15s ease, background .15s ease, transform .15s ease;
+    }
+
+    .choice:hover:not(:disabled) { border-color: var(--blue); background: #f1f6fd; transform: translateY(-2px); }
+    .choice:focus-visible { outline: 4px solid rgba(35,104,181,.2); outline-offset: 1px; }
+    .choice:disabled { cursor: default; color: inherit; opacity: 1; }
+    .choice.is-correct { border-color: #159468; color: #086b4a; background: #e8faf3; }
+    .choice.is-wrong { border-color: var(--red); color: #a51d2c; background: #fff0f1; }
+    .choice-image { min-height: 112px; }
+    .choice-image img { width: 92px; height: 92px; object-fit: contain; }
+    .choice-character { font-family: "BiauKai", "DFKai-SB", "標楷體", serif; font-size: 2.1rem; }
+    .choice .ruby-name { gap: 2px; }
+    .choice .annotated-character { grid-template-columns: auto 1rem; }
+    .choice .hanzi { font-size: 1.25rem; }
+    .choice .phonetic { width: 1rem; height: 2.65rem; grid-template-columns: .6rem .4rem; }
+    .choice .phonetic-symbols { font-size: .64rem; }
+    .choice .tone { font-size: .72rem; }
+
+    .answer-feedback {
+      min-height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 12px 11px;
+      font-weight: 900;
+    }
+
+    .answer-feedback.correct { color: #08704d; }
+    .answer-feedback.wrong { color: var(--red-dark); }
 
     .card-meta {
       display: flex;
@@ -339,6 +488,7 @@
 
     @media (max-width: 980px) {
       .toolbar { grid-template-columns: repeat(3, 1fr); }
+      .mode-switcher { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .pokemon-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
@@ -352,11 +502,15 @@
       .toolbar { grid-template-columns: 1fr 1fr; padding: 14px; }
       .field-search { grid-column: 1 / -1; }
       .button { padding-inline: 10px; }
+      .mode-switcher { grid-template-columns: 1fr 1fr; gap: 7px; padding: 7px; }
+      .mode-button { min-height: 58px; gap: 7px; padding: 8px; font-size: .9rem; }
+      .mode-number { width: 27px; height: 27px; }
       .worksheet-head { align-items: flex-start; flex-direction: column; margin-top: 24px; }
       .pokemon-grid { grid-template-columns: 1fr; }
       .artwork-wrap { height: 200px; }
       .artwork-wrap img { width: 182px; height: 182px; }
       .hanzi { font-size: 2.5rem; }
+      .choice .hanzi { font-size: 1.25rem; }
     }
 
     @media print {
@@ -364,7 +518,7 @@
       body { background: #fff; }
       .app-header { color: var(--ink); background: #fff; border-bottom: 3px solid var(--red); }
       .header-inner { min-height: auto; padding-block: 8px 12px; }
-      .brand-badge, .header-copy p, .collection-count, .toolbar, .learning-note { display: none !important; }
+      .brand-badge, .header-copy p, .collection-count, .toolbar, .mode-switcher, .learning-note { display: none !important; }
       .page-shell { width: 100%; padding: 0; }
       .worksheet-head { margin: 14px 0 10px; }
       .worksheet-head p { display: none; }
@@ -420,11 +574,18 @@
       <button class="button button-print" id="printButton" type="button">列印學習單</button>
     </section>
 
+    <nav class="mode-switcher" aria-label="選擇題型">
+      <button class="mode-button is-active" type="button" data-mode="study" aria-pressed="true"><span class="mode-number">01</span><span>看圖認讀</span></button>
+      <button class="mode-button" type="button" data-mode="pictureName" aria-pressed="false"><span class="mode-number">02</span><span>看圖選名字</span></button>
+      <button class="mode-button" type="button" data-mode="soundPicture" aria-pressed="false"><span class="mode-number">03</span><span>看注音選圖片</span></button>
+      <button class="mode-button" type="button" data-mode="missingCharacter" aria-pressed="false"><span class="mode-number">04</span><span>缺字挑戰</span></button>
+    </nav>
+
     <section aria-labelledby="worksheetTitle">
       <div class="worksheet-head">
         <div>
           <h2 id="worksheetTitle">看圖讀出寶可夢名稱</h2>
-          <p>每個中文字的右側，都是它自己的直式注音與聲調。</p>
+          <p id="worksheetDescription">每個中文字的右側，都是它自己的直式注音與聲調。</p>
         </div>
         <div class="batch-summary" id="batchSummary" aria-live="polite">準備題目中</div>
       </div>
@@ -433,7 +594,7 @@
 
     <aside class="learning-note">
       <span aria-hidden="true">💡</span>
-      <div><strong>練習方法：</strong>先按「遮住注音」自己念一次，再顯示注音核對；按「換一批」可繼續挑戰。</div>
+      <div><strong>練習方法：</strong>先選擇題型，作答後會立即顯示結果；按「換一批」可繼續挑戰新的寶可夢。</div>
     </aside>
   </main>
 
@@ -443,13 +604,25 @@
       [650, 721], [722, 809], [810, 905], [906, 1025]
     ];
 
-    const state = { data: [], batch: [], generation: 'all', count: 9, query: '', zhuyinHidden: false };
+    const modeCopy = {
+      study: ['看圖讀出寶可夢名稱', '每個中文字的右側，都是它自己的直式注音與聲調。'],
+      pictureName: ['看圖片，選出正確名稱', '從三個附有逐字注音的名稱中，找出圖片裡的寶可夢。'],
+      soundPicture: ['看注音，選出正確圖片', '先讀出直式注音，再從三張圖片中找答案。'],
+      missingCharacter: ['找出名字中缺少的字', '觀察圖片與注音，選出空格裡應該填入的中文字。']
+    };
+
+    const state = {
+      data: [], batch: [], quizItems: [], answers: {}, mode: 'study',
+      generation: 'all', count: 9, query: '', zhuyinHidden: false
+    };
     const elements = {
       totalCount: document.getElementById('totalCount'), search: document.getElementById('searchInput'),
       generation: document.getElementById('generationSelect'), count: document.getElementById('countSelect'),
       shuffle: document.getElementById('shuffleButton'), toggle: document.getElementById('toggleButton'),
       print: document.getElementById('printButton'), summary: document.getElementById('batchSummary'),
-      grid: document.getElementById('pokemonGrid')
+      grid: document.getElementById('pokemonGrid'), title: document.getElementById('worksheetTitle'),
+      description: document.getElementById('worksheetDescription'),
+      modeButtons: [...document.querySelectorAll('[data-mode]')]
     };
 
     function escapeHtml(value) {
@@ -469,16 +642,28 @@
       return { symbols: match?.[1] || value, tone: match?.[2] || '' };
     }
 
-    function renderAnnotatedName(entry) {
+    function renderAnnotatedName(entry, options = {}) {
       const characters = [...entry.name];
       const syllables = entry.zhuyin.trim().split(/\s+/u);
       const label = `${entry.name}，${entry.zhuyin}`;
       const content = characters.map((character, index) => {
         const { symbols, tone } = splitSyllable(syllables[index] || '');
         const toneClass = tone === '˙' ? 'tone tone-light' : tone ? 'tone' : 'tone tone-empty';
-        return `<span class="annotated-character" aria-hidden="true"><span class="hanzi">${escapeHtml(character)}</span><span class="phonetic"><span class="phonetic-symbols">${escapeHtml(symbols)}</span><span class="${toneClass}">${escapeHtml(tone || 'ˉ')}</span></span></span>`;
+        const isBlank = options.blankIndex === index;
+        return `<span class="annotated-character" aria-hidden="true"><span class="hanzi${isBlank ? ' is-blank' : ''}">${isBlank ? '？' : escapeHtml(character)}</span><span class="phonetic"><span class="phonetic-symbols">${escapeHtml(symbols)}</span><span class="${toneClass}">${escapeHtml(tone || 'ˉ')}</span></span></span>`;
       }).join('');
-      return `<div class="ruby-name" role="text" aria-label="${escapeHtml(label)}">${content}</div>`;
+      const extraClass = options.blankIndex === undefined ? '' : ' missing-name';
+      return `<div class="ruby-name${extraClass}" role="text" aria-label="${escapeHtml(label)}">${content}</div>`;
+    }
+
+    function renderPhoneticPrompt(entry) {
+      const syllables = entry.zhuyin.trim().split(/\s+/u);
+      const content = syllables.map((syllable) => {
+        const { symbols, tone } = splitSyllable(syllable);
+        const toneClass = tone === '˙' ? 'tone tone-light' : tone ? 'tone' : 'tone tone-empty';
+        return `<span class="phonetic" aria-hidden="true"><span class="phonetic-symbols">${escapeHtml(symbols)}</span><span class="${toneClass}">${escapeHtml(tone || 'ˉ')}</span></span>`;
+      }).join('');
+      return `<div class="pronunciation-prompt" role="text" aria-label="${escapeHtml(entry.zhuyin)}">${content}</div>`;
     }
 
     function shuffled(items) {
@@ -488,6 +673,34 @@
         [copy[index], copy[target]] = [copy[target], copy[index]];
       }
       return copy;
+    }
+
+    function optionEntries(correct) {
+      const sameGeneration = state.data.filter((entry) => entry.id !== correct.id && generationOf(entry.id) === generationOf(correct.id));
+      return shuffled([correct, ...shuffled(sameGeneration).slice(0, 2)]);
+    }
+
+    function optionCharacters(correctCharacter) {
+      const candidates = [...new Set(state.data.flatMap((entry) => [...entry.name]))]
+        .filter((character) => character !== correctCharacter && /\p{Script=Han}/u.test(character));
+      return shuffled([correctCharacter, ...shuffled(candidates).slice(0, 2)]);
+    }
+
+    function prepareQuizItems() {
+      state.answers = {};
+      state.quizItems = state.batch.map((entry, index) => {
+        if (state.mode === 'pictureName' || state.mode === 'soundPicture') {
+          return { entry, options: optionEntries(entry), key: `${state.mode}-${entry.id}-${index}` };
+        }
+        if (state.mode === 'missingCharacter') {
+          const characters = [...entry.name];
+          const eligibleIndices = characters.map((character, characterIndex) => /\p{Script=Han}/u.test(character) ? characterIndex : -1).filter((characterIndex) => characterIndex >= 0);
+          const blankIndex = eligibleIndices[Math.floor(Math.random() * eligibleIndices.length)] ?? 0;
+          const answer = characters[blankIndex];
+          return { entry, blankIndex, answer, options: optionCharacters(answer), key: `${state.mode}-${entry.id}-${index}` };
+        }
+        return { entry, key: `${state.mode}-${entry.id}-${index}` };
+      });
     }
 
     function filteredPokemon() {
@@ -502,33 +715,127 @@
     function chooseBatch() {
       const pool = filteredPokemon();
       state.batch = shuffled(pool).slice(0, state.count);
+      prepareQuizItems();
       render();
+    }
+
+    function correctValue(item) {
+      return state.mode === 'missingCharacter' ? item.answer : String(item.entry.id);
+    }
+
+    function answerDetails(item) {
+      const selected = state.answers[item.key];
+      const answered = selected !== undefined;
+      return { selected, answered, correct: answered && selected === correctValue(item) };
+    }
+
+    function renderStudyCards() {
+      return state.batch.map((entry) => {
+        const generation = generationOf(entry.id);
+        return `<article class="pokemon-card"><div class="card-meta"><span class="dex-number">全國圖鑑 #${String(entry.id).padStart(4, '0')}</span><span>第 ${generation} 世代</span></div><div class="artwork-wrap"><img src="${artworkPath(entry)}" alt="${escapeHtml(entry.name)}" loading="lazy"></div><div class="name-panel">${renderAnnotatedName(entry)}</div></article>`;
+      }).join('');
+    }
+
+    function choiceClass(item, value) {
+      const { answered, selected } = answerDetails(item);
+      if (!answered) return 'choice';
+      if (value === correctValue(item)) return 'choice is-correct';
+      if (value === selected) return 'choice is-wrong';
+      return 'choice';
+    }
+
+    function renderQuizCard(item, index) {
+      const { answered, correct } = answerDetails(item);
+      const cardClass = answered ? `question-card ${correct ? 'is-correct' : 'is-wrong'}` : 'question-card';
+      let prompt = '';
+      let choices = '';
+
+      if (state.mode === 'pictureName') {
+        prompt = `<img class="quiz-art" src="${artworkPath(item.entry)}" alt="題目中的寶可夢">`;
+        choices = item.options.map((option) => `<button class="${choiceClass(item, String(option.id))}" type="button" data-question="${item.key}" data-answer="${option.id}" ${answered ? 'disabled' : ''}>${renderAnnotatedName(option)}</button>`).join('');
+      }
+
+      if (state.mode === 'soundPicture') {
+        prompt = renderPhoneticPrompt(item.entry);
+        choices = item.options.map((option) => `<button class="${choiceClass(item, String(option.id))} choice-image" type="button" data-question="${item.key}" data-answer="${option.id}" aria-label="選擇這張寶可夢圖片" ${answered ? 'disabled' : ''}><img src="${artworkPath(option)}" alt="選項圖片" loading="lazy"></button>`).join('');
+      }
+
+      if (state.mode === 'missingCharacter') {
+        prompt = `<div class="missing-prompt"><img class="quiz-art" src="${artworkPath(item.entry)}" alt="${escapeHtml(item.entry.name)}">${renderAnnotatedName(item.entry, { blankIndex: item.blankIndex })}</div>`;
+        choices = item.options.map((option) => `<button class="${choiceClass(item, option)} choice-character" type="button" data-question="${item.key}" data-answer="${escapeHtml(option)}" ${answered ? 'disabled' : ''}>${escapeHtml(option)}</button>`).join('');
+      }
+
+      const feedback = answered
+        ? `<div class="answer-feedback ${correct ? 'correct' : 'wrong'}">${correct ? '答對了！' : `再記一次：${escapeHtml(item.entry.name)}`}</div>`
+        : '<div class="answer-feedback" aria-hidden="true">&nbsp;</div>';
+
+      return `<article class="${cardClass}"><div class="question-heading"><span>第 ${index + 1} 題</span><span>${answered ? (correct ? '答對' : '再試試') : '請選答案'}</span></div><div class="quiz-prompt">${prompt}</div><div class="choice-list">${choices}</div>${feedback}</article>`;
+    }
+
+    function renderSummary(poolSize) {
+      const generationLabel = state.generation === 'all' ? '全部世代' : `第 ${state.generation} 世代`;
+      if (state.mode === 'study') {
+        elements.summary.textContent = `${generationLabel}・顯示 ${state.batch.length}／${poolSize} 隻`;
+        return;
+      }
+      const answeredItems = state.quizItems.filter((item) => state.answers[item.key] !== undefined);
+      const correctCount = answeredItems.filter((item) => state.answers[item.key] === correctValue(item)).length;
+      elements.summary.textContent = `${generationLabel}・已答 ${answeredItems.length}/${state.batch.length}・答對 ${correctCount}`;
     }
 
     function render() {
       const poolSize = filteredPokemon().length;
-      const generationLabel = state.generation === 'all' ? '全部世代' : `第 ${state.generation} 世代`;
-      elements.summary.textContent = `${generationLabel}・顯示 ${state.batch.length}／${poolSize} 隻`;
+      const [title, description] = modeCopy[state.mode];
+      elements.title.textContent = title;
+      elements.description.textContent = description;
+      renderSummary(poolSize);
       if (!state.batch.length) {
         elements.grid.innerHTML = `<div class="empty-state">找不到符合條件的寶可夢，請換個名稱或世代。</div>`;
         return;
       }
-      elements.grid.innerHTML = state.batch.map((entry) => {
-        const generation = generationOf(entry.id);
-        return `<article class="pokemon-card"><div class="card-meta"><span class="dex-number">全國圖鑑 #${String(entry.id).padStart(4, '0')}</span><span>第 ${generation} 世代</span></div><div class="artwork-wrap"><img src="${artworkPath(entry)}" alt="${escapeHtml(entry.name)}" loading="lazy"></div><div class="name-panel">${renderAnnotatedName(entry)}</div></article>`;
-      }).join('');
+      elements.grid.innerHTML = state.mode === 'study'
+        ? renderStudyCards()
+        : state.quizItems.map(renderQuizCard).join('');
     }
 
     elements.search.addEventListener('input', (event) => { state.query = event.target.value; chooseBatch(); });
     elements.generation.addEventListener('change', (event) => { state.generation = event.target.value; chooseBatch(); });
     elements.count.addEventListener('change', (event) => { state.count = Number(event.target.value); chooseBatch(); });
     elements.shuffle.addEventListener('click', chooseBatch);
+
+    function setZhuyinHidden(hidden) {
+      state.zhuyinHidden = hidden;
+      document.body.classList.toggle('zhuyin-hidden', hidden);
+      elements.toggle.textContent = hidden ? '顯示注音' : '遮住注音';
+      elements.toggle.setAttribute('aria-pressed', String(hidden));
+    }
+
     elements.toggle.addEventListener('click', () => {
-      state.zhuyinHidden = !state.zhuyinHidden;
-      document.body.classList.toggle('zhuyin-hidden', state.zhuyinHidden);
-      elements.toggle.textContent = state.zhuyinHidden ? '顯示注音' : '遮住注音';
-      elements.toggle.setAttribute('aria-pressed', String(state.zhuyinHidden));
+      setZhuyinHidden(!state.zhuyinHidden);
     });
+
+    elements.modeButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        state.mode = button.dataset.mode;
+        elements.modeButtons.forEach((item) => {
+          const active = item === button;
+          item.classList.toggle('is-active', active);
+          item.setAttribute('aria-pressed', String(active));
+        });
+        const needsVisibleZhuyin = state.mode === 'soundPicture' || state.mode === 'missingCharacter';
+        if (needsVisibleZhuyin) setZhuyinHidden(false);
+        elements.toggle.disabled = needsVisibleZhuyin;
+        chooseBatch();
+      });
+    });
+
+    elements.grid.addEventListener('click', (event) => {
+      const choice = event.target.closest('[data-question][data-answer]');
+      if (!choice || choice.disabled) return;
+      state.answers[choice.dataset.question] = choice.dataset.answer;
+      render();
+    });
+
     elements.print.addEventListener('click', () => window.print());
 
     async function start() {
