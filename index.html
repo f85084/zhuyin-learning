@@ -596,7 +596,7 @@
         width: 100%;
         height: 282mm;
         display: grid;
-        grid-template-rows: auto auto repeat(6, minmax(0, 1fr));
+        grid-template-rows: auto auto repeat(5, minmax(0, 1fr));
         gap: 1.5mm;
         margin: 0;
         padding: 0;
@@ -621,7 +621,9 @@
       .exercise-heading h3 { font-size: .88rem; }
       .exercise-heading p { display: none; }
       .pokemon-grid { height: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5mm; }
+      #studyGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       body[data-print-count="1"] .pokemon-grid { grid-template-columns: 1fr; }
+      body[data-print-count="1"] #studyGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .pokemon-card {
         height: 100%;
         display: grid;
@@ -719,7 +721,7 @@
         </select>
       </div>
       <div class="field">
-        <label for="countSelect">每種題數</label>
+        <label for="countSelect">其他題型題數</label>
         <select id="countSelect"><option value="1">1 題</option><option value="2" selected>2 題</option></select>
       </div>
       <button class="button button-primary" id="shuffleButton" type="button">↻ 重新產生</button>
@@ -746,23 +748,18 @@
         <div class="pokemon-grid exercise-grid" id="pictureNameGrid"></div>
       </section>
 
-      <section class="exercise-section" aria-labelledby="soundPictureHeading">
-        <div class="exercise-heading"><span>三</span><div><h3 id="soundPictureHeading">看注音選圖片</h3><p>讀注音，圈出正確圖片。</p></div></div>
-        <div class="pokemon-grid exercise-grid" id="soundPictureGrid"></div>
-      </section>
-
       <section class="exercise-section" aria-labelledby="hanziZhuyinHeading">
-        <div class="exercise-heading"><span>四</span><div><h3 id="hanziZhuyinHeading">看國字選注音</h3><p>看寶可夢名稱，圈出正確注音。</p></div></div>
+        <div class="exercise-heading"><span>三</span><div><h3 id="hanziZhuyinHeading">看國字選注音</h3><p>看寶可夢名稱，圈出正確注音。</p></div></div>
         <div class="pokemon-grid exercise-grid" id="hanziZhuyinGrid"></div>
       </section>
 
       <section class="exercise-section" aria-labelledby="tonePracticeHeading">
-        <div class="exercise-heading"><span>五</span><div><h3 id="tonePracticeHeading">分辨聲調</h3><p>讀一讀，圈出聲調正確的注音。</p></div></div>
+        <div class="exercise-heading"><span>四</span><div><h3 id="tonePracticeHeading">分辨聲調</h3><p>讀一讀，圈出聲調正確的注音。</p></div></div>
         <div class="pokemon-grid exercise-grid" id="tonePracticeGrid"></div>
       </section>
 
       <section class="exercise-section" aria-labelledby="writeZhuyinHeading">
-        <div class="exercise-heading"><span>六</span><div><h3 id="writeZhuyinHeading">看圖寫注音</h3><p>看名稱，在每個中文字右側寫上注音。</p></div></div>
+        <div class="exercise-heading"><span>五</span><div><h3 id="writeZhuyinHeading">看圖寫注音</h3><p>看名稱，在每個中文字右側寫上注音。</p></div></div>
         <div class="pokemon-grid exercise-grid" id="writeZhuyinGrid"></div>
       </section>
     </article>
@@ -790,7 +787,6 @@
       summary: document.getElementById('batchSummary'),
       studyGrid: document.getElementById('studyGrid'),
       pictureNameGrid: document.getElementById('pictureNameGrid'),
-      soundPictureGrid: document.getElementById('soundPictureGrid'),
       hanziZhuyinGrid: document.getElementById('hanziZhuyinGrid'),
       tonePracticeGrid: document.getElementById('tonePracticeGrid'),
       writeZhuyinGrid: document.getElementById('writeZhuyinGrid'),
@@ -911,18 +907,17 @@
     function chooseBatch() {
       const pool = filteredPokemon();
       const picked = shuffled(pool);
-      const group = (groupIndex) => Array.from({ length: Math.min(state.count, picked.length) }, (_, index) => picked[(groupIndex * state.count + index) % picked.length]);
+      const studyCount = Math.min(3, picked.length);
+      const group = (groupIndex) => Array.from({ length: Math.min(state.count, picked.length) }, (_, index) => picked[(studyCount + groupIndex * state.count + index) % picked.length]);
       state.sections = {
-        study: group(0),
-        pictureName: group(1),
-        soundPicture: group(2),
-        hanziZhuyin: group(3),
-        tonePractice: group(4),
-        writeZhuyin: group(5)
+        study: picked.slice(0, studyCount),
+        pictureName: group(0),
+        hanziZhuyin: group(1),
+        tonePractice: group(2),
+        writeZhuyin: group(3)
       };
       state.quizItems = {
         pictureName: buildQuizItems('pictureName', state.sections.pictureName),
-        soundPicture: buildQuizItems('soundPicture', state.sections.soundPicture),
         hanziZhuyin: buildQuizItems('hanziZhuyin', state.sections.hanziZhuyin),
         tonePractice: buildToneQuizItems(state.sections.tonePractice)
       };
@@ -973,11 +968,6 @@
         choices = item.options.map((option) => `<button class="${choiceClass(item, String(option.id))}" type="button" data-question="${item.key}" data-answer="${option.id}" ${answered ? 'disabled' : ''}>${renderAnnotatedName(option)}</button>`).join('');
       }
 
-      if (item.type === 'soundPicture') {
-        prompt = renderPhoneticPrompt(item.entry);
-        choices = item.options.map((option) => `<button class="${choiceClass(item, String(option.id))} choice-image" type="button" data-question="${item.key}" data-answer="${option.id}" aria-label="選擇這張寶可夢圖片" ${answered ? 'disabled' : ''}><img src="${artworkPath(option)}" alt="選項圖片" loading="eager" decoding="sync"></button>`).join('');
-      }
-
       if (item.type === 'hanziZhuyin') {
         prompt = renderHanziName(item.entry);
         choices = item.options.map((option) => `<button class="${choiceClass(item, String(option.id))}" type="button" data-question="${item.key}" data-answer="${option.id}" aria-label="${escapeHtml(option.zhuyin)}" ${answered ? 'disabled' : ''}>${renderPhoneticSequence(option)}</button>`).join('');
@@ -1016,7 +1006,6 @@
       if (!state.sections.study?.length) {
         elements.studyGrid.innerHTML = `<div class="empty-state">找不到符合條件的寶可夢，請換個名稱或世代。</div>`;
         elements.pictureNameGrid.innerHTML = '';
-        elements.soundPictureGrid.innerHTML = '';
         elements.hanziZhuyinGrid.innerHTML = '';
         elements.tonePracticeGrid.innerHTML = '';
         elements.writeZhuyinGrid.innerHTML = '';
@@ -1024,7 +1013,6 @@
       }
       elements.studyGrid.innerHTML = renderStudyCards(state.sections.study);
       elements.pictureNameGrid.innerHTML = state.quizItems.pictureName.map(renderQuizCard).join('');
-      elements.soundPictureGrid.innerHTML = state.quizItems.soundPicture.map(renderQuizCard).join('');
       elements.hanziZhuyinGrid.innerHTML = state.quizItems.hanziZhuyin.map(renderQuizCard).join('');
       elements.tonePracticeGrid.innerHTML = state.quizItems.tonePractice.map(renderQuizCard).join('');
       elements.writeZhuyinGrid.innerHTML = renderWritingCards(state.sections.writeZhuyin);
