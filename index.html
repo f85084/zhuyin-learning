@@ -356,17 +356,17 @@
 
     .writing-character {
       display: inline-grid;
-      grid-template-columns: auto 2.2rem;
+      grid-template-columns: auto 3.25rem;
       align-items: center;
-      gap: 3px;
+      gap: 5px;
     }
 
     .zhuyin-writing-slot {
-      width: 2.5rem;
-      height: 6rem;
+      width: 3.25rem;
+      height: 7.2rem;
       display: grid;
-      grid-template-columns: 1.55rem .75rem;
-      gap: 3px;
+      grid-template-columns: 2.05rem 1rem;
+      gap: 4px;
     }
 
     .symbol-writing-box, .tone-writing-box {
@@ -375,7 +375,7 @@
       background: repeating-linear-gradient(to bottom, transparent 0 31%, rgba(35,104,181,.12) 32% 34%, transparent 35% 65%, rgba(35,104,181,.12) 66% 68%, transparent 69% 100%);
     }
 
-    .tone-writing-box { height: 2rem; align-self: center; background: none; }
+    .tone-writing-box { height: 2.5rem; align-self: center; background: none; }
 
     .choice-list {
       display: grid;
@@ -641,10 +641,10 @@
       .writing-body { min-height: 0; gap: 3px; padding: 4px 6px 7px; }
       .writing-art { width: 50px; height: 50px; }
       .writing-name { width: 100%; flex-wrap: nowrap; justify-content: space-evenly; gap: 0; padding-inline: 8px; }
-      .writing-character { grid-template-columns: auto 1.08rem; gap: 1px; }
-      .zhuyin-writing-slot { width: 1.22rem; height: 3.8rem; grid-template-columns: .76rem .4rem; gap: 1px; }
+      .writing-character { grid-template-columns: auto 1.3rem; gap: 1px; }
+      .zhuyin-writing-slot { width: 1.3rem; height: 4.2rem; grid-template-columns: .8rem .44rem; gap: 1px; }
       .symbol-writing-box, .tone-writing-box { border-width: 2px; border-radius: 5px; }
-      .tone-writing-box { height: 1.8rem; }
+      .tone-writing-box { height: 2.1rem; }
       .pronunciation-prompt { gap: 5px; padding: 3px 7px; border-radius: 6px; }
       .pronunciation-prompt .phonetic { height: 3.15rem; transform: scale(1.14); }
       .hanzi-only-name { flex: 1; min-width: 0; justify-content: space-evenly; gap: 0; padding: 3px 8px; border-radius: 6px; }
@@ -683,15 +683,15 @@
       body[data-print-count="3"] .writing-body { gap: 2px; padding: 2px 2px 5px; }
       body[data-print-count="3"] .writing-art { width: 50px; height: 50px; }
       body[data-print-count="3"] .writing-name { gap: 0; padding-inline: 1px; }
-      body[data-print-count="3"] .writing-character { grid-template-columns: auto 2.37rem; gap: 1px; }
+      body[data-print-count="3"] .writing-character { grid-template-columns: auto 3.02rem; gap: 2px; }
       body[data-print-count="3"] .writing-character .hanzi { font-size: 1.02rem; }
-      body[data-print-count="3"] .zhuyin-writing-slot { width: 2.35rem; height: 5.45rem; grid-template-columns: 1.48rem .76rem; gap: 1px; }
-      body[data-print-count="3"] .writing-name.is-medium .writing-character { grid-template-columns: auto 1.97rem; gap: 0; }
+      body[data-print-count="3"] .zhuyin-writing-slot { width: 3rem; height: 6.6rem; grid-template-columns: 1.9rem .98rem; gap: 2px; }
+      body[data-print-count="3"] .writing-name.is-medium .writing-character { grid-template-columns: auto 2.27rem; gap: 1px; }
       body[data-print-count="3"] .writing-name.is-medium .writing-character .hanzi { font-size: .92rem; }
-      body[data-print-count="3"] .writing-name.is-medium .zhuyin-writing-slot { width: 1.95rem; grid-template-columns: 1.22rem .64rem; }
-      body[data-print-count="3"] .writing-name.is-long .writing-character { grid-template-columns: auto 1.42rem; gap: 0; }
+      body[data-print-count="3"] .writing-name.is-medium .zhuyin-writing-slot { width: 2.25rem; height: 6.35rem; grid-template-columns: 1.4rem .75rem; }
+      body[data-print-count="3"] .writing-name.is-long .writing-character { grid-template-columns: auto 1.7rem; gap: 0; }
       body[data-print-count="3"] .writing-name.is-long .writing-character .hanzi { font-size: .9rem; }
-      body[data-print-count="3"] .writing-name.is-long .zhuyin-writing-slot { width: 1.4rem; height: 4.95rem; grid-template-columns: .88rem .46rem; }
+      body[data-print-count="3"] .writing-name.is-long .zhuyin-writing-slot { width: 1.68rem; height: 5.85rem; grid-template-columns: 1.04rem .56rem; }
       .answer-feedback { display: none; }
     }
   </style>
