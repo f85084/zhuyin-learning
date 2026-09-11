@@ -597,7 +597,7 @@
       .artwork-wrap { height: 50px; padding: 0; }
       .artwork-wrap img { width: 48px; height: 48px; filter: none; }
       .name-panel { min-height: 0; padding: 5px 4px 7px; }
-      .ruby-name { flex-wrap: nowrap; gap: 2px; }
+      .ruby-name { width: 100%; flex-wrap: nowrap; justify-content: space-evenly; gap: 0; padding-inline: 4px; }
       .annotated-character { grid-template-columns: auto 1.08rem; }
       .hanzi { font-size: 1.08rem; }
       .phonetic { height: 3.05rem; grid-template-columns: .65rem .42rem; }
@@ -624,18 +624,19 @@
       }
       .writing-body { min-height: 0; gap: 3px; padding: 4px 6px 7px; }
       .writing-art { width: 44px; height: 44px; }
-      .writing-name { flex-wrap: nowrap; gap: 2px; }
+      .writing-name { width: 100%; flex-wrap: nowrap; justify-content: space-evenly; gap: 0; padding-inline: 8px; }
       .writing-character { grid-template-columns: auto 1.08rem; gap: 1px; }
       .zhuyin-writing-slot { width: 1.22rem; height: 3.8rem; grid-template-columns: .76rem .4rem; gap: 1px; }
       .symbol-writing-box, .tone-writing-box { border-width: 1.5px; border-radius: 4px; }
       .tone-writing-box { height: 1.3rem; }
       .pronunciation-prompt { gap: 5px; padding: 3px 7px; border-radius: 6px; }
       .pronunciation-prompt .phonetic { height: 2.85rem; transform: scale(1.04); }
-      .hanzi-only-name { gap: 3px; padding: 3px 8px; border-radius: 6px; }
+      .hanzi-only-name { flex: 1; min-width: 0; justify-content: space-evenly; gap: 0; padding: 3px 8px; border-radius: 6px; }
       .hanzi-only-name .hanzi { font-size: 1.18rem; }
-      .image-name-prompt { gap: 8px; }
+      .image-name-prompt { width: 100%; gap: 8px; padding-inline: 4px; }
       .image-name-prompt .quiz-art { width: 42px; height: 42px; }
       .zhuyin-image-card .quiz-prompt { min-height: 0; padding-block: 3px; }
+      .zhuyin-image-card .pronunciation-prompt { width: 78%; justify-content: space-evenly; gap: 0; }
       .zhuyin-image-card .choice-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .zhuyin-image-card .choice-image img { width: 37px; height: 37px; }
       .zhuyin-image-card .choice-image-label { font-size: .64rem; }
@@ -649,7 +650,7 @@
       .choice .phonetic { width: .62rem; height: 1.78rem; grid-template-columns: .38rem .23rem; }
       .choice .phonetic-symbols { font-size: .43rem; }
       .choice .tone { font-size: .52rem; }
-      .choice .phonetic-choice-row { gap: 2px; }
+      .choice .ruby-name, .choice .phonetic-choice-row { width: 100%; justify-content: space-evenly; gap: 0; }
       .choice .phonetic-choice-row .phonetic { height: 2.08rem; }
       body[data-print-count="3"] #pictureNameGrid .choice-list,
       body[data-print-count="3"] #hanziZhuyinGrid .choice-list {
@@ -661,7 +662,7 @@
       body[data-print-count="3"] #hanziZhuyinGrid .choice { min-height: 26px; padding: 2px 3px; }
       body[data-print-count="3"] .writing-body { gap: 2px; padding: 3px 5px 6px; }
       body[data-print-count="3"] .writing-art { width: 42px; height: 42px; }
-      body[data-print-count="3"] .writing-name { gap: 1px; }
+      body[data-print-count="3"] .writing-name { gap: 0; padding-inline: 8px; }
       body[data-print-count="3"] .writing-character { grid-template-columns: auto 1.36rem; gap: 1px; }
       body[data-print-count="3"] .writing-character .hanzi { font-size: .9rem; }
       body[data-print-count="3"] .zhuyin-writing-slot { width: 1.34rem; height: 4.35rem; grid-template-columns: .84rem .44rem; gap: 1px; }
