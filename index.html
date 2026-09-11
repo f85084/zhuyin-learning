@@ -346,11 +346,11 @@
     }
 
     .zhuyin-writing-slot {
-      width: 2.1rem;
-      height: 5.25rem;
+      width: 2.5rem;
+      height: 6rem;
       display: grid;
-      grid-template-columns: 1.25rem .65rem;
-      gap: 2px;
+      grid-template-columns: 1.55rem .75rem;
+      gap: 3px;
     }
 
     .symbol-writing-box, .tone-writing-box {
@@ -386,8 +386,16 @@
     .choice:disabled { cursor: default; color: inherit; opacity: 1; }
     .choice.is-correct { border-color: #159468; color: #086b4a; background: #e8faf3; }
     .choice.is-wrong { border-color: var(--red); color: #a51d2c; background: #fff0f1; }
-    .choice-image { min-height: 78px; }
+    .choice-image {
+      min-height: 96px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
     .choice-image img { width: 62px; height: 62px; object-fit: contain; }
+    .choice-image-label { font-family: "Iansui Pokemon", "DFKai-SB", cursive; font-size: 1rem; font-weight: 700; line-height: 1.1; }
     .choice .ruby-name { gap: 2px; }
     .choice .annotated-character { grid-template-columns: auto 1rem; }
     .choice .hanzi { font-size: 1.25rem; }
@@ -618,7 +626,7 @@
       .writing-art { width: 44px; height: 44px; }
       .writing-name { flex-wrap: nowrap; gap: 2px; }
       .writing-character { grid-template-columns: auto 1.08rem; gap: 1px; }
-      .zhuyin-writing-slot { width: 1.08rem; height: 3.5rem; grid-template-columns: .65rem .37rem; gap: 1px; }
+      .zhuyin-writing-slot { width: 1.22rem; height: 3.8rem; grid-template-columns: .76rem .4rem; gap: 1px; }
       .symbol-writing-box, .tone-writing-box { border-width: 1.5px; border-radius: 4px; }
       .tone-writing-box { height: 1.3rem; }
       .pronunciation-prompt { gap: 5px; padding: 3px 7px; border-radius: 6px; }
@@ -629,11 +637,13 @@
       .image-name-prompt .quiz-art { width: 42px; height: 42px; }
       .zhuyin-image-card .quiz-prompt { min-height: 0; padding-block: 3px; }
       .zhuyin-image-card .choice-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .zhuyin-image-card .choice-image img { width: 40px; height: 40px; }
+      .zhuyin-image-card .choice-image img { width: 37px; height: 37px; }
+      .zhuyin-image-card .choice-image-label { font-size: .64rem; }
       .choice-list { height: 100%; align-content: stretch; grid-auto-rows: 1fr; gap: 3px; padding: 0 5px 5px; }
       .choice { min-height: 28px; padding: 2px; border-width: 1.25px; border-radius: 5px; }
-      .choice-image { min-height: 34px; }
-      .choice-image img { width: 29px; height: 29px; }
+      .choice-image { min-height: 42px; gap: 1px; }
+      .choice-image img { width: 31px; height: 31px; }
+      .choice-image-label { font-size: .58rem; line-height: 1; }
       .choice .hanzi { font-size: .67rem; }
       .choice .annotated-character { grid-template-columns: auto .59rem; }
       .choice .phonetic { width: .62rem; height: 1.78rem; grid-template-columns: .38rem .23rem; }
@@ -652,9 +662,12 @@
       body[data-print-count="3"] .writing-body { gap: 2px; padding: 3px 5px 6px; }
       body[data-print-count="3"] .writing-art { width: 42px; height: 42px; }
       body[data-print-count="3"] .writing-name { gap: 1px; }
-      body[data-print-count="3"] .writing-character { grid-template-columns: auto .94rem; gap: 0; }
-      body[data-print-count="3"] .writing-character .hanzi { font-size: .88rem; }
-      body[data-print-count="3"] .zhuyin-writing-slot { width: .92rem; height: 3.2rem; grid-template-columns: .56rem .32rem; gap: 1px; }
+      body[data-print-count="3"] .writing-character { grid-template-columns: auto 1.36rem; gap: 1px; }
+      body[data-print-count="3"] .writing-character .hanzi { font-size: .9rem; }
+      body[data-print-count="3"] .zhuyin-writing-slot { width: 1.34rem; height: 4.35rem; grid-template-columns: .84rem .44rem; gap: 1px; }
+      body[data-print-count="3"] .writing-name.is-long .writing-character { grid-template-columns: auto 1.08rem; gap: 0; }
+      body[data-print-count="3"] .writing-name.is-long .writing-character .hanzi { font-size: .8rem; }
+      body[data-print-count="3"] .writing-name.is-long .zhuyin-writing-slot { width: 1.06rem; height: 4rem; grid-template-columns: .66rem .34rem; }
       .answer-feedback { display: none; }
     }
   </style>
@@ -873,7 +886,8 @@
     function renderWritingCards(entries) {
       return entries.map((entry, index) => {
         const characters = [...entry.name].map((character) => `<span class="writing-character"><span class="hanzi">${escapeHtml(character)}</span><span class="zhuyin-writing-slot" aria-label="在這裡寫注音"><span class="symbol-writing-box"></span><span class="tone-writing-box"></span></span></span>`).join('');
-        return `<article class="writing-card"><div class="question-heading"><span>第 ${index + 1} 題</span><span>寫注音</span></div><div class="writing-body"><img class="writing-art" src="${artworkPath(entry)}" alt="${escapeHtml(entry.name)}" loading="eager" decoding="sync"><div class="writing-name">${characters}</div></div></article>`;
+        const lengthClass = [...entry.name].length > 4 ? ' is-long' : '';
+        return `<article class="writing-card"><div class="question-heading"><span>第 ${index + 1} 題</span><span>寫注音</span></div><div class="writing-body"><img class="writing-art" src="${artworkPath(entry)}" alt="${escapeHtml(entry.name)}" loading="eager" decoding="sync"><div class="writing-name${lengthClass}">${characters}</div></div></article>`;
       }).join('');
     }
 
@@ -904,7 +918,7 @@
 
       if (item.type === 'zhuyinImage') {
         prompt = renderPhoneticPrompt(item.entry);
-        choices = item.options.map((option) => `<button class="${choiceClass(item, String(option.id))} choice-image" type="button" data-question="${item.key}" data-answer="${option.id}" aria-label="${escapeHtml(option.name)}" ${answered ? 'disabled' : ''}><img src="${artworkPath(option)}" alt="${escapeHtml(option.name)}" loading="eager" decoding="sync"></button>`).join('');
+        choices = item.options.map((option) => `<button class="${choiceClass(item, String(option.id))} choice-image" type="button" data-question="${item.key}" data-answer="${option.id}" aria-label="${escapeHtml(option.name)}" ${answered ? 'disabled' : ''}><img src="${artworkPath(option)}" alt="${escapeHtml(option.name)}" loading="eager" decoding="sync"><span class="choice-image-label">${escapeHtml(option.name)}</span></button>`).join('');
       }
 
       const feedback = answered
