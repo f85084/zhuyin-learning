@@ -177,30 +177,12 @@
 
     .button:disabled { cursor: not-allowed; opacity: .48; transform: none; }
 
-    .worksheet-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 20px;
-      margin: 30px 2px 18px;
-    }
+    .worksheet-head { margin: 30px 2px 18px; }
 
     .worksheet-head h2 {
       margin: 0;
       font-size: clamp(1.35rem, 2vw, 1.8rem);
       color: var(--blue-dark);
-    }
-
-    .worksheet-head p { margin: 5px 0 0; color: var(--muted); line-height: 1.55; }
-
-    .batch-summary {
-      flex: 0 0 auto;
-      padding: 8px 13px;
-      border-radius: 999px;
-      color: #8f2330;
-      background: #ffe8ea;
-      font-size: .9rem;
-      font-weight: 900;
     }
 
     .worksheet-sheet {
@@ -213,15 +195,6 @@
     }
 
     .worksheet-sheet .worksheet-head { margin-top: 0; padding-top: 22px; }
-
-    .student-fields {
-      display: flex;
-      justify-content: flex-end;
-      gap: 28px;
-      margin: -4px 2px 20px;
-      color: #45546a;
-      font-weight: 800;
-    }
 
     .exercise-section + .exercise-section { margin-top: 26px; }
 
@@ -341,22 +314,32 @@
 
     .phonetic-choice-row .phonetic { height: 3.7rem; }
 
-    .check-prompt {
+    .order-card { overflow: hidden; }
+    .order-body { min-height: 148px; display: grid; grid-template-rows: auto 1fr; gap: 10px; padding: 12px 16px 16px; }
+    .order-prompt { display: flex; align-items: center; justify-content: center; gap: 12px; }
+    .order-art { width: 70px; height: 70px; object-fit: contain; }
+    .order-pieces { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 9px; }
+    .order-piece {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 16px;
-      padding: 12px 16px;
-      border-radius: 18px;
-      background: #f3efff;
+      gap: 4px;
+      padding: 6px 8px;
+      border: 2px solid #cbd7e6;
+      border-radius: 12px;
+      background: #fff;
     }
-
-    .check-prompt .quiz-art { width: 72px; height: 72px; }
-    .check-copy { display: flex; align-items: center; gap: 12px; }
-    .check-copy .hanzi-only-name { padding: 0; background: transparent; }
-    .check-copy .phonetic-choice-row { padding: 5px 9px; border-radius: 10px; background: #fff; }
-    .choice-list-binary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .choice-check { font-size: 1rem; }
+    .order-number {
+      width: 1.7rem;
+      height: 1.7rem;
+      display: grid;
+      place-items: center;
+      border: 2px dashed #8ca6c5;
+      border-radius: 50%;
+      color: #718399;
+      font-size: .72rem;
+      font-weight: 900;
+    }
+    .order-piece .phonetic { height: 3.5rem; }
 
     .writing-card {
       overflow: hidden;
@@ -557,22 +540,6 @@
       font-weight: 800;
     }
 
-    .learning-note {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-top: 22px;
-      padding: 14px 17px;
-      border-left: 5px solid var(--yellow);
-      border-radius: 12px;
-      color: #34445a;
-      background: #fff;
-      box-shadow: 0 7px 18px rgba(24, 51, 86, .06);
-      line-height: 1.55;
-    }
-
-    .learning-note strong { color: var(--blue-dark); }
-
     @media (max-width: 980px) {
       .toolbar { grid-template-columns: repeat(3, 1fr); }
       .pokemon-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -588,10 +555,9 @@
       .toolbar { grid-template-columns: 1fr 1fr; padding: 14px; }
       .field-search { grid-column: 1 / -1; }
       .button { padding-inline: 10px; }
-      .worksheet-head { align-items: flex-start; flex-direction: column; margin-top: 24px; }
+      .worksheet-head { margin-top: 24px; }
       .pokemon-grid { grid-template-columns: 1fr; }
       .worksheet-sheet { margin-top: 18px; padding: 0 11px 20px; border-radius: 18px; }
-      .student-fields { flex-direction: column; gap: 7px; margin-bottom: 18px; }
       .artwork-wrap { height: 126px; }
       .artwork-wrap img { width: 112px; height: 112px; }
       .hanzi { font-size: 2.5rem; }
@@ -602,13 +568,13 @@
       @page { size: A4 portrait; margin: 7mm; }
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       html, body { width: 100%; min-height: 100%; background: #fff; }
-      .app-header, .toolbar, .learning-note { display: none !important; }
+      .app-header, .toolbar { display: none !important; }
       .page-shell { width: 100%; padding: 0; }
       .worksheet-sheet {
         width: 100%;
         height: 282mm;
         display: grid;
-        grid-template-rows: auto auto repeat(5, minmax(0, 1fr));
+        grid-template-rows: auto repeat(5, minmax(0, 1fr));
         gap: 1.5mm;
         margin: 0;
         padding: 0;
@@ -619,9 +585,6 @@
       }
       .worksheet-sheet .worksheet-head { margin: 0; padding: 0 0 1.2mm; border-bottom: 2px solid var(--red); }
       .worksheet-head h2 { font-size: 1.12rem; }
-      .worksheet-head p { display: none; }
-      .batch-summary { padding: 4px 9px; font-size: .72rem; }
-      .student-fields { align-items: center; margin: 0; gap: 24px; font-size: .78rem; }
       .exercise-section {
         min-height: 0;
         display: grid;
@@ -688,11 +651,14 @@
       .hanzi-only-name .hanzi { font-size: 1.12rem; }
       .image-name-prompt { gap: 7px; }
       .image-name-prompt .quiz-art { width: 34px; height: 34px; }
-      .check-prompt { gap: 7px; padding: 3px 7px; border-radius: 6px; }
-      .check-prompt .quiz-art { width: 32px; height: 32px; }
-      .check-copy { gap: 6px; }
-      .check-copy .phonetic-choice-row { padding: 2px 5px; border-radius: 5px; }
-      .check-copy .phonetic-choice-row .phonetic { height: 2.15rem; }
+      .order-card { grid-template-rows: auto minmax(0, 1fr); }
+      .order-body { min-height: 0; gap: 3px; padding: 3px 6px 5px; }
+      .order-prompt { gap: 6px; }
+      .order-art { width: 32px; height: 32px; }
+      .order-pieces { flex-wrap: nowrap; gap: 4px; }
+      .order-piece { gap: 2px; padding: 2px 4px; border-width: 1.25px; border-radius: 6px; }
+      .order-number { width: 1rem; height: 1rem; border-width: 1px; font-size: .45rem; }
+      .order-piece .phonetic { height: 2.1rem; }
       .choice-list { gap: 3px; padding: 0 5px 4px; }
       .choice { min-height: 28px; padding: 2px; border-width: 1.25px; border-radius: 5px; }
       .choice-image { min-height: 34px; }
@@ -746,13 +712,8 @@
 
     <article class="worksheet-sheet" aria-labelledby="worksheetTitle">
       <div class="worksheet-head">
-        <div>
-          <h2 id="worksheetTitle">寶可夢注音綜合學習單</h2>
-          <p>注音是學習重點，圖片只作為辨認提示。</p>
-        </div>
-        <div class="batch-summary" id="batchSummary" aria-live="polite">準備題目中</div>
+        <h2 id="worksheetTitle">寶可夢注音綜合學習單</h2>
       </div>
-      <div class="student-fields"><span>姓名：________________</span><span>日期：________________</span></div>
 
       <section class="exercise-section" aria-labelledby="studyHeading">
         <div class="exercise-heading"><span>一</span><div><h3 id="studyHeading">看圖認讀</h3><p>看圖片，讀出寶可夢名稱。</p></div></div>
@@ -769,9 +730,9 @@
         <div class="pokemon-grid exercise-grid" id="hanziZhuyinGrid"></div>
       </section>
 
-      <section class="exercise-section" aria-labelledby="zhuyinCheckHeading">
-        <div class="exercise-heading"><span>四</span><div><h3 id="zhuyinCheckHeading">注音對不對</h3><p>看圖片和名稱，判斷注音是否正確。</p></div></div>
-        <div class="pokemon-grid exercise-grid" id="zhuyinCheckGrid"></div>
+      <section class="exercise-section" aria-labelledby="syllableOrderHeading">
+        <div class="exercise-heading"><span>四</span><div><h3 id="syllableOrderHeading">注音排排看</h3><p>把打亂的注音依正確順序編號。</p></div></div>
+        <div class="pokemon-grid exercise-grid" id="syllableOrderGrid"></div>
       </section>
 
       <section class="exercise-section" aria-labelledby="writeZhuyinHeading">
@@ -780,10 +741,6 @@
       </section>
     </article>
 
-    <aside class="learning-note">
-      <span aria-hidden="true">💡</span>
-      <div><strong>使用方式：</strong>完成四個區塊後可直接列印；按「重新產生」會一次更換整張學習單。</div>
-    </aside>
   </main>
 
   <script>
@@ -793,18 +750,17 @@
     ];
 
     const state = {
-      data: [], sections: {}, quizItems: {}, answers: {},
+      data: [], sections: {}, quizItems: {}, syllableOrderItems: [], answers: {},
       generation: 'all', count: 2, query: ''
     };
     const elements = {
       totalCount: document.getElementById('totalCount'), search: document.getElementById('searchInput'),
       generation: document.getElementById('generationSelect'), count: document.getElementById('countSelect'),
       shuffle: document.getElementById('shuffleButton'), print: document.getElementById('printButton'),
-      summary: document.getElementById('batchSummary'),
       studyGrid: document.getElementById('studyGrid'),
       pictureNameGrid: document.getElementById('pictureNameGrid'),
       hanziZhuyinGrid: document.getElementById('hanziZhuyinGrid'),
-      zhuyinCheckGrid: document.getElementById('zhuyinCheckGrid'),
+      syllableOrderGrid: document.getElementById('syllableOrderGrid'),
       writeZhuyinGrid: document.getElementById('writeZhuyinGrid'),
       worksheet: document.querySelector('.worksheet-sheet')
     };
@@ -882,12 +838,14 @@
       return entries.map((entry, index) => ({ type, entry, options: optionEntries(entry), key: `${type}-${entry.id}-${index}` }));
     }
 
-    function buildZhuyinCheckItems(entries) {
-      const matchPattern = shuffled(entries.map((_, index) => index % 2 === 0));
-      return entries.map((entry, index) => {
-        const wrongEntry = optionEntries(entry).find((option) => option.id !== entry.id) || entry;
-        const candidate = matchPattern[index] ? entry : wrongEntry;
-        return { type: 'zhuyinCheck', entry, candidate, isMatch: candidate.id === entry.id, key: `zhuyinCheck-${entry.id}-${index}` };
+    function buildSyllableOrderItems(entries) {
+      return entries.map((entry) => {
+        const original = entry.zhuyin.trim().split(/\s+/u);
+        let pieces = shuffled(original);
+        if (pieces.length > 1 && pieces.every((piece, index) => piece === original[index])) {
+          pieces = [...pieces.slice(1), pieces[0]];
+        }
+        return { entry, pieces };
       });
     }
 
@@ -909,20 +867,20 @@
         study: picked.slice(0, studyCount),
         pictureName: group(0),
         hanziZhuyin: group(1),
-        zhuyinCheck: group(2),
+        syllableOrder: group(2),
         writeZhuyin: group(3)
       };
       state.quizItems = {
         pictureName: buildQuizItems('pictureName', state.sections.pictureName),
-        hanziZhuyin: buildQuizItems('hanziZhuyin', state.sections.hanziZhuyin),
-        zhuyinCheck: buildZhuyinCheckItems(state.sections.zhuyinCheck)
+        hanziZhuyin: buildQuizItems('hanziZhuyin', state.sections.hanziZhuyin)
       };
+      state.syllableOrderItems = buildSyllableOrderItems(state.sections.syllableOrder);
       state.answers = {};
       render();
     }
 
     function correctValue(item) {
-      return item.type === 'zhuyinCheck' ? (item.isMatch ? 'yes' : 'no') : String(item.entry.id);
+      return String(item.entry.id);
     }
 
     function answerDetails(item) {
@@ -945,6 +903,13 @@
       }).join('');
     }
 
+    function renderSyllableOrderCards(items) {
+      return items.map((item, index) => {
+        const pieces = item.pieces.map((syllable) => `<div class="order-piece"><span class="order-number" aria-label="填寫順序">　</span>${renderPhoneticSequence({ zhuyin: syllable })}</div>`).join('');
+        return `<article class="question-card order-card"><div class="question-heading"><span>第 ${index + 1} 題</span><span>填順序</span></div><div class="order-body"><div class="order-prompt"><img class="order-art" src="${artworkPath(item.entry)}" alt="${escapeHtml(item.entry.name)}" loading="eager" decoding="sync">${renderHanziName(item.entry)}</div><div class="order-pieces">${pieces}</div></div></article>`;
+      }).join('');
+    }
+
     function choiceClass(item, value) {
       const { answered, selected } = answerDetails(item);
       if (!answered) return 'choice';
@@ -958,7 +923,6 @@
       const cardClass = answered ? `question-card ${correct ? 'is-correct' : 'is-wrong'}` : 'question-card';
       let prompt = '';
       let choices = '';
-      let choiceListClass = 'choice-list';
 
       if (item.type === 'pictureName') {
         prompt = `<img class="quiz-art" src="${artworkPath(item.entry)}" alt="題目中的寶可夢" loading="eager" decoding="sync">`;
@@ -970,46 +934,27 @@
         choices = item.options.map((option) => `<button class="${choiceClass(item, String(option.id))}" type="button" data-question="${item.key}" data-answer="${option.id}" aria-label="${escapeHtml(option.zhuyin)}" ${answered ? 'disabled' : ''}>${renderPhoneticSequence(option)}</button>`).join('');
       }
 
-      if (item.type === 'zhuyinCheck') {
-        prompt = `<div class="check-prompt"><img class="quiz-art" src="${artworkPath(item.entry)}" alt="${escapeHtml(item.entry.name)}" loading="eager" decoding="sync"><div class="check-copy">${renderHanziName(item.entry)}${renderPhoneticSequence(item.candidate)}</div></div>`;
-        choiceListClass = 'choice-list choice-list-binary';
-        choices = [['yes', '○ 正確'], ['no', '× 不正確']].map(([value, label]) => `<button class="${choiceClass(item, value)} choice-check" type="button" data-question="${item.key}" data-answer="${value}" ${answered ? 'disabled' : ''}>${label}</button>`).join('');
-      }
-
       const feedback = answered
         ? `<div class="answer-feedback ${correct ? 'correct' : 'wrong'}">${correct ? '答對了！' : `再記一次：${escapeHtml(item.entry.name)}`}</div>`
         : '<div class="answer-feedback" aria-hidden="true">&nbsp;</div>';
 
-      return `<article class="${cardClass}"><div class="question-heading"><span>第 ${index + 1} 題</span><span>${answered ? (correct ? '答對' : '再試試') : '請選答案'}</span></div><div class="quiz-prompt">${prompt}</div><div class="${choiceListClass}">${choices}</div>${feedback}</article>`;
-    }
-
-    function renderSummary(poolSize) {
-      const generationLabel = state.generation === 'all' ? '全部世代' : `第 ${state.generation} 世代`;
-      const allQuizItems = Object.values(state.quizItems).flat();
-      const answeredItems = allQuizItems.filter((item) => state.answers[item.key] !== undefined);
-      const correctCount = answeredItems.filter((item) => state.answers[item.key] === correctValue(item)).length;
-      const totalQuestions = Object.values(state.sections).reduce((total, entries) => total + entries.length, 0);
-      elements.summary.textContent = answeredItems.length
-        ? `${generationLabel}・共 ${totalQuestions} 題・答對 ${correctCount}/${answeredItems.length}`
-        : `${generationLabel}・共 ${totalQuestions} 題・題庫 ${poolSize} 隻`;
+      return `<article class="${cardClass}"><div class="question-heading"><span>第 ${index + 1} 題</span><span>${answered ? (correct ? '答對' : '再試試') : '請選答案'}</span></div><div class="quiz-prompt">${prompt}</div><div class="choice-list">${choices}</div>${feedback}</article>`;
     }
 
     function render() {
-      const poolSize = filteredPokemon().length;
       document.body.dataset.printCount = String(state.count);
-      renderSummary(poolSize);
       if (!state.sections.study?.length) {
         elements.studyGrid.innerHTML = `<div class="empty-state">找不到符合條件的寶可夢，請換個名稱或世代。</div>`;
         elements.pictureNameGrid.innerHTML = '';
         elements.hanziZhuyinGrid.innerHTML = '';
-        elements.zhuyinCheckGrid.innerHTML = '';
+        elements.syllableOrderGrid.innerHTML = '';
         elements.writeZhuyinGrid.innerHTML = '';
         return;
       }
       elements.studyGrid.innerHTML = renderStudyCards(state.sections.study);
       elements.pictureNameGrid.innerHTML = state.quizItems.pictureName.map(renderQuizCard).join('');
       elements.hanziZhuyinGrid.innerHTML = state.quizItems.hanziZhuyin.map(renderQuizCard).join('');
-      elements.zhuyinCheckGrid.innerHTML = state.quizItems.zhuyinCheck.map(renderQuizCard).join('');
+      elements.syllableOrderGrid.innerHTML = renderSyllableOrderCards(state.syllableOrderItems);
       elements.writeZhuyinGrid.innerHTML = renderWritingCards(state.sections.writeZhuyin);
       updatePrintReadiness();
     }
@@ -1049,7 +994,6 @@
         elements.totalCount.textContent = state.data.length.toLocaleString('zh-TW');
         chooseBatch();
       } catch (error) {
-        elements.summary.textContent = '無法載入題庫';
         elements.studyGrid.innerHTML = `<div class="empty-state">寶可夢題庫暫時無法載入，請重新整理頁面。</div>`;
       }
     }
