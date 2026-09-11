@@ -321,6 +321,16 @@
       gap: 0;
       padding-inline: 24px;
     }
+    .zhuyin-image-card .pronunciation-prompt.is-long {
+      width: min(92%, 440px);
+      padding-inline: 20px;
+    }
+    .zhuyin-image-card .pronunciation-prompt.is-long .phonetic { transform: scale(1.18); }
+    .zhuyin-image-card .pronunciation-prompt.is-very-long {
+      width: min(96%, 520px);
+      padding-inline: 14px;
+    }
+    .zhuyin-image-card .pronunciation-prompt.is-very-long .phonetic { transform: scale(1.08); }
     .zhuyin-image-card .choice-image img { width: 74px; height: 74px; }
 
     .writing-card {
@@ -643,6 +653,10 @@
       .image-name-prompt .quiz-art { width: 42px; height: 42px; }
       .zhuyin-image-card .quiz-prompt { min-height: 0; padding-block: 3px; }
       .zhuyin-image-card .pronunciation-prompt { width: 86%; justify-content: space-evenly; gap: 0; padding-inline: 8px; }
+      .zhuyin-image-card .pronunciation-prompt.is-long,
+      .zhuyin-image-card .pronunciation-prompt.is-very-long { width: 96%; padding-inline: 4px; }
+      .zhuyin-image-card .pronunciation-prompt.is-long .phonetic { transform: scale(.98); }
+      .zhuyin-image-card .pronunciation-prompt.is-very-long .phonetic { transform: scale(.9); }
       .zhuyin-image-card .choice-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .zhuyin-image-card .choice-image img { width: 37px; height: 37px; }
       .zhuyin-image-card .choice-image-label { font-size: .64rem; }
@@ -804,12 +818,13 @@
 
     function renderPhoneticPrompt(entry) {
       const syllables = entry.zhuyin.trim().split(/\s+/u);
+      const densityClass = syllables.length >= 6 ? ' is-very-long' : syllables.length >= 4 ? ' is-long' : '';
       const content = syllables.map((syllable) => {
         const { symbols, tone } = splitSyllable(syllable);
         const toneClass = tone === '˙' ? 'tone tone-light' : tone ? 'tone' : 'tone tone-empty';
         return `<span class="phonetic" aria-hidden="true"><span class="phonetic-symbols">${escapeHtml(symbols)}</span><span class="${toneClass}">${escapeHtml(tone || 'ˉ')}</span></span>`;
       }).join('');
-      return `<div class="pronunciation-prompt" role="text" aria-label="${escapeHtml(entry.zhuyin)}">${content}</div>`;
+      return `<div class="pronunciation-prompt${densityClass}" role="text" aria-label="${escapeHtml(entry.zhuyin)}">${content}</div>`;
     }
 
     function renderHanziName(entry) {
