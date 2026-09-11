@@ -385,7 +385,7 @@
     }
 
     .choice {
-      min-height: 54px;
+      min-height: 62px;
       display: grid;
       place-items: center;
       padding: 8px;
@@ -411,13 +411,13 @@
       gap: 4px;
     }
     .choice-image img { width: 62px; height: 62px; object-fit: contain; }
-    .choice-image-label { font-family: "Iansui Pokemon", "DFKai-SB", cursive; font-size: 1rem; font-weight: 700; line-height: 1.1; }
+    .choice-image-label { font-family: "Iansui Pokemon", "DFKai-SB", cursive; font-size: 1.15rem; font-weight: 700; line-height: 1.1; }
     .choice .ruby-name { gap: 2px; }
-    .choice .annotated-character { grid-template-columns: auto 1rem; }
-    .choice .hanzi { font-size: 1.25rem; }
-    .choice .phonetic { width: 1rem; height: 2.65rem; grid-template-columns: .6rem .4rem; }
-    .choice .phonetic-symbols { font-size: .64rem; }
-    .choice .tone { font-size: .72rem; }
+    .choice .annotated-character { grid-template-columns: auto 1.22rem; }
+    .choice .hanzi { font-size: 1.5rem; }
+    .choice .phonetic { width: 1.2rem; height: 3.2rem; grid-template-columns: .72rem .48rem; }
+    .choice .phonetic-symbols { font-size: .78rem; }
+    .choice .tone { font-size: .9rem; }
 
     .answer-feedback {
       min-height: 34px;
@@ -575,7 +575,7 @@
         width: 100%;
         height: 282mm;
         display: grid;
-        grid-template-rows: auto 1.08fr 1.22fr 1.22fr 1.02fr 1.13fr;
+        grid-template-rows: auto 1.24fr 1.24fr 1.16fr 1.36fr;
         gap: 1.5mm;
         margin: 0;
         padding: 0;
@@ -627,9 +627,9 @@
         border-radius: 9px;
         box-shadow: none;
       }
-      .question-heading { padding: 2px 7px; font-size: .58rem; }
-      .quiz-prompt { min-height: 0; padding: 5px 3px; }
-      .quiz-art { width: 46px; height: 46px; filter: none; }
+      .question-heading { padding: 3px 7px; font-size: .64rem; }
+      .quiz-prompt { min-height: 0; padding: 7px 3px; }
+      .quiz-art { width: 52px; height: 52px; filter: none; }
       .writing-card {
         height: 100%;
         display: grid;
@@ -639,16 +639,16 @@
         box-shadow: none;
       }
       .writing-body { min-height: 0; gap: 3px; padding: 4px 6px 7px; }
-      .writing-art { width: 44px; height: 44px; }
+      .writing-art { width: 50px; height: 50px; }
       .writing-name { width: 100%; flex-wrap: nowrap; justify-content: space-evenly; gap: 0; padding-inline: 8px; }
       .writing-character { grid-template-columns: auto 1.08rem; gap: 1px; }
       .zhuyin-writing-slot { width: 1.22rem; height: 3.8rem; grid-template-columns: .76rem .4rem; gap: 1px; }
       .symbol-writing-box, .tone-writing-box { border-width: 2px; border-radius: 5px; }
       .tone-writing-box { height: 1.8rem; }
       .pronunciation-prompt { gap: 5px; padding: 3px 7px; border-radius: 6px; }
-      .pronunciation-prompt .phonetic { height: 2.85rem; transform: scale(1.04); }
+      .pronunciation-prompt .phonetic { height: 3.15rem; transform: scale(1.14); }
       .hanzi-only-name { flex: 1; min-width: 0; justify-content: space-evenly; gap: 0; padding: 3px 8px; border-radius: 6px; }
-      .hanzi-only-name .hanzi { font-size: 1.18rem; }
+      .hanzi-only-name .hanzi { font-size: 1.42rem; }
       .image-name-prompt { width: 100%; gap: 8px; padding-inline: 4px; }
       .image-name-prompt .quiz-art { width: 42px; height: 42px; }
       .zhuyin-image-card .quiz-prompt { min-height: 0; padding-block: 3px; }
@@ -659,19 +659,19 @@
       .zhuyin-image-card .pronunciation-prompt.is-very-long .phonetic { transform: scale(.9); }
       .zhuyin-image-card .choice-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .zhuyin-image-card .choice-image img { width: 37px; height: 37px; }
-      .zhuyin-image-card .choice-image-label { font-size: .64rem; }
+      .zhuyin-image-card .choice-image-label { font-size: .76rem; }
       .choice-list { height: 100%; align-content: stretch; grid-auto-rows: 1fr; gap: 3px; padding: 0 5px 5px; }
-      .choice { min-height: 28px; padding: 2px; border-width: 1.25px; border-radius: 5px; }
+      .choice { min-height: 34px; padding: 3px 2px; border-width: 1.25px; border-radius: 5px; }
       .choice-image { min-height: 42px; gap: 1px; }
       .choice-image img { width: 31px; height: 31px; }
-      .choice-image-label { font-size: .58rem; line-height: 1; }
-      .choice .hanzi { font-size: .67rem; }
-      .choice .annotated-character { grid-template-columns: auto .59rem; }
-      .choice .phonetic { width: .62rem; height: 1.78rem; grid-template-columns: .38rem .23rem; }
-      .choice .phonetic-symbols { font-size: .43rem; }
-      .choice .tone { font-size: .52rem; }
+      .choice-image-label { font-size: .7rem; line-height: 1; }
+      .choice .hanzi { font-size: .82rem; }
+      .choice .annotated-character { grid-template-columns: auto .74rem; }
+      .choice .phonetic { width: .76rem; height: 2.3rem; grid-template-columns: .47rem .28rem; }
+      .choice .phonetic-symbols { font-size: .54rem; }
+      .choice .tone { font-size: .65rem; }
       .choice .ruby-name, .choice .phonetic-choice-row { width: 100%; justify-content: space-evenly; gap: 0; }
-      .choice .phonetic-choice-row .phonetic { height: 2.08rem; }
+      .choice .phonetic-choice-row .phonetic { height: 2.55rem; }
       body[data-print-count="3"] #pictureNameGrid .choice-list,
       body[data-print-count="3"] #hanziZhuyinGrid .choice-list {
         grid-template-columns: 1fr;
@@ -679,18 +679,18 @@
         padding: 0 4px 4px;
       }
       body[data-print-count="3"] #pictureNameGrid .choice,
-      body[data-print-count="3"] #hanziZhuyinGrid .choice { min-height: 26px; padding: 2px 3px; }
+      body[data-print-count="3"] #hanziZhuyinGrid .choice { min-height: 34px; padding: 3px; }
       body[data-print-count="3"] .writing-body { gap: 2px; padding: 2px 2px 5px; }
-      body[data-print-count="3"] .writing-art { width: 42px; height: 42px; }
+      body[data-print-count="3"] .writing-art { width: 50px; height: 50px; }
       body[data-print-count="3"] .writing-name { gap: 0; padding-inline: 1px; }
       body[data-print-count="3"] .writing-character { grid-template-columns: auto 2.37rem; gap: 1px; }
-      body[data-print-count="3"] .writing-character .hanzi { font-size: .9rem; }
+      body[data-print-count="3"] .writing-character .hanzi { font-size: 1.02rem; }
       body[data-print-count="3"] .zhuyin-writing-slot { width: 2.35rem; height: 5.45rem; grid-template-columns: 1.48rem .76rem; gap: 1px; }
       body[data-print-count="3"] .writing-name.is-medium .writing-character { grid-template-columns: auto 1.97rem; gap: 0; }
-      body[data-print-count="3"] .writing-name.is-medium .writing-character .hanzi { font-size: .8rem; }
+      body[data-print-count="3"] .writing-name.is-medium .writing-character .hanzi { font-size: .92rem; }
       body[data-print-count="3"] .writing-name.is-medium .zhuyin-writing-slot { width: 1.95rem; grid-template-columns: 1.22rem .64rem; }
       body[data-print-count="3"] .writing-name.is-long .writing-character { grid-template-columns: auto 1.42rem; gap: 0; }
-      body[data-print-count="3"] .writing-name.is-long .writing-character .hanzi { font-size: .8rem; }
+      body[data-print-count="3"] .writing-name.is-long .writing-character .hanzi { font-size: .9rem; }
       body[data-print-count="3"] .writing-name.is-long .zhuyin-writing-slot { width: 1.4rem; height: 4.95rem; grid-template-columns: .88rem .46rem; }
       .answer-feedback { display: none; }
     }
@@ -737,28 +737,23 @@
         <h2 id="worksheetTitle">寶可夢注音綜合學習單</h2>
       </div>
 
-      <section class="exercise-section" aria-labelledby="studyHeading">
-        <div class="exercise-heading"><span>一</span><div><h3 id="studyHeading">看圖認讀</h3><p>看圖片，讀出寶可夢名稱。</p></div></div>
-        <div class="pokemon-grid exercise-grid" id="studyGrid"><div class="loading-state">正在準備學習單⋯⋯</div></div>
-      </section>
-
       <section class="exercise-section" aria-labelledby="pictureNameHeading">
-        <div class="exercise-heading"><span>二</span><div><h3 id="pictureNameHeading">看圖選名字</h3><p>看圖片，圈出正確名稱。</p></div></div>
-        <div class="pokemon-grid exercise-grid" id="pictureNameGrid"></div>
+        <div class="exercise-heading"><span>一</span><div><h3 id="pictureNameHeading">看圖選名字</h3><p>看圖片，圈出正確名稱。</p></div></div>
+        <div class="pokemon-grid exercise-grid" id="pictureNameGrid"><div class="loading-state">正在準備學習單⋯⋯</div></div>
       </section>
 
       <section class="exercise-section" aria-labelledby="hanziZhuyinHeading">
-        <div class="exercise-heading"><span>三</span><div><h3 id="hanziZhuyinHeading">看國字選注音</h3><p>看寶可夢名稱，圈出正確注音。</p></div></div>
+        <div class="exercise-heading"><span>二</span><div><h3 id="hanziZhuyinHeading">看國字選注音</h3><p>看寶可夢名稱，圈出正確注音。</p></div></div>
         <div class="pokemon-grid exercise-grid" id="hanziZhuyinGrid"></div>
       </section>
 
       <section class="exercise-section" aria-labelledby="zhuyinImageHeading">
-        <div class="exercise-heading"><span>四</span><div><h3 id="zhuyinImageHeading">看注音選圖片</h3><p>讀出注音，圈出正確的寶可夢圖片。</p></div></div>
+        <div class="exercise-heading"><span>三</span><div><h3 id="zhuyinImageHeading">看注音選圖片</h3><p>讀出注音，圈出正確的寶可夢圖片。</p></div></div>
         <div class="pokemon-grid exercise-grid" id="zhuyinImageGrid"></div>
       </section>
 
       <section class="exercise-section" aria-labelledby="writeZhuyinHeading">
-        <div class="exercise-heading"><span>五</span><div><h3 id="writeZhuyinHeading">看圖寫注音</h3><p>看名稱，在每個中文字右側寫上注音。</p></div></div>
+        <div class="exercise-heading"><span>四</span><div><h3 id="writeZhuyinHeading">看圖寫注音</h3><p>看名稱，在每個中文字右側寫上注音。</p></div></div>
         <div class="pokemon-grid exercise-grid" id="writeZhuyinGrid"></div>
       </section>
     </article>
@@ -779,7 +774,6 @@
       totalCount: document.getElementById('totalCount'), search: document.getElementById('searchInput'),
       generation: document.getElementById('generationSelect'), count: document.getElementById('countSelect'),
       shuffle: document.getElementById('shuffleButton'), print: document.getElementById('printButton'),
-      studyGrid: document.getElementById('studyGrid'),
       pictureNameGrid: document.getElementById('pictureNameGrid'),
       hanziZhuyinGrid: document.getElementById('hanziZhuyinGrid'),
       zhuyinImageGrid: document.getElementById('zhuyinImageGrid'),
@@ -873,10 +867,8 @@
     function chooseBatch() {
       const pool = filteredPokemon();
       const picked = shuffled(pool);
-      const studyCount = Math.min(state.count, picked.length);
-      const group = (groupIndex) => Array.from({ length: Math.min(state.count, picked.length) }, (_, index) => picked[(studyCount + groupIndex * state.count + index) % picked.length]);
+      const group = (groupIndex) => Array.from({ length: Math.min(state.count, picked.length) }, (_, index) => picked[(groupIndex * state.count + index) % picked.length]);
       state.sections = {
-        study: picked.slice(0, studyCount),
         pictureName: group(0),
         hanziZhuyin: group(1),
         zhuyinImage: group(2),
@@ -899,13 +891,6 @@
       const selected = state.answers[item.key];
       const answered = selected !== undefined;
       return { selected, answered, correct: answered && selected === correctValue(item) };
-    }
-
-    function renderStudyCards(entries) {
-      return entries.map((entry) => {
-        const generation = generationOf(entry.id);
-        return `<article class="pokemon-card"><div class="card-meta"><span class="dex-number">全國圖鑑 #${String(entry.id).padStart(4, '0')}</span><span>第 ${generation} 世代</span></div><div class="artwork-wrap"><img src="${artworkPath(entry)}" alt="${escapeHtml(entry.name)}" loading="eager" decoding="sync"></div><div class="name-panel">${renderAnnotatedName(entry)}</div></article>`;
-      }).join('');
     }
 
     function renderWritingCards(entries) {
@@ -956,15 +941,13 @@
 
     function render() {
       document.body.dataset.printCount = String(state.count);
-      if (!state.sections.study?.length) {
-        elements.studyGrid.innerHTML = `<div class="empty-state">找不到符合條件的寶可夢，請換個名稱或世代。</div>`;
-        elements.pictureNameGrid.innerHTML = '';
+      if (!state.sections.pictureName?.length) {
+        elements.pictureNameGrid.innerHTML = `<div class="empty-state">找不到符合條件的寶可夢，請換個名稱或世代。</div>`;
         elements.hanziZhuyinGrid.innerHTML = '';
         elements.zhuyinImageGrid.innerHTML = '';
         elements.writeZhuyinGrid.innerHTML = '';
         return;
       }
-      elements.studyGrid.innerHTML = renderStudyCards(state.sections.study);
       elements.pictureNameGrid.innerHTML = state.quizItems.pictureName.map(renderQuizCard).join('');
       elements.hanziZhuyinGrid.innerHTML = state.quizItems.hanziZhuyin.map(renderQuizCard).join('');
       elements.zhuyinImageGrid.innerHTML = state.quizItems.zhuyinImage.map(renderQuizCard).join('');
@@ -1007,7 +990,7 @@
         elements.totalCount.textContent = state.data.length.toLocaleString('zh-TW');
         chooseBatch();
       } catch (error) {
-        elements.studyGrid.innerHTML = `<div class="empty-state">寶可夢題庫暫時無法載入，請重新整理頁面。</div>`;
+        elements.pictureNameGrid.innerHTML = `<div class="empty-state">寶可夢題庫暫時無法載入，請重新整理頁面。</div>`;
       }
     }
 
