@@ -323,6 +323,15 @@
       background: #fff7e7;
     }
 
+    .image-name-prompt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .image-name-prompt .quiz-art { width: 78px; height: 78px; }
+
     .phonetic-choice-row {
       display: flex;
       align-items: center;
@@ -332,19 +341,22 @@
 
     .phonetic-choice-row .phonetic { height: 3.7rem; }
 
-    .toneless-prompt {
+    .check-prompt {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
+      gap: 16px;
       padding: 12px 16px;
       border-radius: 18px;
       background: #f3efff;
     }
 
-    .toneless-prompt .hanzi-only-name { padding: 0; background: transparent; }
-    .toneless-prompt .prompt-divider { width: 2px; height: 48px; background: #cfc4ea; }
-    .toneless-prompt .phonetic-choice-row .phonetic { height: 4rem; }
+    .check-prompt .quiz-art { width: 72px; height: 72px; }
+    .check-copy { display: flex; align-items: center; gap: 12px; }
+    .check-copy .hanzi-only-name { padding: 0; background: transparent; }
+    .check-copy .phonetic-choice-row { padding: 5px 9px; border-radius: 10px; background: #fff; }
+    .choice-list-binary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .choice-check { font-size: 1rem; }
 
     .writing-card {
       overflow: hidden;
@@ -674,9 +686,13 @@
       .pronunciation-prompt .phonetic { height: 2.85rem; transform: scale(1.04); }
       .hanzi-only-name { gap: 3px; padding: 3px 8px; border-radius: 6px; }
       .hanzi-only-name .hanzi { font-size: 1.12rem; }
-      .toneless-prompt { gap: 6px; padding: 3px 7px; border-radius: 6px; }
-      .toneless-prompt .prompt-divider { height: 32px; }
-      .toneless-prompt .phonetic-choice-row .phonetic { height: 2.7rem; }
+      .image-name-prompt { gap: 7px; }
+      .image-name-prompt .quiz-art { width: 34px; height: 34px; }
+      .check-prompt { gap: 7px; padding: 3px 7px; border-radius: 6px; }
+      .check-prompt .quiz-art { width: 32px; height: 32px; }
+      .check-copy { gap: 6px; }
+      .check-copy .phonetic-choice-row { padding: 2px 5px; border-radius: 5px; }
+      .check-copy .phonetic-choice-row .phonetic { height: 2.15rem; }
       .choice-list { gap: 3px; padding: 0 5px 4px; }
       .choice { min-height: 28px; padding: 2px; border-width: 1.25px; border-radius: 5px; }
       .choice-image { min-height: 34px; }
@@ -753,9 +769,9 @@
         <div class="pokemon-grid exercise-grid" id="hanziZhuyinGrid"></div>
       </section>
 
-      <section class="exercise-section" aria-labelledby="tonePracticeHeading">
-        <div class="exercise-heading"><span>四</span><div><h3 id="tonePracticeHeading">分辨聲調</h3><p>讀一讀，圈出聲調正確的注音。</p></div></div>
-        <div class="pokemon-grid exercise-grid" id="tonePracticeGrid"></div>
+      <section class="exercise-section" aria-labelledby="zhuyinCheckHeading">
+        <div class="exercise-heading"><span>四</span><div><h3 id="zhuyinCheckHeading">注音對不對</h3><p>看圖片和名稱，判斷注音是否正確。</p></div></div>
+        <div class="pokemon-grid exercise-grid" id="zhuyinCheckGrid"></div>
       </section>
 
       <section class="exercise-section" aria-labelledby="writeZhuyinHeading">
@@ -788,7 +804,7 @@
       studyGrid: document.getElementById('studyGrid'),
       pictureNameGrid: document.getElementById('pictureNameGrid'),
       hanziZhuyinGrid: document.getElementById('hanziZhuyinGrid'),
-      tonePracticeGrid: document.getElementById('tonePracticeGrid'),
+      zhuyinCheckGrid: document.getElementById('zhuyinCheckGrid'),
       writeZhuyinGrid: document.getElementById('writeZhuyinGrid'),
       worksheet: document.querySelector('.worksheet-sheet')
     };
@@ -848,15 +864,6 @@
       return `<div class="phonetic-choice-row" role="text" aria-label="${escapeHtml(entry.zhuyin)}">${content}</div>`;
     }
 
-    function renderTonelessPrompt(entry) {
-      const syllables = entry.zhuyin.trim().split(/\s+/u);
-      const symbols = syllables.map((syllable) => {
-        const parsed = splitSyllable(syllable);
-        return `<span class="phonetic" aria-hidden="true"><span class="phonetic-symbols">${escapeHtml(parsed.symbols)}</span><span class="tone tone-empty">ˉ</span></span>`;
-      }).join('');
-      return `<div class="toneless-prompt">${renderHanziName(entry)}<span class="prompt-divider" aria-hidden="true"></span><div class="phonetic-choice-row" aria-label="尚未標示聲調的注音">${symbols}</div></div>`;
-    }
-
     function shuffled(items) {
       const copy = [...items];
       for (let index = copy.length - 1; index > 0; index -= 1) {
@@ -875,24 +882,13 @@
       return entries.map((entry, index) => ({ type, entry, options: optionEntries(entry), key: `${type}-${entry.id}-${index}` }));
     }
 
-    const toneMarks = ['ˉ', 'ˊ', 'ˇ', 'ˋ', '˙'];
-
-    function toneSignature(entry) {
-      return entry.zhuyin.trim().split(/\s+/u).map((syllable) => splitSyllable(syllable).tone || 'ˉ');
-    }
-
-    function toneOptions(entry) {
-      const correct = toneSignature(entry);
-      const variants = new Map([[correct.join(''), correct]]);
-      for (let offset = 1; variants.size < 3 && offset < toneMarks.length; offset += 1) {
-        const variant = correct.map((tone, index) => toneMarks[(toneMarks.indexOf(tone) + offset + index) % toneMarks.length]);
-        variants.set(variant.join(''), variant);
-      }
-      return shuffled([...variants.values()]);
-    }
-
-    function buildToneQuizItems(entries) {
-      return entries.map((entry, index) => ({ type: 'tonePractice', entry, options: toneOptions(entry), key: `tonePractice-${entry.id}-${index}` }));
+    function buildZhuyinCheckItems(entries) {
+      const matchPattern = shuffled(entries.map((_, index) => index % 2 === 0));
+      return entries.map((entry, index) => {
+        const wrongEntry = optionEntries(entry).find((option) => option.id !== entry.id) || entry;
+        const candidate = matchPattern[index] ? entry : wrongEntry;
+        return { type: 'zhuyinCheck', entry, candidate, isMatch: candidate.id === entry.id, key: `zhuyinCheck-${entry.id}-${index}` };
+      });
     }
 
     function filteredPokemon() {
@@ -913,20 +909,20 @@
         study: picked.slice(0, studyCount),
         pictureName: group(0),
         hanziZhuyin: group(1),
-        tonePractice: group(2),
+        zhuyinCheck: group(2),
         writeZhuyin: group(3)
       };
       state.quizItems = {
         pictureName: buildQuizItems('pictureName', state.sections.pictureName),
         hanziZhuyin: buildQuizItems('hanziZhuyin', state.sections.hanziZhuyin),
-        tonePractice: buildToneQuizItems(state.sections.tonePractice)
+        zhuyinCheck: buildZhuyinCheckItems(state.sections.zhuyinCheck)
       };
       state.answers = {};
       render();
     }
 
     function correctValue(item) {
-      return item.type === 'tonePractice' ? toneSignature(item.entry).join('') : String(item.entry.id);
+      return item.type === 'zhuyinCheck' ? (item.isMatch ? 'yes' : 'no') : String(item.entry.id);
     }
 
     function answerDetails(item) {
@@ -962,6 +958,7 @@
       const cardClass = answered ? `question-card ${correct ? 'is-correct' : 'is-wrong'}` : 'question-card';
       let prompt = '';
       let choices = '';
+      let choiceListClass = 'choice-list';
 
       if (item.type === 'pictureName') {
         prompt = `<img class="quiz-art" src="${artworkPath(item.entry)}" alt="題目中的寶可夢" loading="eager" decoding="sync">`;
@@ -969,23 +966,21 @@
       }
 
       if (item.type === 'hanziZhuyin') {
-        prompt = renderHanziName(item.entry);
+        prompt = `<div class="image-name-prompt"><img class="quiz-art" src="${artworkPath(item.entry)}" alt="${escapeHtml(item.entry.name)}" loading="eager" decoding="sync">${renderHanziName(item.entry)}</div>`;
         choices = item.options.map((option) => `<button class="${choiceClass(item, String(option.id))}" type="button" data-question="${item.key}" data-answer="${option.id}" aria-label="${escapeHtml(option.zhuyin)}" ${answered ? 'disabled' : ''}>${renderPhoneticSequence(option)}</button>`).join('');
       }
 
-      if (item.type === 'tonePractice') {
-        prompt = renderTonelessPrompt(item.entry);
-        choices = item.options.map((tones) => {
-          const value = tones.join('');
-          return `<button class="${choiceClass(item, value)}" type="button" data-question="${item.key}" data-answer="${value}" aria-label="聲調選項 ${escapeHtml(value)}" ${answered ? 'disabled' : ''}>${renderPhoneticSequence(item.entry, tones)}</button>`;
-        }).join('');
+      if (item.type === 'zhuyinCheck') {
+        prompt = `<div class="check-prompt"><img class="quiz-art" src="${artworkPath(item.entry)}" alt="${escapeHtml(item.entry.name)}" loading="eager" decoding="sync"><div class="check-copy">${renderHanziName(item.entry)}${renderPhoneticSequence(item.candidate)}</div></div>`;
+        choiceListClass = 'choice-list choice-list-binary';
+        choices = [['yes', '○ 正確'], ['no', '× 不正確']].map(([value, label]) => `<button class="${choiceClass(item, value)} choice-check" type="button" data-question="${item.key}" data-answer="${value}" ${answered ? 'disabled' : ''}>${label}</button>`).join('');
       }
 
       const feedback = answered
         ? `<div class="answer-feedback ${correct ? 'correct' : 'wrong'}">${correct ? '答對了！' : `再記一次：${escapeHtml(item.entry.name)}`}</div>`
         : '<div class="answer-feedback" aria-hidden="true">&nbsp;</div>';
 
-      return `<article class="${cardClass}"><div class="question-heading"><span>第 ${index + 1} 題</span><span>${answered ? (correct ? '答對' : '再試試') : '請選答案'}</span></div><div class="quiz-prompt">${prompt}</div><div class="choice-list">${choices}</div>${feedback}</article>`;
+      return `<article class="${cardClass}"><div class="question-heading"><span>第 ${index + 1} 題</span><span>${answered ? (correct ? '答對' : '再試試') : '請選答案'}</span></div><div class="quiz-prompt">${prompt}</div><div class="${choiceListClass}">${choices}</div>${feedback}</article>`;
     }
 
     function renderSummary(poolSize) {
@@ -1007,14 +1002,14 @@
         elements.studyGrid.innerHTML = `<div class="empty-state">找不到符合條件的寶可夢，請換個名稱或世代。</div>`;
         elements.pictureNameGrid.innerHTML = '';
         elements.hanziZhuyinGrid.innerHTML = '';
-        elements.tonePracticeGrid.innerHTML = '';
+        elements.zhuyinCheckGrid.innerHTML = '';
         elements.writeZhuyinGrid.innerHTML = '';
         return;
       }
       elements.studyGrid.innerHTML = renderStudyCards(state.sections.study);
       elements.pictureNameGrid.innerHTML = state.quizItems.pictureName.map(renderQuizCard).join('');
       elements.hanziZhuyinGrid.innerHTML = state.quizItems.hanziZhuyin.map(renderQuizCard).join('');
-      elements.tonePracticeGrid.innerHTML = state.quizItems.tonePractice.map(renderQuizCard).join('');
+      elements.zhuyinCheckGrid.innerHTML = state.quizItems.zhuyinCheck.map(renderQuizCard).join('');
       elements.writeZhuyinGrid.innerHTML = renderWritingCards(state.sections.writeZhuyin);
       updatePrintReadiness();
     }
